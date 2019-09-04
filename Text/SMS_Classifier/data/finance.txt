@@ -1,0 +1,17 @@
+debited
+credited
+paid
+txn
+currency
+topup
+recharge
+bank
+icici
+hdfc
+sbi
+credit
+debit
+card
+updated
+balance
+insurance

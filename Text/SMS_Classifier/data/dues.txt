@@ -1,0 +1,13 @@
+bill
+due
+mobile
+electricity
+broadband
+date
+currency
+expire
+expires
+plan
+renewal
+premium
+invoice
