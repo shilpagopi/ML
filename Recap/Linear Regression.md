@@ -6,7 +6,7 @@
 
 ### _Cost function: MSE_
 
-<img src="https://lh5.googleusercontent.com/YIaB0aE1Z09Xy0sqEm2UgccUNdRt0MAh7iiBwyfPQAgSRbLo8MdsPixwh4qUBqXnqxJ4crMJowz4-AoT2r0FgzVeVAi58f2rwsQQTEvl=s1080" alt="drawing" width="600" height="300"/>
+<img src="https://camo.githubusercontent.com/fb05a923f3c55f93488175bfc50b8a9349de312c/68747470733a2f2f6d69726f2e6d656469756d2e636f6d2f6d61782f3630302f312a337742356f746b674b456976395836476464307232514032782e706e67" alt="drawing" width="300" height="75"/>
 
 ### _R-Squared_
 
