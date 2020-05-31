@@ -18,7 +18,7 @@
 <img src="https://cdn.analyticsvidhya.com/wp-content/uploads/2019/08/huber.jpg.jpg" width="500" height="150"/>
 
 ### 5. Regression Metrics
-<img src="https://github.com/shilpagopi/ML/blob/master/Recap/img/regression-metrics.JPG" width="500" height="700"/>
+<img src="https://github.com/shilpagopi/ML/blob/master/Recap/img/regression-metrics.JPG" width="800" height="500"/>
 
 ## Classification Loss Functions
 ### 1. Cross Entropy
@@ -31,4 +31,4 @@
 * Use class labels -1 and 1
 
 ### 3. Confusion Metrics
-<img src="https://github.com/shilpagopi/ML/blob/master/Recap/img/classification-metrics.JPG" width="500" height="700"/>
+<img src="https://github.com/shilpagopi/ML/blob/master/Recap/img/classification-metrics.JPG" width="800" height="700"/>
