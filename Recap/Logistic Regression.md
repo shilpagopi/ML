@@ -11,7 +11,7 @@ It uses a maximum likelihood estimation rather than the least squares estimation
 
 > Probability = y' (as it a cound value between 0 and 1)
 
-# Multinomial Logistic Regression
+# Multinomial/Softmax Logistic Regression
 ```
 Do the maths, considering K labels. It will turn out to be equivalent to training independent k-1 regressors. Separate w for each class.
 An alternative approach is to train K regressors. Do softmax to get output probabilities summing to 1.
