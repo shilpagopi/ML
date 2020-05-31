@@ -9,6 +9,10 @@ Regularization significantly reduces the variance of the model, without substant
 ### Ridge Regression (L2 Norm)
 <img src = "https://miro.medium.com/max/1106/1*CiqZ8lhwxi5c4d1nV24w4g.png" width = "600" height = "100">
 
+### Elastic Net
+Trade off between Lasso and Ridge regressions:  
+a(Wi^2) + (1-a)(Wi)  
+
 **L1 vs L2**
 * Choose L1, when we intend to drop the weights for meaningless dimensions to exactly 0.
 L2 regularization encourages weights to be small, but doesn't force them to exactly 0.0.
