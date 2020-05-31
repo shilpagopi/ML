@@ -17,6 +17,9 @@
 ### 4. Huber Loss
 <img src="https://cdn.analyticsvidhya.com/wp-content/uploads/2019/08/huber.jpg.jpg" width="500" height="150"/>
 
+### 5. Regression Metrics
+<img src="https://github.com/shilpagopi/ML/blob/master/Recap/img/regression-metrics.JPG" width="500" height="700"/>
+
 ## Classification Loss Functions
 ### 1. Cross Entropy
 <img src="https://leakyreluhome.files.wordpress.com/2020/01/ce_loss.png" width="300" height="100"/>
@@ -26,3 +29,6 @@
 
 * Hinge Loss not only penalizes the wrong predictions but also the right predictions that are not confident.
 * Use class labels -1 and 1
+
+### 3. Confusion Metrics
+<img src="https://github.com/shilpagopi/ML/blob/master/Recap/img/classification-metrics.JPG" width="500" height="700"/>
