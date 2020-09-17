@@ -11,6 +11,11 @@ It uses a maximum likelihood estimation rather than the least squares estimation
 
 > Probability = h (as it is a value between 0 and 1)
 
+* The input to the sigmoid function ‘g’ doesn’t need to be linear function. It can very well be a circle or any shape. z = w1x1^2 + w2x2^2
+
+* We cannot use the same cost function that we used for linear regression because the Sigmoid Function will cause the output to be wavy, causing many local optima. 
+  In other words, it will not be a convex function. Hence, the cost function is transformed using the logarithm of the sigmoid function.
+
 # Multinomial/Softmax Logistic Regression
 ```
 Do the maths, considering K labels. It will turn out to be equivalent to training independent k-1 regressors. Separate w for each class.
