@@ -32,3 +32,6 @@
 
 ### 3. Confusion Metrics
 <img src="https://github.com/shilpagopi/ML/blob/master/Recap/img/classification-metrics.JPG" width="800" height="700"/>
+
+* RoC: detection vs false alarm
+* Type I Error = false positive, Type II error = false negative
