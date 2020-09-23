@@ -1,5 +1,22 @@
 # Statistics
 
+### Central Limit Theorem (CLT)
+Given a population with unknown distribution (it could be uniform, binomial or completely random), the sample means will approximate the normal distribution.
+
+Given a population whose means is μ and variance V. The sampling distribution of the mean will approach a normal distribution which has a mean μ and a variance V/n, as the value of n (= number of data points in each sample = 30) goes up. (In fact, in the sampling distribution of the mean, the number of samples is assumed to be infinite.)
+
+* Assumptions
+  * The data must be sampled randomly
+  * Samples should be independent of each other.
+  * Sample size should be not more than 10% of the population when sampling is done without replacement
+  * The sample size should be sufficiently large. (a sample size of 30 is considered sufficient when the population is symmetric.)
+ 
+* Applications/Inferences:
+  * We have the information of a valid sample. We can make accurate assumptions about it’s population.
+  * We have the information of the population. We can make accurate assumptions about a valid sample from that population.
+  * We have the information of a population and a valid sample. We can accurately infer if the sample was drawn from that population.
+  * We have the information about two different valid samples. We can accurately infer if the two samples where drawn from the same population.
+
 ### P-value
 p-value is a number between 0 and 1. Based on the value it will denote the strength of the results. The claim which is on trial is called the Null Hypothesis.
 
