@@ -18,6 +18,7 @@ a(Wi^2) + (1-a)(Wi)
 L2 regularization encourages weights to be small, but doesn't force them to exactly 0.0.
 
 * L2 penalizes higher coefficients more than L1
+* L1 corresponds to setting a Laplacean prior on the terms, while L2 corresponds to a Gaussian prior.
 ```
 The only difference between the normal gradient descent and gradient descent regularized, 
 is that it finds a converged value of theta as low as possible. The starting point of 
