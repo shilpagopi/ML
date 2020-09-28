@@ -28,3 +28,5 @@ every theta iteration is slightly lesser than the previous value of theta.
 ### Dropout in Neural Networks
 Dropout is the fraction of neurons we "drop", randomly picked for each iteration.
 We delete the connections going into, and out of, the neuron when we drop it.
+
+### Using cross-validation techniques also reduces variance.
