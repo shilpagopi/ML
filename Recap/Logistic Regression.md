@@ -22,3 +22,15 @@ Do the maths, considering K labels. It will turn out to be equivalent to trainin
 An alternative approach is to train K regressors. Do softmax to get output probabilities summing to 1.
 z1 = w1.x
 p(k=1) = exp(z1)/(sum(exp(z)) for k = 1 to K)
+```
+
+# Evaluation of Model Fit
+* Pseudo R2 =1 − (L1/L0)  
+where, L1 and L0 are the log-likelihood of trained model and a base model with a logistic regression on just a constant (and does not depend on x) (yi=1/(1+exp(−α)))
+
+* Akaike information criterion, AIC = 2k-2*ln(L)  
+k is the number of estimated parameters in the model
+L is the maximum value of the likelihood function for the model  
+Prefer model with the minimum AIC value  
+Intuition: Information loss  
+
