@@ -35,3 +35,6 @@
 
 * RoC: detection vs false alarm
 * Type I Error = false positive, Type II error = false negative
+
+* False Positive Rate, FPR = 1 - TNR = FP/TN+FP
+* False Negative Rate, FNR = 1- TPR = FN/TP+FN
