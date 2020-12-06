@@ -30,3 +30,9 @@ One-to-one, one-to-many, many-to-one, many-to-many (input and output: same size,
 * Vanishing/Explodding gradient (solved by Gradient Clipping or Gates in LSTMs/GRUs)
 * Difficulty of accessing information from a long time ago (solved by LSTMs/GRUs)
 * Cannot consider any future input for the current state (solved by Bi-directional RNNs)
+
+### What is a Linear Transformation
+A Linear Transformation, also known as a linear map, is a mapping of a function between two modules that preserves the operations of addition and scalar multiplication.
+U, also called the domain, to the vector space V, also called the codomain. ( T : U → V ) The linear transformation has two properties:
+T(u1+u2)=T(u1)+T(u2) for all u1,u2∈U
+T(αu)=αT(u)T(αu)=αT(u) for all u∈U and all α∈C
