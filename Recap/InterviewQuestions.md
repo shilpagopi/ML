@@ -36,3 +36,8 @@ Deductive learning is the process of using conclusions to form observations
 * Random forests allow you to determine the feature importance. SVM’s can’t do this.
 * Random forests are much quicker and simpler to build than an SVM.
 * For multi-class classification problems, SVMs require a one-vs-rest method, which is less scalable and more memory intensive.
+
+### Which algorithm is better at handling outliers logistic regression or SVM?
+Logistic regression will find a linear boundary if it exists to accommodate the outliers. Logistic regression will shift the linear boundary in order to accommodate the outliers. SVM is insensitive to individual samples. There will not be a major shift in the linear boundary to accommodate an outlier. SVM comes with inbuilt complexity controls, which take care of overfitting. This is not true in case of logistic regression.+
+
+### CRV curves? Lift Curves?
