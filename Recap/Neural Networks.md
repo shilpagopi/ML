@@ -36,3 +36,7 @@ A Linear Transformation, also known as a linear map, is a mapping of a function 
 U, also called the domain, to the vector space V, also called the codomain. ( T : U → V ) The linear transformation has two properties:
 T(u1+u2)=T(u1)+T(u2) for all u1,u2∈U
 T(αu)=αT(u)T(αu)=αT(u) for all u∈U and all α∈C
+
+### Bias term in NN
+The units have a constant bias input, which each output unit can weight independently to achieve the effect of a translation vector. 
+The bias input determines the baseline value for the unit. 
