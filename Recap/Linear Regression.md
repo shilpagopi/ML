@@ -3,6 +3,7 @@
 * Core idea: Fit a line to data
 * Linear Regression is a machine learning algorithm based on supervised learning. 
 * Regression models a target prediction value based on independent variables.
+* Assumption: Errors are normally distributed, Variance of errors is zero.
 
 ### _Cost function: MSE_
 
