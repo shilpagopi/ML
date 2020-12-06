@@ -13,6 +13,8 @@ It uses a maximum likelihood estimation rather than the least squares estimation
 
 * The input to the sigmoid function ‘g’ doesn’t need to be linear function. It can very well be a circle or any shape. z = w1x1^2 + w2x2^2
 
+* If input is given as linear, then decision boundary must be a line.
+
 * We cannot use the same cost function that we used for linear regression because the Sigmoid Function will cause the output to be wavy, causing many local optima. 
   In other words, it will not be a convex function. Hence, the cost function is transformed using the logarithm of the sigmoid function.
 
