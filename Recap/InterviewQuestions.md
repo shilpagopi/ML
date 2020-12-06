@@ -23,6 +23,11 @@ In stochastic gradient descent, you'll evaluate only 1 training sample for the s
 * G-Mean = sqrt(Sensitivity * Specificity)  
 * Select the threshold with the largest G-Mean value.
 
+### Why not use linear regression in place of logistic regression for binary classification?
+* Distribution of error terms: Linear regression assumes that error terms are normally distributed. In case of binary classification, this assumption does not hold true, as the data distribution is different.
+* Model output: In linear regression, the output is continuous. Also, the predict values that can go beyond 0 and 1. If we want the output in the form of probabilities, which can be mapped to two different classes, then its range should be restricted to 0 and 1.
+* Variance of Residual errors: Linear regression assumes that the variance of random errors is constant. This assumption is also violated in case of logistic regression.
+
 ### Inductive vs Deductive
 Inductive learning is the process of using observations to draw conclusions 
 Deductive learning is the process of using conclusions to form observations 
