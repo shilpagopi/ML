@@ -21,7 +21,11 @@ So then we factorize this matrix to yield a lower-dimensional (word x features) 
 (Words x Context) = (Words x Features) * (Features x Context) 
 
 ### FastText
-FastText (based on Word2Vec) is word-fragment based and can usually handle unseen words, although it still generates one vector per word. 
+* FastText (based on Word2Vec) is word-fragment based and can usually handle unseen words, although it still generates one vector per word. 
+* Represents each word as an n-gram of characters. This helps capture the meaning of shorter words and allows the embeddings to understand suffixes and prefixes.
+* Once the word has been represented using character n-grams, a skip-gram model is trained to learn the embeddings. This model is considered to be a bag of words model with a sliding window over a word because no internal structure of the word is taken into account. As long as the characters are within this window, the order of the n-grams doesn’t matter.
+* Works well with rare word. Unseen word can be broken down into n-grams to get its embeddings.
+* Word2vec and GloVe both fail to provide any vector representation for words that are not in the model dictionary. This is a huge advantage of this method.
 
 ### Elmo
 Elmo is purely character-based, providing vectors for each character that can combined through a deep learning model or simply averaged to get a word vector (edit: the off-the-shelf implementation gives whole-word vectors like this already). 
