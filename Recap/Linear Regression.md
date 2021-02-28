@@ -16,3 +16,9 @@
 Two popular examples of regularization:
 Lasso Regression: where J is modified to minimize the absolute sum of the coefficients (called L1 regularization).
 Ridge Regression: ... L2 regularization
+
+* Why is least square function an apt loss function for linear regression?  
+y = wTx + e(=Error term)  
+e is distributed IID (independently and identically distributed) according to a Gaussian distribution (also called a Normal distribution) mean *zero* and some variance σ^2.  
+e ~ N(0,σ^2), y ~ N(wTx,σ^2)  
+Least square function can be obtained by calculating log likelihood, P(y/x) = P(e), since w is fixed.  
