@@ -41,3 +41,10 @@ Deductive learning is the process of using conclusions to form observations
 Logistic regression will find a linear boundary if it exists to accommodate the outliers. Logistic regression will shift the linear boundary in order to accommodate the outliers. SVM is insensitive to individual samples. There will not be a major shift in the linear boundary to accommodate an outlier. SVM comes with inbuilt complexity controls, which take care of overfitting. This is not true in case of logistic regression.+
 
 ### CRV curves? Lift Curves?
+
+### Parametric vs Non-parametric Algorithm ?
+* Parametric:  Once we’ve fit the finite no. of parameters and stored them away, the training data is not required to make future predictions. 
+Eg. Linear Regression
+
+* Non-Parametric: Need training data to make predictions. Storage to represent hypothesis grows linearly with the size of the training set.
+Eg. Locally weighted linear regression algorithm.
