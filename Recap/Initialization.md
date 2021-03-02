@@ -41,3 +41,4 @@
 
 > Good initialization techniques set the weights neither too bigger than 1, nor too lesser than 1. So, the gradients do not vanish or explode too quickly. They help avoid slow convergence, also ensuring that we do not keep oscillating off the minima. There exist other variants of the above, where the main objective again is to minimize the variance of the parameters.
 
+> The gradients with respect to bias depend only on the linear activation of that layer, and not on the gradients of the deeper layers. Thus there is no diminishing or explosion of gradients for the bias terms and they can be safely initialized to 0.
