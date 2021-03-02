@@ -24,6 +24,11 @@ M-step: Recompute cluster means
 * Complete linkage : Minimize maximum distance of between cluster pairs
 
 ### Performance Assessment
-Silhouette coefficient for a single sample: S = (a-b)/max(a,b)
+#### Silhouette coefficient for a single sample: S = (a-b)/max(a,b)
 a: mean distance between a sample and all other points in the same class
 b: mean distance between between a sample and all other points in the next nearest cluster
+
+#### Choose initialization with lowest WSS
+WSS means the sum of distances between the points and the corresponding centroids for each cluster. WSS is a measure of compactness. 
+BSS means the sum of distances between the centroids and the total sample mean multiplied by the number of points within each cluster. BSS is a measure of dispersion 
+For clustering to be successful, we need to get the lower WSS and the higher BSS. 
