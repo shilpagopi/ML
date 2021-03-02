@@ -28,7 +28,21 @@ M-step: Recompute cluster means
 a: mean distance between a sample and all other points in the same class
 b: mean distance between between a sample and all other points in the next nearest cluster
 
+#### Inertia - how to choose K?
+* Inertia is the sum of distances of all the points from its respective centroids. (=WSS?)
+* Lesser the inertia value, the better our clusters are.
+* Plot K vs inertia. Choose K where inertia almost becomes a constant.
+
+#### Dunn Index
+* Dunn index is the ratio of the minimum of inter-cluster distances and maximum of intracluster distances. 
+* High dunn index => better clusters
+
 #### Choose initialization with lowest WSS
 WSS means the sum of distances between the points and the corresponding centroids for each cluster. WSS is a measure of compactness. 
 BSS means the sum of distances between the centroids and the total sample mean multiplied by the number of points within each cluster. BSS is a measure of dispersion 
 For clustering to be successful, we need to get the lower WSS and the higher BSS. 
+
+#### Stopping criteria for clustering
+* Centroids of newly formed clusters do not change
+* Points remain in the same cluster
+* Maximum number of iterations are reached
