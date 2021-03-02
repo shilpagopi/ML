@@ -9,3 +9,8 @@
 |Tanh|| 1 - g(z)^2|Non-linear, zero-centered, more preferred to sigmoid (?), steeper gradient than sigmoid,  fixed output range |Y|NO|
 | Leaky RELU| (alpha x z) when z<0 | alpha | usu, alpha = 0.01 | NO | Y |
 * Vanishing gradients happens when derivative of activation function 0<=f’(x)<1; exploding gradients when f’(x)>1.
+
+##### Why is RELU better?
+* Computational Simplicity
+* Negative inputs can output true zero values allowing a sparse representation which accelerates learning and simplifies the model.
+* Easier to optimize when its behavior is linear or close to linear.
