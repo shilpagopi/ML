@@ -27,6 +27,8 @@ M-step: Recompute cluster means
 #### Silhouette coefficient for a single sample: S = (a-b)/max(a,b)
 a: mean distance between a sample and all other points in the same class
 b: mean distance between between a sample and all other points in the next nearest cluster
+* Silhouette coefficients near +1 indicate that the sample is far away from the neighboring clusters. A value of 0 indicates that the sample is on or very close to the decision boundary between two neighboring clusters and negative values indicate that those samples might have been assigned to the wrong cluster. 
+* Also, the silhoutte values chart bars are narrow/broad based on number of instances falling into each cluster.
 
 #### Inertia - how to choose K?
 * Inertia is the sum of distances of all the points from its respective centroids. (=WSS?)
