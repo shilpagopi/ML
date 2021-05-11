@@ -17,6 +17,16 @@ Given a population whose means is μ and variance V. The sampling distribution o
   * We have the information of a population and a valid sample. We can accurately infer if the sample was drawn from that population.
   * We have the information about two different valid samples. We can accurately infer if the two samples where drawn from the same population.
 
+### Confidence Interval: point estimate±z∗SE
+
+* A confidence interval is a range of values above and below a point estimate that captures the true population parameter at some predetermined confidence level. 
+If you want to have a 95% chance of capturing the true population parameter with a point estimate and a corresponding confidence interval, we'd set our confidence level to 95%.
+* Higher confidence levels result in a wider confidence intervals.
+
+* z: critical value corresponding to the confidence level. (Critical value is the number of standard deviations we'd have to go from the mean of the normal distribution to capture the proportion of the data associated with the desired confidence level.) Roughly, z = 2 for 95% confidence.
+* SE: standard error for a point estimate. For example, the standard error for the sample mean is sigma/sqrt(n), where s is the standard deviation and n is the number of samples.
+* z∗SE: margin of error
+
 ### P-value
 p-value is a number between 0 and 1. Based on the value it will denote the strength of the results. The claim which is on trial is called the Null Hypothesis.
 
