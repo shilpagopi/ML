@@ -27,6 +27,10 @@ If you want to have a 95% chance of capturing the true population parameter with
 * SE: standard error for a point estimate. For example, the standard error for the sample mean is sigma/sqrt(n), where s is the standard deviation and n is the number of samples.
 * z∗SE: margin of error
 
+### Standardized Normal Distribution
+*  μ = 0 and σ = 1
+*  To convert X into normal distribution, use Z= (X−μ)/σ
+
 ### P-value
 p-value is a number between 0 and 1. Based on the value it will denote the strength of the results. The claim which is on trial is called the Null Hypothesis.
 
