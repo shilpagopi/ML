@@ -19,22 +19,24 @@ Given a population whose means is μ and variance V. The sampling distribution o
 
 ### Confidence Interval: point estimate±z∗SE
 
-* A confidence interval is a range of values above and below a point estimate that captures the true population parameter at some predetermined confidence level. 
-If you want to have a 95% chance of capturing the true population parameter with a point estimate and a corresponding confidence interval, we'd set our confidence level to 95%.
-* Higher confidence levels result in a wider confidence intervals.
-
 * z: critical value corresponding to the confidence level. (Critical value is the number of standard deviations we'd have to go from the mean of the normal distribution to capture the proportion of the data associated with the desired confidence level.) Roughly, z = 2 for 95% confidence.
 * SE: standard error for a point estimate. For example, the standard error for the sample mean is sigma/sqrt(n), where s is the standard deviation and n is the number of samples.
 * z∗SE: margin of error
+
+* A confidence interval is a range of values above and below a point estimate that captures the true population parameter at some predetermined confidence level. 
+If you want to have a 95% chance of capturing the true population parameter with a point estimate and a corresponding confidence interval, we'd set our confidence level to 95%.
+* Higher confidence levels result in a wider confidence intervals.
+* 95% confidence interval means that 95% of confidence intervals, each from random samples of the same size from the same population will contain the true population parameter.
 
 ### Standardized Normal Distribution
 *  μ = 0 and σ = 1
 *  To convert X into normal distribution, use Z= (X−μ)/σ
 
 ### P-value
-p-value is a number between 0 and 1. Based on the value it will denote the strength of the results. The claim which is on trial is called the Null Hypothesis.
+* p-value is defined as the probability of obtaining the observed or more extreme outcome, given that the null hypothesis is true (not the probability that the alternative hypthesis is true).
+* p-value is a number between 0 and 1. Based on the value it will denote the strength of the results. The claim which is on trial is called the Null Hypothesis.
 
-Low p-value (≤ 0.05) indicates strength against the null hypothesis which means we can reject the null Hypothesis. High p-value (≥ 0.05) indicates strength for the null hypothesis which means we can accept the null Hypothesis p-value of 0.05 indicates the Hypothesis could go either way.
+* Low p-value (≤ 0.05) indicates strength against the null hypothesis which means we can reject the null Hypothesis. High p-value (≥ 0.05) indicates strength for the null hypothesis which means we can accept the null Hypothesis p-value of 0.05 indicates the Hypothesis could go either way.
 ### Bias vs Variance
   * Bias: oversimplification
   * Variance: noise capturing
