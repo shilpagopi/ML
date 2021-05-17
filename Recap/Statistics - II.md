@@ -60,3 +60,6 @@ E(x) = np; Var(x) = np(1-p)
 * Test statistic: t = (µˆ − µ)/SE
 
 #### Significance level or alpha = 1 – Confidence level
+
+#### Percentage of variability in Y is explained by X? 
+R^2 = (t^2/(t^2+degrees of freedom))
