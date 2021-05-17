@@ -23,6 +23,7 @@ of x and ¯x tends to be smaller than the distance between each observed value o
 
 #### Standard Score / Z score
 Z-score indicates how many standard deviations an element is from the mean. z = (X - μ) / σ
+Z = (sample mean - μ) / SE
 
 ####  Interquartile range is equal to Q3 - Q1
 
