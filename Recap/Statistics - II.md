@@ -15,14 +15,14 @@ However, when the sample size is large and does not include outliers, the mean s
 #### Sample Variance
 Observations from a simple random sample can be used to estimate the variance of a **population**  
 s^2 = Σ ( xi - x )^2 / ( n - 1 )  
-If population data is given, use n in denominator
+If population data is given, use n in denominator  
 **Why?** 
 Notice that we divide by n − 1 in the denominator and not n. Intuitively, we have to do this because ¯x, which is not the true mean µ but
 is instead an estimate of the true mean, is “closer” to each of the observed values of x’s compared to the true mean µ. Put another way, the distance between each observed value
 of x and ¯x tends to be smaller than the distance between each observed value of x and µ. In the case of expectation, some such errors were positive and others were negative, so they cancelled out on average. But, since we’re squaring the distances, our values, (xi − x¯)^2 will be systematically lower than the true ones (xi − µ)^2. So, if we divide by n instead of n − 1, we’ll end up underestimating our uncertainty.
 
 #### Standard Score / Z score
-Z-score indicates how many standard deviations an element is from the mean. z = (X - μ) / σ
+Z-score indicates how many standard deviations an element is from the mean. z = (X - μ) / σ  
 Z = (sample mean - μ) / SE
 
 ####  Interquartile range is equal to Q3 - Q1
@@ -56,7 +56,7 @@ E(x) = np; Var(x) = np(1-p)
 #### Random quantity
 * The random quantity is approximately Gaussian with mean p and variance p(1−p)/n
 * If variance of population is given, var of sample = (var of popu.)/n
-* Standard error(SE) = σ/√n
+* Standard error(SE) = σ of population/√n
 * Test statistic: t = (µˆ − µ)/SE
 
 #### Significance level or alpha = 1 – Confidence level
