@@ -57,3 +57,5 @@ E(x) = np; Var(x) = np(1-p)
 * If variance of population is given, var of sample = (var of popu.)/n
 * Standard error(SE) = σ/√n
 * Test statistic: t = (µˆ − µ)/SE
+
+#### Significance level or alpha = 1 – Confidence level
