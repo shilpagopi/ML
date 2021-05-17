@@ -16,6 +16,10 @@ However, when the sample size is large and does not include outliers, the mean s
 Observations from a simple random sample can be used to estimate the variance of a **population**  
 s^2 = Σ ( xi - x )^2 / ( n - 1 )  
 If population data is given, use n in denominator
+**Why?** 
+Notice that we divide by n − 1 in the denominator and not n. Intuitively, we have to do this because ¯x, which is not the true mean µ but
+is instead an estimate of the true mean, is “closer” to each of the observed values of x’s compared to the true mean µ. Put another way, the distance between each observed value
+of x and ¯x tends to be smaller than the distance between each observed value of x and µ. In the case of expectation, some such errors were positive and others were negative, so they cancelled out on average. But, since we’re squaring the distances, our values, (xi − x¯)^2 will be systematically lower than the true ones (xi − µ)^2. So, if we divide by n instead of n − 1, we’ll end up underestimating our uncertainty.
 
 #### Standard Score / Z score
 Z-score indicates how many standard deviations an element is from the mean. z = (X - μ) / σ
@@ -39,7 +43,17 @@ As a "rule of thumb", an extreme value is often considered to be an outlier if i
 * If you know the linear correlation (r) between two variables, then the coefficient of determination (R2) is easily computed using the following formula: R2 = r2.
 * A random pattern of residuals supports a linear model; a non-random pattern supports a nonlinear model. The sum of the residuals is always zero, whether the data set is linear or nonlinear.
 
+#### Population mean and Sample statistics
+Population mean (μ), population std deviation (σ), E[sample mean] = μ, E[variance] =σ^2
 
+#### Bernoulli Distribution
+E(x) = p; Var(x) = p(1-p)
 
+#### Binomial Distribution
+E(x) = np; Var(x) = np(1-p)
 
-
+#### Random quantity
+* The random quantity is approximately Gaussian with mean p and variance p(1−p)/n
+* If variance of population is given, var of sample = (var of popu.)/n
+* Standard error(SE) = σ/√n
+* Test statistic: t = (µˆ − µ)/SE
