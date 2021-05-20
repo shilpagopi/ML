@@ -12,6 +12,7 @@
 * PCA makes maximum variability in the dataset more visible by rotating the axes. Principal component captures the most variance
 * PCA involves the transformation of variables in the dataset into a new set of variables which are called PCs (Principal Components). 
 * The principal components would be equal to the number of original variables in the given dataset.
+* One method to find PCA: First compute covariance matrix and then find eigen vectors for cov matrix
 
 #### Covariance
 > cov = (1/N)(Summation of (Xi-X)(Yi-Y))  
