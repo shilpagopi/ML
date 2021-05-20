@@ -32,5 +32,8 @@
 * Large variance implies more structure: high variance axes are treated as principal components, while low variance axes are treated as noise and discarded.
 
 #### Disadvantages
-* PCA can lead to low model performance after applying it if the original dataset has a weak correlation or no correlation. The variables need to be related to one other to apply PCA perfectly.
+* May lower model performance if original features have a weak/no correlation or do not meet the assumptions of linearity.
+* Classification accuracy: If the differentiating characteristics of the classes lie in low variance components, they may be lost.
+* Outliers: PCA is also affected by outliers, and normalization of the data needs to be an essential component of any workflow.
+* Interpretability: Each principal component is a combination of original features and does not allow for the individual feature importance to be recognized
 
