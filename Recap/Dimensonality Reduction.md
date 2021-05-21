@@ -18,7 +18,7 @@
 * Compute covariance matrix: The off-diagonal elements represent the covariance among each pair of variables and the diagonal elements represent variances of each variable.
 * Find eigen vectors for cov matrix: (A - ƛI).v = 0
 * Form a feature maatrix using selected eigen vectors
-* New features = Scaled Data x Feature Matrix
+* New features = (Feature Matrix)T X (Scaled Data)T 
 
 #### Covariance
 > cov = (1/N)(Summation of (Xi-X)(Yi-Y))  
