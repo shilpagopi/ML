@@ -1,7 +1,10 @@
 # Anomaly Detection
+Point anomaly, Contextual anomaly,Collective Anomaly
+
 #### Types of Techniques
 * Unsupervised anomaly detection techniques assume that anomalies are rare in dataset
 * Supervised anomaly detection techniques work like binary classifiers (problem of unbalanced data)
+* Common assumption: anomalies are statistically different from normal instances
 
 #### Techniques
 Density-based techniques (k-nearest neighbor,local outlier factor,isolation forests)  
