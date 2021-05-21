@@ -16,8 +16,10 @@
   * The optimum value of epsilon is at the point of maximum curvature in the K-Distance Graph (data point vs. its nearest data point for all dataset points)
 *  A data point is a Core point if the circle around it contains at least ‘minPoints’ number of points. If the number of points is less than minPoints, then it is classified as Border Point, and if there are no other data points around any data point within epsilon radius, then it treated as Noise.
 
-
 #### Density Reachability and Connectivity
 * Directly Density-Reachable: A point X is directly density-reachable from point Y if dist(X, Y) <= epsilon and Y is a core point (viceversa may not be true)
 * Density-Reachable: C is density reachable from A if A->B->C where -> means 'directly density-reachable'
 * Density-Connected: X is density-connected from Y if there exists a point O such that X<-O and O->Y
+
+#### Limitations of DBSCAN
+It struggles with clusters of similar densities and also if the dimension of data increases.
