@@ -4,6 +4,7 @@
 * Similar to K-means, but K need not be specified in advance
 * K-Means lead to spherical clusters. DBSCAN creates clustrs of varied shape.
 * In K-Means, a slight data change may affect centroids and output clusters. This problem is greatly reduced in DBSCAN.
+* Robust to outliers
 * K-Means assigns every point into a cluster whereas DBSCAN creates 3 types of points: Core, Border and Noise.
 
 #### Concepts
