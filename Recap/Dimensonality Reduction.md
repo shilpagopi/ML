@@ -36,4 +36,5 @@
 * Classification accuracy: If the differentiating characteristics of the classes lie in low variance components, they may be lost.
 * Outliers: PCA is also affected by outliers, and normalization of the data needs to be an essential component of any workflow.
 * Interpretability: Each principal component is a combination of original features and does not allow for the individual feature importance to be recognized
+* Does not preserve the distances between points
 
