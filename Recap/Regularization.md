@@ -1,7 +1,8 @@
 # Regularization
 
 Why? To prevent overfitting.  
-Regularization significantly reduces the variance of the model, without substantial increase in its bias.  
+Regularization significantly reduces the variance of the model, without substantial increase in its bias.
+Regularization reduces flexibility of complex models
 
 ### Lasso Regression (L1 Norm)
 <img src = "https://miro.medium.com/max/1094/1*tHJ4sSPYV0bDr8xxEdiwXA.png" width = "600" height = "100">
@@ -30,3 +31,7 @@ Dropout is the fraction of neurons we "drop", randomly picked for each iteration
 We delete the connections going into, and out of, the neuron when we drop it.
 
 ### Using cross-validation techniques also reduces variance.
+* Cross-validation on Time series:
+Fold 1 : training [1], test [2]  
+Fold 2 : training [1 2], test [3]  
+Fold 3 : training [1 2 3], test [4]  
