@@ -48,3 +48,5 @@ Eg. Linear Regression
 
 * Non-Parametric: Need training data to make predictions. Storage to represent hypothesis grows linearly with the size of the training set.
 Eg. Locally weighted linear regression algorithm.
+### AI, ML, DL, Data Mining
+DL -> subset of -> ML -> subset of -> AI 
