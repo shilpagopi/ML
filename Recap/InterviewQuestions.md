@@ -50,3 +50,6 @@ Eg. Linear Regression
 Eg. Locally weighted linear regression algorithm.
 ### AI, ML, DL, Data Mining
 DL -> subset of -> ML -> subset of -> AI 
+
+### One-hot encoding vs Label encoding
+Label encoding: var x = 1,2 or 3. No dimensionality increase.
