@@ -25,6 +25,9 @@
 
 - https://blog.finxter.com/top-pytorch-cheat-sheets/
 
+- https://www.stefanseegerer.de/media/pytorch-cheatsheet-EN.pdf
+- https://web.cs.ucdavis.edu/~yjlee/teaching/ecs289g-winter2018/Pytorch_Tutorial.pdf
+
 6. Scipy 
 - https://www.datacamp.com/community/blog/python-scipy-cheat-sheet#gs.JDSg3OI
 
