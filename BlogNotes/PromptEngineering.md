@@ -16,3 +16,4 @@
 * Use of action verbs: eg. generate, create,  categorize, classify, complete etc.
 * Use of delimiters(```, """, < >, <tag> </tag>) : eg. summarize the text delimited by triple backquotes
 * Response Styling: eg. instruct to respond in a consistent style say, student to teacher.
+* Chain prompting : eg. give multiple steps to reach output
