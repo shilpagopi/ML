@@ -18,3 +18,6 @@
 * Response Styling: eg. instruct to respond in a consistent style say, student to teacher.
 * Chain prompting : eg. give multiple steps to reach output
 * Output Specification: eg. Tabular style, limit within 5 sentences or 100 words.
+* Transformation: language translation, spelling and grammar checking, tone adjustment (formal/informal/slang), format conversion
+* Roles - System, Assistant, User: Assistant is the chatbot, and system is the hidden controller of assistant behaviour.
+* Inference - eg. infer top 3 topics of discussion, extract list of emotions/product aspects in the customer review
