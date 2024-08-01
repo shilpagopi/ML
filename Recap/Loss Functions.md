@@ -38,3 +38,15 @@
 
 * False Positive Rate, FPR = 1 - TNR = FP/TN+FP
 * False Negative Rate, FNR = 1- TPR = FN/TP+FN
+
+## Gen-AI Loss Functions
+### 1. Perplexity: 
+* Measure of uncertainty or surprise: It measures a model's ability to predict the next word in a sequence.
+* It quantifies the model's "surprise" when encountering new data — lower surprise indicates better prediction accuracy
+* Perpelxity = inverse of the geometric mean of the probability distribution over all possible outputs for a given input.
+* Perplexity = 2 ^ Entropy
+* Eg. if dog and cat can be predicted with [0.5, 0.5] prob, perplexity = 1/(sqrt(0.5*0.5) = 1.4
+* For a very confident/reliable model, perplexity is 1.
+* Perplexity of a fair k-sided dice is k. (Note: for geometric mean of n numbers, take nth root of product of those numbers.)
+* Limitations: Ignores the natural word frequencies, overlooks word order significance
+* Link for derivation: https://www.cs.bu.edu/fac/snyder/cs505/PerplexityPosts.pdf
