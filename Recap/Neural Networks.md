@@ -5,7 +5,7 @@
 One-to-one, one-to-many, many-to-one, many-to-many (input and output: same size, different size), bi-directional, deep (DRNN)
 
 ## Activation Functions
-<img src="https://github.com/shilpagopi/ML/blob/master/Recap/img/activation-functions.JPG" width="750" height="300">
+<img src="https://miro.medium.com/v2/resize:fit:1400/1*p_hyqAtyI8pbt2kEl6siOQ.png" width="750" height="600">
 
 ## BackPropagation
 <img src="https://github.com/shilpagopi/ML/blob/master/Recap/img/gradient_descent.png" width="250" height="250">
