@@ -48,5 +48,9 @@
 * Eg. if dog and cat can be predicted with [0.5, 0.5] prob, perplexity = 1/(sqrt(0.5*0.5) = 1.4
 * For a very confident/reliable model, perplexity is 1.
 * Perplexity of a fair k-sided dice is k. (Note: for geometric mean of n numbers, take nth root of product of those numbers.)
-* Limitations: Ignores the natural word frequencies, overlooks word order significance
+* Limitations:
+     * Ignores the natural word frequencies
+     * overlooks word order significance
+     * cannot compare over multiple datasets as word distributions are different
+     * not correlated to accuracy
 * Link for derivation: https://www.cs.bu.edu/fac/snyder/cs505/PerplexityPosts.pdf
