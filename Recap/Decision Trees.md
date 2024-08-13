@@ -50,6 +50,9 @@ Heuristics: Random Selection of Split Points, Percentiles (focuses on regions wi
 ## Advantages
 * Implicitly perform variable screening or feature selection
 * Nonlinear relationships between parameters do not affect tree performance
+* Can handle missing data
+* Handling mixed data types
+* Interpretability and Explainability
 
 ## Disadvantages
 * Unstable and **sensitive to variance**,as small variations in data might generate a completely different tree
