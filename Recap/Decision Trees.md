@@ -10,7 +10,8 @@ Entropy after splitting based on a feature, E(parent,feature):
 ### 2. Information gain
 > IG =   E(parent) - E(parent,feature)
 ### 3. Gini index
-Calculate gini index for each split, as the weighted Gini score of each node of that split  
+Calculate gini index for each split, as the weighted Gini score of each node of that split (similar to entropy) 
+Gini index range: 0(pure) to 0.5(most impure)
 <img src="https://miro.medium.com/max/417/1*QF-JeWpQQ86xhRhseHGecg.png" width="250" height="75">
 
 ### 4. Reduction in Variance  
