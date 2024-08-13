@@ -13,6 +13,14 @@
 ##### Why do we need activation functions?
 Its primary purpose is to introduce non-linearity into the model. Without activation functions, a neural network would be equivalent to a simple linear regression model, incapable of learning complex patterns in data.
 
+##### Activation functions depending on output layer
+softmax is used for multi-class classification, sigmoid for binary classification, and linear for regression.   
+
+##### Activation functions depending on architecture
+Generative Adversarial Networks (GANs): Leaky ReLU for the generator, and sigmoid or tanh for the discriminator
+RNN: Tanh or ReLU (more nowadays)
+CNN: ReLU
+
 ##### Why is RELU better?
 * Computational Simplicity
 * Negative inputs can output true zero values allowing a sparse representation which accelerates learning and simplifies the model.
