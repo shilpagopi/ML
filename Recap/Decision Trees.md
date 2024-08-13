@@ -9,6 +9,7 @@ Entropy after splitting based on a feature, E(parent,feature):
 <img src="https://miro.medium.com/max/491/0*d-tAV4Ci2D2mzhrg.png" width="600" height="400">  
 ### 2. Information gain
 > IG =   E(parent) - E(parent,feature)
+
 ### 3. Gini index
 Calculate gini index for each split, as the weighted Gini score of each node of that split (similar to entropy) 
 Gini index range: 0(pure) to 0.5(most impure)
@@ -20,6 +21,10 @@ Calculate variance for each split as the weighted average of each node variance.
 
 ### 5. Reduction in MSE (for regression)  
 Calculate MSE for each split as the weighted average of each node MSE.
+
+### 6.Continuous Variable
+Sort the data, the potential split points are typically the midpoints between consecutive values.
+Heuristics: Random Selection of Split Points, Percentiles (focuses on regions with higher data density), Entropy-Based Sampling (calculating entropy for different intervals of the continuous variable)
 
 ### Prediction from a single impure leaf node
 * Majority Voting/Probability-Based Prediction:
