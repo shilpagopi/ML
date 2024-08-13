@@ -30,6 +30,15 @@ every theta iteration is slightly lesser than the previous value of theta.
 Dropout is the fraction of neurons we "drop", randomly picked for each iteration.
 We delete the connections going into, and out of, the neuron when we drop it.
 
+### Batch Normalization
+* normalize the inputs of a layer for each mini-batch, typically applied after the activation function.
+* Normalized_x = (x - mean(x)) / std(x), Output = gamma * Normalized_x + beta, gamma and beta are learnable params.
+* Benefits
+  * Reduces internal covariate shift between layers: By normalizing the inputs, it helps to stabilize the distribution of activations across layers, preventing the distribution of inputs to later layers from changing drastically.
+  * Improves gradient flow: By reducing the magnitude of activations, it helps to prevent vanishing or exploding gradients.
+  * Acts as a regularizer: Reduces overfitting by introducing noise into the training process.
+  * Allows for higher learning rates: Since the inputs are normalized, higher learning rates can be used without causing instability.   
+
 ### Using cross-validation techniques also reduces variance.
 * Cross-validation on Time series:
 Fold 1 : training [1], test [2]  
