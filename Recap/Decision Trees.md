@@ -32,9 +32,15 @@ Heuristics: Random Selection of Split Points, Percentiles (focuses on regions wi
 
 ## How to avoid overfitting?
 * **Pruning**
+* Pre-pruning
   * Minimum samples for a terminal node
   * Maximum depth of tree
   * Maximum features to consider for split
+  * Minimum information gain
+* Postpruning
+  * Cost-complexity pruning: A cost-complexity parameter is introduced to balance tree size and accuracy.
+  * Error-based pruning: Subtrees are removed if their removal doesn't increase the error rate significantly.
+    
 * **Random forest**
 
 ## Decision trees vs Linear models?
