@@ -21,3 +21,6 @@ Using the kernel trick enables us effectively run algorithms in a high-dimension
 
 ### AI, ML, DL, Data Mining
 DL -> subset of -> ML -> subset of -> AI 
+
+#### Types of Cross-Validation
+K-Fold Cross-Validation, Stratified K-Fold Cross-Validation,Leave-One-Out Cross-Validation (LOOCV): Each data point is used as a validation set once - computationally expensive for large datasets.
