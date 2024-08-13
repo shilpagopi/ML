@@ -13,5 +13,9 @@
     * detect the hidden (latent) correlation between semantics (words)
     * SVD (singular value decomposition) technique: matrix contains rows for words and columns for documents.
     * handle static and unstructured data, generally
-      
+ 
+### LLM Training and Inference
+* Self-supervised learning or Pretraining - as a next word predictor
+* SFT: Supervised fine-tuning or instruction tuning - Prompts and sample inputs by human labeler are given as a labeled dataset.
+* RLHF: Reinforcement Learning from Human Feedback - Generate multiple outputs, human ranks, train a reward model and freeze, optimize base model for higher rewards. Why RLHF - For human alignment, to maximize helpfulness, minimize harm, reduce dishonesty.      
 
