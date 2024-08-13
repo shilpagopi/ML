@@ -18,6 +18,10 @@ Gini index range: 0(pure) to 0.5(most impure)
 Calculate variance for each split as the weighted average of each node variance.  
 <img src="https://miro.medium.com/max/300/0*cTpeBgM-byR-rWx_.png" width="250" height="75"> 
 
+### Prediction from a single impure leaf node
+* Majority Voting/Probability-Based Prediction:
+* Confidence-Based Prediction:if probability(class) in leaf node is below a confidence threshold, assign a default class.
+
 ## How to avoid overfitting?
 * **Pruning**
   * Minimum samples for a terminal node
