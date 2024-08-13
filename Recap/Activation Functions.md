@@ -25,3 +25,20 @@ Its primary purpose is to introduce non-linearity into the model. Without activa
 * Batch Normalization: Normalizing activations
 * Architectural: Resnets (skip connections), LSTM and GRU gates
 * Optimization algorithsm with Adaptive learning rate methods. Eg: Adam and RMSprop
+
+##### Recent Advancements
+* Mish: a smooth, continuous, self regularized, non-monotonic activation function:
+  * Mish: f(x) = x*tanh(log(1+e^x))
+  * Mish is bounded below at around 0.31, and unbound above.
+  * Due to the preservation of a small amount of negative information, Mish eliminated the Dying ReLU phenomenon.
+* Swish
+* Gaussian Error Linear Unit (GELU):Inspired by dropout, GELU introduces a stochastic element into the activation function.
+* Hybrid Activation Functions:Combining multiple activation functions within a single layer
+* Areas of interest:
+  * Smoothness: to help with gradient flow and optimization)
+  * Non-monotonicity: to introduce more complex behaviors and improve model expressivity
+  * Adaptivity: to adapt to different data distributions or training stages
+
+
+
+
