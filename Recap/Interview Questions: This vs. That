@@ -35,3 +35,8 @@ DL -> subset of -> ML -> subset of -> AI
 
 ### One-hot encoding vs Label encoding
 Label encoding: var x = 1,2 or 3. No dimensionality increase.
+
+### Layer norm vs Batch norm
+* Normalization axis: Batch normalization normalizes across the batch dimension, while layer normalization normalizes across the feature dimension for a single training example.
+* Sensitivity to batch size: Batch normalization is sensitive to batch size, while layer normalization is not
+* Mathematical steps similar: compute mean and variance, Normalized_x = (x - mean(x)) / std(x), Scale and shift: Output = gamma * Normalized_x + beta
