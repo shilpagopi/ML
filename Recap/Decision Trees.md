@@ -18,6 +18,9 @@ Gini index range: 0(pure) to 0.5(most impure)
 Calculate variance for each split as the weighted average of each node variance.  
 <img src="https://miro.medium.com/max/300/0*cTpeBgM-byR-rWx_.png" width="250" height="75"> 
 
+### 5. Reduction in MSE (for regression)  
+Calculate MSE for each split as the weighted average of each node MSE.
+
 ### Prediction from a single impure leaf node
 * Majority Voting/Probability-Based Prediction:
 * Confidence-Based Prediction:if probability(class) in leaf node is below a confidence threshold, assign a default class.
@@ -41,3 +44,12 @@ Calculate variance for each split as the weighted average of each node variance.
 * Unstable and **sensitive to variance**,as small variations in data might generate a completely different tree
 * Greedy algorithms cannot guarantee to return the **globally optimal** decision tree
 * May generate **biased** trees if some classes dominate (unbalanced data)
+
+### Algorithms comparison
+Feature| ID3	| C4.5	| CART|
+--|--|--|--
+Data type	| Categorical	|Categorical and continuous	|Categorical and continuous
+Splitting criterion|	Information gain|	Gain ratio	|Gini impurity (classification), squared error (regression)
+Handling missing values	|No	|Yes	|Yes
+Pruning	|No	|Yes|	Yes
+Tree structure	|Multi-way splits|	Multi-way splits	|Binary splits
