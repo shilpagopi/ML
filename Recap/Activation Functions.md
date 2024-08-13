@@ -8,7 +8,7 @@
 | Sigmoid | | g(z) (1-g(z))| Range: 0-1, non-linear, continuously differentiable, monotonic, and has a fixed output range. Not zero centered - makes optimization harder.| Y | NO |
 |Tanh|| 1 - g(z)^2|Range:-1 to 1, Non-linear, zero-centered, more preferred to sigmoid (?), steeper gradient than sigmoid,  fixed output range |Y|NO|
 | Leaky RELU| (alpha x z) when z<0 | alpha | usu, alpha = 0.01 | NO | Y |
-* Vanishing gradients happens when derivative of activation function 0<=f’(x)<1; exploding gradients when f’(x)>1.
+* Vanishing gradients happens when derivative of activation function 0<=f’(x)<1; exploding gradients when f’(x)>1. Gradients used to update the network's weights become extremely small or "vanish" as they are backpropagated from the output layers to the earlier layers. (Eg. sigmoid, tanh)
 
 ##### Why do we need activation functions?
 Its primary purpose is to introduce non-linearity into the model. Without activation functions, a neural network would be equivalent to a simple linear regression model, incapable of learning complex patterns in data.
