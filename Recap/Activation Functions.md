@@ -17,3 +17,11 @@ Its primary purpose is to introduce non-linearity into the model. Without activa
 * Computational Simplicity
 * Negative inputs can output true zero values allowing a sparse representation which accelerates learning and simplifies the model.
 * Easier to optimize when its behavior is linear or close to linear.
+
+##### Solutions to Vanishing Gradient Problem
+* Activation Functions:ReLU and its variants
+* Weight initialization techniques like Xavier and He initialization
+* Gradient Clipping
+* Batch Normalization: Normalizing activations
+* Architectural: Resnets (skip connections), LSTM and GRU gates
+* Optimization algorithsm with Adaptive learning rate methods. Eg: Adam and RMSprop
