@@ -12,9 +12,10 @@ Using the kernel trick enables us effectively run algorithms in a high-dimension
 * Select the threshold with the largest G-Mean value.
 
 ### How to handle data imbalance
-* Use under sampling or over sampling to balance the data
+* Use under sampling or over sampling to balance the data (oversampling - overfitting, undersampling - info loss)
 * Change the prediction threshold value
-* Assign laregr sample weights to minority labels 
+* Assign larger sample weights to minority labels
+* Use apt eval metrics (prec, rec, f1 instead of accuracy)
 * Detect anomalies
 
 ### CRV curves? Lift Curves?
