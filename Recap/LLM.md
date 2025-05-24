@@ -4,6 +4,17 @@
 * Instruction Fine-tuning
 * Alignment: Reinforcement Learning from Human Feedback (RLHF)
 
+#### Decoding strategies
+* Greedy Sampling: Picks the token with the highest probability.
+  Pros: Simple and fast. Cons: Repetitive and Generic, Suboptimal Global Sequence
+* Beam Search: Tracks k (beam width) most probable sequences. Branch out by k and prune.
+  Pros: More globally probable and coherent and less repeptitive than greedy search. Cons: Less diverse
+* Sampling Strategies (Introducing Randomness)
+  * Temperature(T) Sampling: Divide logits (raw prediction scores) by T *before* the softmax function. T = 0: Equivalent to greedy sampling. T = 1: No change (standard sampling).T < 1: "Hardens" or "sharpens" the distribution (conservative and deterministic). T > 1: "Softens" or "flattens" the distribution (creative, even non coherent)
+  * Top-K Sampling: A token is sampled from the k most probable tokens. Pros:Diverse, Avoids sampling extremely unlikely tokens Cons: The fixed k.
+  * Top-P Sampling (Nucleus Sampling): Samples from the smallest set of tokens whose cumulative probability exceeds a threshold p. Pros: Dynamically adjusts the number of tokens, more robust that top-K. Provides a good balance between coherence and diversity.
+* Combining Strategies: Temperature and Top-P
+
 #### Evaluation
 * Human evaluation:Rating Scales (e.g., Likert scale), Ranking, A/B Testing, Critique and Annotation.
   Human evaluation parameters: Fluency/Naturalness,Coherence/Consistency, Relevance/Fidelity to Prompt, Creativity/Diversity, Factuality/Truthfulness, Safety/Harmlessness, Aesthetics, Task-Specific Criteria
