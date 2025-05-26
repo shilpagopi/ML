@@ -93,4 +93,20 @@ This final (seq_len, d_model) output is the context-aware representation of the 
 * Encoder-Decoder Attention (Cross-Attention): Used in the decoder. Queries come from the decoder's previous layer output, while Keys and Values come from the encoder's output. This allows the decoder to focus on relevant parts of the input sequence when generating the output.
 * Masked Self-Attention (Causal Attention): Used in the decoder for training. It's a special type of self-attention where future tokens are "masked out" (set to negative infinity before softmax) to prevent the model from "cheating" by looking at subsequent tokens when predicting the current one. This ensures that the generation process remains autoregressive (only depends on past information).
 
+##### Types of Attention:
+* Scaled Dot product attention discussed above.
   
+* Additive Attention (Bahdanau Attention):
+Concept: Unlike dot-product attention which relies on a multiplicative interaction (dot product), additive attention computes alignment scores using a feed-forward neural network with a single hidden layer.
+How it works: It combines the query and key vectors (often from different sequences, e.g., encoder hidden states and decoder hidden states) and passes them through a tanh activation function, followed by a linear transformation and then softmax. The formula often looks something like: 
+​(h_i,s_j) = v*  tanh(W[h i;s j])  (?)
+Context: This was a popular attention mechanism before the Transformer introduced scaled dot-product attention, particularly in sequence-to-sequence models with Recurrent Neural Networks (RNNs).
+
+* Local Attention:
+Concept: Traditional (global) attention mechanisms compute attention weights over the entire input sequence, which can be computationally expensive for very long sequences (quadratic complexity). Local attention addresses this by restricting the attention mechanism to a smaller, localized window around a certain position in the sequence.
+Benefit: Reduces computational complexity, making it more efficient for long sequences, especially when the relevant information is likely to be found in a local context (e.g., in time series data or very long documents).
+
+* Linear Attention:
+Concept: A class of attention mechanisms that aim to reduce the quadratic complexity of standard attention to linear complexity with respect to sequence length.
+How it works: Instead of the dot product followed by softmax, linear attention typically uses a different similarity function (e.g., a kernel function or a combination of operations) that allows for the factorization of the attention matrix, leading to linear time and space complexity.
+Examples: Performer, Linformer, and models like BASED utilize linear attention variants. This is particularly relevant for handling extremely long sequences in large language models.
