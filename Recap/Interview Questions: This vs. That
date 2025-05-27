@@ -41,6 +41,24 @@ Label encoding: var x = 1,2 or 3. No dimensionality increase.
 * Sensitivity to batch size: Batch normalization is sensitive to batch size, while layer normalization is not
 * Mathematical steps similar: compute mean and variance, Normalized_x = (x - mean(x)) / std(x), Scale and shift: Output = gamma * Normalized_x + beta
 
+### Explain the difference between Maximum Likelihood Estimation (MLE) and Maximum A Posteriori (MAP) estimation.
+
+Answer: Both MLE and MAP are methods for estimating the parameters of a statistical model, but they differ in their philosophical approach:
+Maximum Likelihood Estimation (MLE):
+A frequentist approach.
+Aims to find the parameter values that maximize the likelihood of observing the given data.
+Assumes the parameters are fixed but unknown.
+It only considers the likelihood function, P(Data∣θ), where θ represents the parameters.
+It is prone to overfitting with small datasets or complex models if not regularized.
+
+Maximum A Posteriori (MAP) Estimation:
+A Bayesian approach.
+Aims to find the parameter values that maximize the posterior probability of the parameters given the data.
+Incorporates prior knowledge or beliefs about the parameters in the form of a prior distribution, P(θ).
+The formula is P(θ∣Data)∝P(Data∣θ)∗P(θ), where P(Data∣θ) is the likelihood and P(θ) is the prior.
+When the prior is uniform (i.e., all parameter values are equally likely), MAP estimation reduces to MLE.
+MAP can be more robust to small datasets by leveraging prior information.
+
 ### Differentiate between autoregressive and masked language models
 
 | Feature           | Autoregressive Language Models (ARLMs) | Masked Language Models (MLMs)        |
