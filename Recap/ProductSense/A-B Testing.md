@@ -83,11 +83,32 @@ This means the observed difference is not statistically significant. You do not 
 While the p-value tells you if a difference exists, the confidence interval tells you the magnitude and direction of that difference, and the range of plausible values for the true difference.
 <img width="721" alt="image" src="https://github.com/user-attachments/assets/3c62fb41-479b-437d-88e9-12aaf69ac93e" />
 
-
 Confidence Interval: Answers the question: "What is the range of plausible values for the true effect?"
 Doesn't include zero: Statistically significant effect, direction is clear.
 Includes zero: Not statistically significant, zero difference is a plausible outcome.
 Practical Significance: Even if a result is statistically significant, is the magnitude of the change large enough to be meaningful from a business perspective? A 0.01% increase in conversion rate might be statistically significant with huge sample sizes, but it might not be worth the development effort.
 Sample Size and Duration: Ensure your test ran long enough and collected sufficient data as determined by your initial power analysis. Stopping early invalidates results.
 Assumptions: Be aware of the assumptions of the statistical tests you use (e.g., independence of observations, approximate normality for t-tests with smaller samples).
+
+## For 2 samples with continuous values:
+<img width="734" alt="image" src="https://github.com/user-attachments/assets/a9bc6885-17ad-44ce-b484-831f8fe1ee3a" />
+
+<img width="720" alt="image" src="https://github.com/user-attachments/assets/350adb39-0a7c-49ac-8604-105ef6c42122" />
+
+<img width="734" alt="image" src="https://github.com/user-attachments/assets/7e68a4fe-4e3f-46ac-90a9-63d290de7cae" />
+
+<img width="727" alt="image" src="https://github.com/user-attachments/assets/192bbbd8-ea63-40f5-8989-9d71ae17251a" />
+
+## For 2 samples with categorical values:
+<img width="727" alt="image" src="https://github.com/user-attachments/assets/6434c2bd-ecfc-4588-b665-d162eded78d5" />
+
+<img width="736" alt="image" src="https://github.com/user-attachments/assets/56a2f0e8-12a6-432b-a3de-0adc52bb9374" />
+
+<img width="725" alt="image" src="https://github.com/user-attachments/assets/9caff218-f911-4f79-ad60-ce2a9a273248" />
+
+
+
+
+
+
 
