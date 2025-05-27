@@ -26,5 +26,40 @@ Key Characteristics: Discrete Outcomes,Finite Set of Outcomes,Equal Probability
 > Variance: Var(X)= ((b−a+1)^2-1)/12
 > For a standard die, n=(6−1+1)=6. So, the variance is (6^2−1)/12=(36−1)/12=35/12≈2.9167.
 
+#### <img width="360" alt="image" src="https://github.com/user-attachments/assets/e9e83fda-b88e-4d1e-94be-3fdc4f0dc714" />
+
+#### Basic Probability
+<img width="681" alt="image" src="https://github.com/user-attachments/assets/0e582407-14e4-4881-a2e4-de44e0a2c2f2" />
+
+#### Combinatorics
+<img width="720" alt="image" src="https://github.com/user-attachments/assets/11dcfb70-5499-4deb-894c-c310bab70b0d" />
+
+#### Random Variables
+<img width="637" alt="image" src="https://github.com/user-attachments/assets/3d3b8171-f13f-48bd-a6fa-a4baa7a8edfb" />
+
+#### Common Discrete Distributions
+<img width="709" alt="image" src="https://github.com/user-attachments/assets/83aa9dc1-aca7-488a-a501-1ba7c21d82b0" />
+
+#### Common Continuous Distributions
+<img width="709" alt="image" src="https://github.com/user-attachments/assets/851b1c26-29e4-493f-8fc8-703401433495" />
+
+#### Descriptive Statistics
+<img width="644" alt="image" src="https://github.com/user-attachments/assets/47c5a397-8f37-42a7-a207-93ce441db6a7" />
+
+#### Inferential Statistics
+<img width="705" alt="image" src="https://github.com/user-attachments/assets/95b03826-7e6e-4959-976a-235a90c54d2e" />
+
+#### Hypothesis Testing
+<img width="716" alt="image" src="https://github.com/user-attachments/assets/124660e0-8319-4c3a-b73c-be4da10a6a07" />
+
+<img width="720" alt="image" src="https://github.com/user-attachments/assets/66f6b3a8-427b-48b8-a3fc-fa20613e073b" />
+
+
+
+
+
+
+
+
 
 
