@@ -7,7 +7,7 @@ Inferential Statistics: Uses a sample of data to make inferences or predictions 
 
 #### 2. Explain the Central Limit Theorem (CLT) and its significance.
 
-Answer: The Central Limit Theorem states that, regardless of the original distribution of a population, the sampling distribution of the sample mean (or sum) will approach a normal distribution as the sample size increases. This is significant because:
+Answer: The Central Limit Theorem states that, regardless of the original distribution of a population, the sampling distribution of the sample mean (or sum) will approach a normal distribution as the sample size increases. E[Xbar]=μ. This is significant because:
 It allows us to use normal distribution properties for hypothesis testing and confidence intervals, even if the original population isn't normally distributed.
 It's fundamental to understanding why many statistical methods work.
 It applies to a wide range of real-world scenarios where data is aggregated.
