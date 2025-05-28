@@ -66,6 +66,11 @@ Expected no. of buys to collect all n different coupons.
 * Say you roll three dice, one by one. What is the probability that you obtain 3 numbers in a strictly increasing order? 5/54
 * What is the expected number of coin flips needed to get two consecutive heads? 6
   <img width="741" alt="image" src="https://github.com/user-attachments/assets/d11dd209-df09-4b65-a899-a72f039e4c6c" />
-* 
+* What is the probability that none of the ants collide, if k ants sit on k corners of an equilateral polygon and each ant randomly picks a direction and starts moving along the edge ? Ans. 1/(2^(k-1))
+* How many cards would you expect to draw from a standard deck before seeing the first ace? 10.6
+* The expected number of cards to draw until the first special card is observed is given by the formula: E= (K+1)/(N+1), where N=52,K=number of special cards.
+  Formula basis: Think of aces being evenly spread out. 4*10.6+(10.6-1)=52
+​
+
 
 
