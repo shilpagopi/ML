@@ -64,4 +64,8 @@ The overall number of rolls is,
 
 = 14.7
 * Say you roll three dice, one by one. What is the probability that you obtain 3 numbers in a strictly increasing order? 5/54
+* What is the expected number of coin flips needed to get two consecutive heads? 6
+  <img width="741" alt="image" src="https://github.com/user-attachments/assets/d11dd209-df09-4b65-a899-a72f039e4c6c" />
+* 
+
 
