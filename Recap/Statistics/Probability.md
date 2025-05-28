@@ -70,6 +70,7 @@ Expected no. of buys to collect all n different coupons.
 * How many cards would you expect to draw from a standard deck before seeing the first ace? 10.6
 * The expected number of cards to draw until the first special card is observed is given by the formula: E= (K+1)/(N+1), where N=52,K=number of special cards.
   Formula basis: Think of aces being evenly spread out. 4*10.6+(10.6-1)=52
+* A and B are playing a game where A has n+1 coins, B has n coins, and they each flip all of their coins. What is the probability that A will have more heads than B? 0.5 (intuitive answer)
 ​
 
 
