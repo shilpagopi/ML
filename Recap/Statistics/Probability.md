@@ -71,6 +71,7 @@ Expected no. of buys to collect all n different coupons.
 * The expected number of cards to draw until the first special card is observed is given by the formula: E= (K+1)/(N+1), where N=52,K=number of special cards.
   Formula basis: Think of aces being evenly spread out. 4*10.6+(10.6-1)=52
 * A and B are playing a game where A has n+1 coins, B has n coins, and they each flip all of their coins. What is the probability that A will have more heads than B? 0.5 (intuitive answer)
+* Say you are given an unfair coin, with an unknown bias towards heads or tails. How can you generate fair odds using this coin? use "HT" to denote head and "TH" to denote tail coz prob = p(1-p), equal for both cases. Ignore "HH" and "TT"
 ​
 
 
