@@ -24,4 +24,5 @@ Expected no. of buys to collect all n different coupons.
 * What is the probability that a seven-game series goes to 7 games?
 * What is the probability that two random chords in a circle will intersect? 1/3
 * What is the expected number of rolls needed to see all 6 sides of a fair die? (1+6/5+6/4+6/3+6/2+6/1) = 14.7
+* Say you roll three dice, one by one. What is the probability that you obtain 3 numbers in a strictly increasing order? 5/54
 
