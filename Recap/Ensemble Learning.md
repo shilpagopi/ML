@@ -13,7 +13,7 @@ Example|Random Forest|Adaboost
 ### Random Forest
 **Randomness**
 * Random sampling of training data points with replacement (bootstrapping) when building trees
-* Random subsets of features considered when splitting nodes
+* Random subset of features considered for splitting, at each node
 
 **Probability Estimation**  
 a) Fraction of trees voting for a class (hard voting)  
