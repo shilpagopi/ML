@@ -26,6 +26,32 @@ What it is: A boolean flag to calculate the out-of-bag (OOB) error. OOB samples 
 Monitor model performance as you increase n_estimators and see when the OOB error stabilizes.
 RandomizedSearchCV instead of gridsearch for other hyperparameter tuning, if the dataset has say 1m rows.
 
+#### Bias and Variance of a Single Decision Tree
+High Variance: A single, unpruned decision tree tends to have high variance. This is because decision trees are very flexible models that can fit the training data extremely well, sometimes even perfectly. They are prone to overfitting, meaning they learn the noise in the training data in addition to the underlying patterns. If you were to train a decision tree on a slightly different subset of the training data, the resulting tree structure and predictions could change drastically. This sensitivity to the training data is the hallmark of high variance.
+
+Low Bias: Conversely, a single, unpruned decision tree tends to have low bias. This is because, given enough depth, a decision tree can capture complex, non-linear relationships in the data. It can model almost any function, leading to a low systemic error (bias) in its predictions on the training data.
+Bias and Variance of a Random Forest
+Random Forest leverages the bias-variance tradeoff to achieve better overall performance than a single decision tree. It does this by combining multiple decision trees using a technique called bootstrap aggregating (bagging) and introducing additional randomness.
+
+Here's how Random Forest typically behaves in terms of bias and variance:
+
+Variance: Significantly Reduced
+This is the primary strength of Random Forest. It reduces variance through two main mechanisms:
+
+Bagging (Bootstrap Aggregating):
+Random Forest builds multiple decision trees (the "forest"), where each tree is trained on a different bootstrap sample (a random sample with replacement) of the original training data.
+Since each tree sees a slightly different subset of the data, they will make different errors.
+For regression, the final prediction is the average of the predictions from all individual trees. For classification, it's a majority vote. Averaging (or voting) uncorrelated errors significantly reduces the variance of the overall ensemble. The more uncorrelated the trees are, the greater the variance reduction.
+
+Feature Randomness (Random Subspace Method):
+At each node in each individual tree, Random Forest considers only a random subset of the available features when determining the best split. This further decorrelates the trees, as they are less likely to split on the same strong features repeatedly. If one or two features are very strong predictors, a standard bagging approach might lead to very similar trees. By limiting feature consideration, Random Forest ensures greater diversity among the trees.
+
+Bias: Slightly Increased (or similar to a single tree, depending on the context)
+While the primary goal of Random Forest is variance reduction, it can introduce a slight increase in bias compared to a single unpruned decision tree. This is because:
+
+Feature Randomness: By randomly selecting a subset of features at each split, individual trees might not always find the globally optimal split, potentially introducing a small amount of additional bias in each tree.
+Averaging: Averaging multiple biased models doesn't necessarily reduce bias. However, the bias of a Random Forest is generally comparable to or only slightly higher than that of a single decision tree that is allowed to grow deep (low bias). The key is that the massive reduction in variance typically far outweighs any minor increase in bias, leading to a much better overall model.
+
 ### AdaBoost (Adaptive Boosting)
 ```
 a) Count of dataset instances = n
