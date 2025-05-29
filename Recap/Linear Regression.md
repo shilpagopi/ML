@@ -50,6 +50,8 @@ Correlation coefficients range from -1 to 1.
 Values close to +1 (strong positive correlation) or -1 (strong negative correlation) indicate a strong linear relationship between the two variables.
 Rule of Thumb: Absolute correlation values above 0.7 or 0.8 (some even use 0.6) are generally considered to indicate a strong pairwise correlation, which might be a sign of multicollinearity.
 Limitations: This method only detects pairwise multicollinearity. It might not catch cases where three or more variables are linearly related even if no two individual variables are highly correlated.
+Correlation Coefficients beyond Pearson (for specific non-linear monotonic relationships):
+Spearman's Rank Correlation or Kendall's Tau: These measure the strength and direction of a monotonic relationship (where variables tend to move in the same or opposite direction, but not necessarily at a constant rate). They can detect non-linear monotonic relationships, but not complex non-monotonic ones (like U-shaped).
 
 ####  2. Variance Inflation Factor (VIF)
 
