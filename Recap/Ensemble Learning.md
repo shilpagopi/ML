@@ -13,11 +13,18 @@ Example|Random Forest|Adaboost
 ### Random Forest
 **Randomness**
 * Random sampling of training data points with replacement (bootstrapping) when building trees
-* Random subset of features considered for splitting, at each node
+* Random subset of features considered for splitting, at each node. sqrt(#features) or log2(#features) or None
 
 **Probability Estimation**  
 a) Fraction of trees voting for a class (hard voting)  
 b) Average of terminal leaf probabilities  
+
+**How to train**:
+Hyperparameters: n_estimators (Number of Trees), number of features, max_depth, min_samples_leaf, set oob_score=True, n_jobs=-1 (to leverage all CPU cores)
+oob_score (Out-of-Bag Score):
+What it is: A boolean flag to calculate the out-of-bag (OOB) error. OOB samples are those training instances not included in a particular tree's bootstrap sample. These can be used as a validation set for that tree.
+Monitor model performance as you increase n_estimators and see when the OOB error stabilizes.
+RandomizedSearchCV instead of gridsearch for other hyperparameter tuning, if the dataset has say 1m rows.
 
 ### AdaBoost (Adaptive Boosting)
 ```
