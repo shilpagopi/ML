@@ -18,6 +18,8 @@ Independence of Errors (No Autocorrelation): The residuals (errors) should be in
 <img src="https://camo.githubusercontent.com/fb05a923f3c55f93488175bfc50b8a9349de312c/68747470733a2f2f6d69726f2e6d656469756d2e636f6d2f6d61782f3630302f312a337742356f746b674b456976395836476464307232514032782e706e67" alt="drawing" width="300" height="75"/>
 
 ### _R-Squared_
+<img width="548" alt="image" src="https://github.com/user-attachments/assets/dcd47f64-78a9-45c4-91df-8ced93a22917" />
+
 
 <img src="https://miro.medium.com/max/1406/1*_HbrAW-tMRBli6ASD5Bttw.png" width="400" height="75"/>
 
@@ -27,6 +29,10 @@ R_2(coefficient of determination)is a statistical measure that represents the pr
 SSE is the usual Squared Loss or Sum of Squared Errors.
 
 R^2 = 1-(Loss/SST)
+<img width="471" alt="image" src="https://github.com/user-attachments/assets/4dbb4b27-f349-49fb-9acb-eb260552062d" />
+<img width="316" alt="image" src="https://github.com/user-attachments/assets/e1d77616-8cf1-4e01-896d-b9ad3e5bdf56" />
+
+
 Higher is Not Always Better: A very high R^2 can sometimes indicate overfitting. Sensitive to Outliers. Increases with More Independent variables.
 
 ### Adjusted_R-Squared_
