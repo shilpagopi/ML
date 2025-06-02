@@ -109,3 +109,7 @@ What multicollinearity doesn't typically affect:
 
 Overall model fit (R-squared): The R-squared value, which indicates how much of the variance in the dependent variable is explained by the independent variables, is generally not affected by multicollinearity. The model might still explain a large portion of the variance.
 Forecasts/Predictions (within the range of the observed data): If the primary goal is prediction within the range of the observed data and the pattern of multicollinearity is expected to continue in future data, multicollinearity may not be a major concern for the overall predictions. However, the reliability of the individual coefficient estimates remains an issue.
+
+### Linear vs Non-linear Measurements
+##### Can t-test or chi squared test be used for non-linear relations?
+No, they are not designed to detect or analyze non-linearity, hence reveal nothing about shape, direction or strength.T-test's purpose is to compare the means of two groups to determine if they are statistically significantly different.Chi test's purpose is to assess the association or independence between two or more categorical variables. For non-linear cases, use non-linear regression(e.g., exponential, logarithmic, polynomial regression, logistic regression) and Spearman's Rank Correlation or Kendall's Tau: These measure the strength and direction of monotonic relationships only.
