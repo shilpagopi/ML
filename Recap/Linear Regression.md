@@ -21,6 +21,18 @@ Independence of Errors (No Autocorrelation): The residuals (errors) should be in
 
 <img src="https://miro.medium.com/max/1406/1*_HbrAW-tMRBli6ASD5Bttw.png" width="400" height="75"/>
 
+R_2(coefficient of determination)is a statistical measure that represents the proportion of the variance in the dependent variable (the outcome you're trying to predict) that can be explained by the independent variable(s) (the predictor variables) in a regression model. It helps to assess the goodness of fit of a regression model
+
+<img width="185" alt="image" src="https://github.com/user-attachments/assets/71746d0d-32f5-464f-add9-c5bfda6a721a" />
+SSE is the usual Squared Loss or Sum of Squared Errors.
+
+R^2 = 1-(Loss/SST)
+Higher is Not Always Better: A very high R^2 can sometimes indicate overfitting. Sensitive to Outliers. Increases with More Independent variables.
+
+### Adjusted_R-Squared_
+<img width="726" alt="image" src="https://github.com/user-attachments/assets/efc9429a-e04a-4691-889d-cd74a5ce796d" />
+
+  
 Two popular examples of regularization:
 Lasso Regression: where J is modified to minimize the absolute sum of the coefficients (called L1 regularization).
 Ridge Regression: ... L2 regularization
