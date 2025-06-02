@@ -81,7 +81,6 @@ Generation Process: The synthetic sample generation itself is similar to SMOTE, 
 
 Benefit: ADASYN is "adaptive" because it focuses more synthetic sample generation on regions where the minority class is sparse or where the decision boundary is ambiguous. This helps to reduce bias towards easy-to-learn minority examples and directs more learning effort to the challenging ones.
 
-
 #### Undersampling the Majority Class
 * Random Undersampling: Simple, reduces training time. Can lead to significant loss of potentially valuable information from the majority class.
 * NearMiss: Selects majority class samples whose average distance to the k-nearest minority class samples is smallest. Aims to keep only "borderline" majority samples.
@@ -93,7 +92,8 @@ Benefit: ADASYN is "adaptive" because it focuses more synthetic sample generatio
 Using both oversampling and undersampling. Eg. SMOTE + Tomek Links / SMOTE + ENN
 
 ### 2.Algorithm-Level Approaches (Cost-Sensitive Learning)
-* Adjust sample weights: Example: In scikit-learn, many classifiers (e.g., LogisticRegression, SVC, RandomForestClassifier, GradientBoostingClassifier) have a class_weight parameter (often set to 'balanced')
+* Adjust sample weights: Example: In scikit-learn, many classifiers (e.g., LogisticRegression, SVC, RandomForestClassifier, GradientBoostingClassifier) have a class_weight parameter (often set to 'balanced'), which assigns weights inversely proportional to classes.<img width="617" alt="image" src="https://github.com/user-attachments/assets/1851dff7-2917-45fa-8373-963b90e9e57d" />
+Note that sample weights assigned during the training phase of a decision tree classifier or regressor are generally NOT used during inferencing (prediction).
 * Change the prediction threshold value (For models that output probabilities (like logistic regression))
 
 ### 3.Ensemble Methods
