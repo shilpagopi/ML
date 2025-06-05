@@ -69,5 +69,9 @@ MAP can be more robust to small datasets by leveraging prior information.
 | Typical Architecture | Decoder-only Transformer               | Encoder-only Transformer             |
 | Examples | GPT series (GPT-2, GPT-3, GPT-4)       | BERT, RoBERTa, ALBERT, DistilBERT    |
 
+### Gradient Descent vs. Adam
+<img width="702" alt="image" src="https://github.com/user-attachments/assets/0eb8b1b0-39ab-4000-ab68-21e344ec690a" />
+
+
 
 
