@@ -18,6 +18,25 @@ It uses a maximum likelihood estimation rather than the least squares estimation
 * We cannot use the same cost function that we used for linear regression because the Sigmoid Function will cause the output to be wavy, causing many local optima. 
   In other words, it will not be a convex function. Hence, the cost function is transformed using the logarithm of the sigmoid function.
 
+### Formulation behind Logistic Regression
+Our goal is to predict the probability,P(0-1). 
+Odds= P/1−P
+Why use odds?
+Probabilities are bounded between 0 and 1. This makes it difficult to model them directly using a linear equation, as a linear equation's output can range from −∞ to +∞.
+Odds, however, range from 0 to +∞. This is an improvement, but they are still not symmetric around 1
+
+​<img width="292" alt="image" src="https://github.com/user-attachments/assets/662a4b46-a38f-4f98-a85d-4294f462c281" />
+Why use log-odds/logit?
+The log-odds range from −∞ to +∞. This is crucial because it allows us to model this quantity using a standard linear regression equation, which can produce any real number.
+It creates a symmetric scale. For example, an odds of 2 has a log-odds of ln(2)≈0.693, while an odds of 0.5 (1/2) has a log-odds of ln(0.5)≈−0.693. The absolute values are the same, reflecting a symmetric distance from "even odds."
+
+<img width="709" alt="image" src="https://github.com/user-attachments/assets/c3d85821-4ba9-42ff-9d92-4efad58d1b27" />
+From Log-Odds Back to Probability (The Sigmoid Function)
+The sigmoid function "squashes" any real number z (the log-odds) into a probability between 0 and 1.
+<img width="215" alt="image" src="https://github.com/user-attachments/assets/81eb2c16-10cf-433e-a58e-c9dba54ae0f5" />
+
+So, in essence: Input Variables → Linear Combination (produces z, which is the log-odds/logit) → Sigmoid Function → Predicted Probability (0 to 1)
+
 ### Assumptions of Logistic Regression
 * Binary or Categorical Dependent Variable: The outcome variable must be dichotomous (for binary) or categorical (for multinomial/ordinal - ordered multi class).
 * Independence of Observations: Each observation should be independent of the others.
