@@ -49,3 +49,7 @@ Handles Complex Estimators: It can be used for complex statistics where analytic
 
 #### Types of Cross-Validation
 K-Fold Cross-Validation, Stratified K-Fold Cross-Validation,Leave-One-Out Cross-Validation (LOOCV): Each data point is used as a validation set once - computationally expensive for large datasets.
+
+#### How to mitigate the curse of dimensionality?
+
+The primary solution is dimensionality reduction. This involves transforming the data into a lower-dimensional space while retaining as much of the important information as possible. Common techniques include: Feature Selection, Feature Extraction: Principal Component Analysis (PCA),Linear Discriminant Analysis (LDA), Visualization: t-Distributed Stochastic Neighbor Embedding (t-SNE), Regularization Techniques 
