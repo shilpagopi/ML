@@ -18,6 +18,13 @@ It uses a maximum likelihood estimation rather than the least squares estimation
 * We cannot use the same cost function that we used for linear regression because the Sigmoid Function will cause the output to be wavy, causing many local optima. 
   In other words, it will not be a convex function. Hence, the cost function is transformed using the logarithm of the sigmoid function.
 
+### Assumptions of Logistic Regression
+* Binary or Categorical Dependent Variable: The outcome variable must be dichotomous (for binary) or categorical (for multinomial/ordinal - ordered multi class).
+* Independence of Observations: Each observation should be independent of the others.
+* No High Multicollinearity: Independent variables should not be highly correlated with each other.
+* Linearity of Independent Variables with Log-Odds: The independent variables should be linearly related to the log-odds of the dependent variable. This is different from linear regression, where variables are linearly related to the raw dependent variable.
+* Large Sample Size: MLE generally requires a relatively large sample size for reliable parameter estimates.
+
 # Multinomial/Softmax Logistic Regression
 ```
 Do the maths, considering K labels. It will turn out to be equivalent to training independent k-1 regressors. Separate w for each class.
