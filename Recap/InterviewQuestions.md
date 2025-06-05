@@ -60,3 +60,7 @@ The primary solution is dimensionality reduction. This involves transforming the
 * Homoscedasticity (Constant Variance of Residuals):introduce heteroscedasticity. A single outlier with a very large residual can disproportionately increase the variance of the residuals in its vicinity, or overall, making the spread of errors appear non-constant.
 * Multicollinearity: Artificially inflate or deflate correlations between predictors, making it seem like multicollinearity is present when it's not, or vice-versa.
 
+#### Type-III Error
+Definition (Most Common): Correctly rejecting the null hypothesis, but for the wrong reason, or providing the right answer to the wrong question.
+Explanation: You might perform a statistically sound analysis, correctly reject a null hypothesis, and find a significant effect. However, the question you originally posed or the way you framed your hypotheses might not be the most relevant or appropriate for the real-world problem you're trying to solve.
+
