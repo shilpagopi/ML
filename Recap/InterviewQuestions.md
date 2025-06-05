@@ -53,3 +53,10 @@ K-Fold Cross-Validation, Stratified K-Fold Cross-Validation,Leave-One-Out Cross-
 #### How to mitigate the curse of dimensionality?
 
 The primary solution is dimensionality reduction. This involves transforming the data into a lower-dimensional space while retaining as much of the important information as possible. Common techniques include: Feature Selection, Feature Extraction: Principal Component Analysis (PCA),Linear Discriminant Analysis (LDA), Visualization: t-Distributed Stochastic Neighbor Embedding (t-SNE), Regularization Techniques 
+
+#### If an outlier is present, how does this affect the assumption of a linear model?
+* Linearity:distort the perceived linear relationship by pulling the regression line towards itself
+* Normality of Residuals (Errors): can skew the distribution of residuals, invalidating the statistical inferences drawn from the model, meaning your p-values and confidence intervals
+* Homoscedasticity (Constant Variance of Residuals):introduce heteroscedasticity. A single outlier with a very large residual can disproportionately increase the variance of the residuals in its vicinity, or overall, making the spread of errors appear non-constant.
+* Multicollinearity: Artificially inflate or deflate correlations between predictors, making it seem like multicollinearity is present when it's not, or vice-versa.
+
