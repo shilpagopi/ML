@@ -72,6 +72,22 @@ MAP can be more robust to small datasets by leveraging prior information.
 ### Gradient Descent vs. Adam
 <img width="702" alt="image" src="https://github.com/user-attachments/assets/0eb8b1b0-39ab-4000-ab68-21e344ec690a" />
 
+### RESNET vs CNN
+ResNet is actually a specific type of Convolutional Neural Network (CNN) architecture, not an alternative to CNNs.
+
+CNN (Convolutional Neural Network): Broad category of neural networks specifically designed to process data with a grid-like topology, such as images, like 
+Convolutional Layers, Activation Functions,Pooling Layers,Fully Connected Layers
+
+ResNet solves degradation problem due to vanishing/exploding gradients and identity mapping difficulty (It's often harder for a stack of non-linear layers to learn H(x)=x than to learn F(x)=0 ) by Residual Connections (Skip/shortcut Connections) in the residual block (or residual unit) with output H(x)=F(x)+x.The input x goes through a few convolutional layers (and activations, batch normalization, etc. – these form F(x)). Crucially, the original input x is added directly to the output of these layers. This sum is then passed through the activation function to become the output of the residual block.
+
+Benefits of Residual Connections:
+Addresses Vanishing Gradients: The skip connection provides a direct, unimpeded path for the gradient to flow through the network during backpropagation. Even if the gradients through the main convolutional path (F(x)) become small, the gradient can still flow back through the identity shortcut (x).
+
+Enables Identity Mapping: If the stacked convolutional layers within a residual block find that they cannot learn anything useful (i.e., H(x) should ideally be x), it's much easier for them to learn F(x)=0 (which would make H(x)=0+x=x) than to directly learn H(x)=x. This ensures that adding more layers will at least not hurt performance, and likely improve it.
+
+ResNet architectures can be built with hundreds or even thousands of layers (e.g., ResNet-50, ResNet-101, ResNet-152), significantly outperforming shallower networks on complex image recognition tasks.
+
+
 
 
 
