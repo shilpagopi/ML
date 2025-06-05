@@ -44,6 +44,11 @@ So, in essence: Input Variables → Linear Combination (produces z, which is the
 * Linearity of Independent Variables with Log-Odds: The independent variables should be linearly related to the log-odds of the dependent variable. This is different from linear regression, where variables are linearly related to the raw dependent variable.
 * Large Sample Size: MLE generally requires a relatively large sample size for reliable parameter estimates.
 
+### Loss Function
+Its main purpose is to measure the difference between two probability distributions: the true (ground-truth) distribution of labels and the predicted probability distribution from your model. It measures the average number of bits required to identify an event from the true distribution (p) when using an encoding scheme optimized for the predicted distribution (q).
+<img width="443" alt="image" src="https://github.com/user-attachments/assets/411db1e0-b35c-426d-bfe9-9ab86ab8b62b" />
+
+The loss is only concerned with the predicted probability of the correct class.
 # Multinomial/Softmax Logistic Regression
 ```
 Do the maths, considering K labels. It will turn out to be equivalent to training independent k-1 regressors. Separate w for each class.
