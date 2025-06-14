@@ -14,20 +14,22 @@ Practical Tips:
   
 ## Parameter-Efficient Fine-Tuning (PEFT) Methods
 ### LORA
-What: Training a small subset of the model's parameters or by adding a few new trainable parameters
-What it is: LoRA works by freezing the original pre-trained model weights and injecting small, trainable low-rank matrices into each transformer layer. Instead of directly optimizing the original weight matrix, it optimizes these much smaller "adapter" matrices.
-How it works: For a weight matrix W0, LoRA adds an update W0+ΔW, where ΔW=BA_transpose. B and A are low-rank matrices (e.g., A is d×r and B is r×k, where r≪min(d,k)). Only A and B are trained.
+What: Training a small subset of the model's parameters or by adding a few new trainable parameters  
+What it is: LoRA works by freezing the original pre-trained model weights and injecting small, trainable low-rank matrices into each transformer layer. Instead of directly optimizing the original weight matrix, it optimizes these much smaller "adapter" matrices.  
+How it works: For a weight matrix W0, LoRA adds an update W0+ΔW, where ΔW=BA_transpose. B and A are low-rank matrices (e.g., A is d×r and B is r×k, where r≪min(d,k)). Only A and B are trained.  
+<img width="739" alt="image" src="https://github.com/user-attachments/assets/00157dbc-11d0-4f1e-b2dc-47b03b99d1ab" />
+
 Pros: Reduced trainable parameters, Faster training, Lower training compute, Reduced storage, Mitigates catastrophic forgetting  
 Cons: May not reach the absolute peak performance of full fine-tuning  
 
 ### Quantization-aware Low-Rank Adaptation (QLoRA)
-What it is: QLoRA builds upon LoRA by performing LoRA fine-tuning on a quantized version of the pre-trained LLM. 
-How it works: Original model weights are stored in a lower precision format (e.g., 4-bit integers instead of 16-bit floating points) using "4-bit NormalFloat (NF4)" quantization, but performs computations in a higher precision. It then applies LoRA on top of these quantized weights.
+What it is: QLoRA builds upon LoRA by performing LoRA fine-tuning on a quantized version of the pre-trained LLM.   
+How it works: Original model weights are stored in a lower precision format (e.g., 4-bit integers instead of 16-bit floating points) using "4-bit NormalFloat (NF4)" quantization, but performs computations in a higher precision. It then applies LoRA on top of these quantized weights.  
 
-Pros: Drastically lower memory usage: (e.g., Llama-2 70B on a single 48GB GPU). Retains most of LoRA's performance benefits with practically negligible degradation.
-Cons: Slightly more complex to set up due to quantization, Slight potential performance degradation 
+Pros: Drastically lower memory usage: (e.g., Llama-2 70B on a single 48GB GPU). Retains most of LoRA's performance benefits with practically negligible degradation.  
+Cons: Slightly more complex to set up due to quantization, Slight potential performance degradation   
 
-Practical Tips:
+Practical Tips:  
 * Optional Quantization: Load models in a quantized format (e.g., 4-bit or 8-bit using bitsandbytes library)
   model = AutoModelForCausalLM.from_pretrained(
     MODEL_NAME,
@@ -39,10 +41,11 @@ Practical Tips:
   * This casts the lm_head and embed_tokens layers to full precision for stability (acoid significant info loss)
   * lm_head: This layer is typically the "language model head" or "output head" of the model. It's responsible for mapping the hidden states of the model to the vocabulary probabilities (i.e., predicting the next token).
   * embed_tokens: This layer is the "embedding layer." It converts input token IDs into dense vector representations (embeddings) that the rest of the model can process.
-  
+* trainer.model.save_pretrained(OUTPUT_DIR): only the small LoRA adapter weights are saved, not the entire base model.
+* During inference, load base model and merge the peft model or adapter weights. peft_model = PeftModel.from_pretrained(base_model, OUTPUT_DIR); merged_model = peft_model.merge_and_unload()
 * Parameters: 
-  * r (LoRA rank): The rank of the low-rank matrices. A higher rank means more trainable parameters, potentially better performance but higher memory/compute.
-  * lora_alpha: A scaling factor for the LoRA weights.
+  * r (LoRA rank): Higher values (e.g., 8, 16, 32, 64) generally lead to more expressiveness but also more trainable parameters and a slight increase in memory. Start with 8 or 16. A higher rank means more trainable parameters, potentially better performance but higher memory/compute. 
+  * lora_alpha: A scaling factor for the LoRA weights. Often set to 2 * r.
   * target_modules: Which layers of the LLM to apply LoRA to (e.g., query, key, value, output projections in attention).
   * lora_dropout: Dropout applied to the LoRA weights.
 
