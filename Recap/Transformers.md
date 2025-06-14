@@ -120,3 +120,23 @@ Benefit: Reduces computational complexity, making it more efficient for long seq
 Concept: A class of attention mechanisms that aim to reduce the quadratic complexity of standard attention to linear complexity with respect to sequence length.
 How it works: Instead of the dot product followed by softmax, linear attention typically uses a different similarity function (e.g., a kernel function or a combination of operations) that allows for the factorization of the attention matrix, leading to linear time and space complexity.
 Examples: Performer, Linformer, and models like BASED utilize linear attention variants. This is particularly relevant for handling extremely long sequences in large language models.
+
+##### Transformer - Hand-written
+<img width="753" alt="image" src="https://github.com/user-attachments/assets/fdbe5c97-9b32-44f4-9d92-ed73cdc7e0bb" />
+<img width="753" alt="image" src="https://github.com/user-attachments/assets/e07fb281-3266-420f-9d20-9e80a497b0bd" />
+<img width="753" alt="image" src="https://github.com/user-attachments/assets/87df1a6a-b109-471c-8fdd-5b22c474f2a2" />
+<img width="753" alt="image" src="https://github.com/user-attachments/assets/615b5fb2-683a-4db6-bb0d-8fc05479c8a0" />
+<img width="753" alt="image" src="https://github.com/user-attachments/assets/9ae185a5-dae8-4c71-958d-dc8bdc59b451" />
+<img width="753" alt="image" src="https://github.com/user-attachments/assets/79d59f4d-c9d6-4184-91cd-ff9a83b64e56" />
+<img width="753" alt="image" src="https://github.com/user-attachments/assets/37a8c92f-1555-474f-a22c-5084700b80b1" />
+<img width="753" alt="image" src="https://github.com/user-attachments/assets/66a304d4-9d91-49ef-b31c-1cf03e3fbd75" />
+<img width="753" alt="image" src="https://github.com/user-attachments/assets/3883836b-8f42-49f0-b725-e3e32741ac65" />
+<img width="753" alt="image" src="https://github.com/user-attachments/assets/c04a90f7-c720-46bf-acc9-4e3a986b0a68" />
+
+
+
+
+
+
+
+
