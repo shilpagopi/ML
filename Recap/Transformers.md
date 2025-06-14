@@ -10,9 +10,20 @@
 
 ## Attention
 Scaled Dot-Product Attention
-The attention mechanism operates on three main components: Queries (Q), Keys (K), and Values (V).
+###### At a Glance:
+* Input Embeddings:(seq_len, d_model)
+* W_Q,W_K,W_V: Query Weights (W_Q): (d_model, d_k); Key Weights (W_K): (d_model, d_k); Value Weights (W_V): (d_model, d_v)
+* Q,K,V: (seq_len, d_k),(seq_len, d_k),(seq_len, d_v)
+* QK(transpose) divided by the square root of d_k: (seq_len, seq_len)
+* **row-wise** Softmax
+* softmax{Attention_Weights).V : (seq_len, seq_len) x (seq_len, d_v) = (seq_len, d_v)
+* For multihead attention:
+  * Concatenate heads: (seq_len, headcount * d_v_head) = (seq_len, d_model)
+  * MultiHead(Q,K,V)=Concat(all_heads)*W_O => (seq_len, d_model) x (d_model, d_model) = (seq_len, d_model)
 
-Imagine you're trying to find relevant information in a database:
+###### Detailed Explanation:
+
+The attention mechanism operates on three main components: Queries (Q), Keys (K), and Values (V).
 
 Query (Q): What you're looking for (e.g., "Show me documents about machine learning.").
 Keys (K): Labels or indices that categorize the information in the database (e.g., "NLP," "Computer Vision," "Machine Learning algorithms").
@@ -21,13 +32,11 @@ The attention mechanism calculates how "relevant" each Key is to the Query, and 
 
 Steps and Dimensions:
 
-Let's assume:
-
 seq_len: Length of the input sequence (number of tokens).
 d_model: The dimensionality of the input embedding for each token (also known as d_embed or hidden_size). This is the main dimension of the Transformer model.
 d_k: The dimension of the Query and Key vectors. In the original Transformer, d_k = d_v = d_model / num_heads.
-Input Embeddings:
 
+Input Embeddings:
 Each token in the input sequence is first converted into a dense vector embedding.
 Input: Token embeddings (e.g., after adding positional encodings) for a sequence of length seq_len.
 Dimension: (seq_len, d_model)
@@ -45,6 +54,7 @@ Key Matrix (K): K=XW_K
 Dimension: (seq_len, d_model) x (d_model, d_k) = (seq_len, d_k)
 Value Matrix (V): V=XW_V
 Dimension: (seq_len, d_model) x (d_model, d_v) = (seq_len, d_v)
+
 Calculate Attention Scores (Similarity):
 The core idea is to calculate how well each Query matches each Key. This is done using a dot product.
 
