@@ -54,6 +54,17 @@ Reference-free Metrics (often compare distributions of real vs. fake images):
 * CLIPScore / CLIP-based Metrics: Leverages the CLIP model's ability to align images and text. Used to assess prompt alignment (how well the generated image matches its text description) and aesthetic quality.
 * Diversity metrics: Beyond IS/FID, specific metrics can quantify the variety of generated samples, especially to detect mode collapse.
 
+#### When not to use RAG?
+* When the LLM already has the necessary knowledge
+* When the information is highly dynamic, real-time
+* When the retrieval source is unreliable, noisy, or biased
+* When the task is purely creative or generative without requiring factual grounding:
+* When the primary goal is not factual recall but reasoning or complex problem-solving
+* When the latency requirements are extremely strict: 
+* When the cost of maintaining the retrieval infrastructure outweighs the benefits
+* When the domain is very niche and specialized, and a small, highly curated dataset for fine-tuning is available
+* When explainability and direct source attribution are less critical
+
 #### Handling catastrophic forgetting while finetuning
 * Rehearsal-Based Methods - Data Replay/Experience Replay: a small subset of data from previous tasks is stored and "replayed" (re-trained alongside the new data). If old data is not available,use self synthesized data.
 * Regularization-Based Methods:
