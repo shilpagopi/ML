@@ -96,7 +96,7 @@ peft_model_loaded = PeftModel.from_pretrained(base_model, OUTPUT_DIR)
 Prefix-Tuning adds trainable tokens to the input sequence.
 Learns a small, continuous, task-specific "prefix" that is prepended to the input embeddings at **each layer** of the transformer.
 
-Prefix projection: 
+Prefix projection:   
 <img width="742" alt="image" src="https://github.com/user-attachments/assets/b326ae80-d011-4d7c-b845-51c4ebdf9d8b" />
 <img width="725" alt="image" src="https://github.com/user-attachments/assets/a50ce9c8-27b4-4af7-a660-30d35adcf4ad" />
 
