@@ -52,9 +52,7 @@ Practical Tips:
   * lora_dropout: Dropout applied to the LoRA weights.
  
 ### Adapter Methods (Eg.Adapter-H (Houlsby Adapters/Bottleneck Adapters)
-Adapter methods insert small, new neural network modules (adapters) between existing layers
-
-The most common adapter architecture involves a bottleneck structure: a down-projection, a non-linearity, and an up-projection. These are often inserted after attention layers and/or feed-forward layers.
+Adapter methods insert small, new neural network modules (adapters). The most common adapter architecture involves a bottleneck structure: a down-projection, a non-linearity, and an up-projection. These are often inserted after attention layers and/or feed-forward layers.
 
 The General Idea of Adapter Insertion
 A standard Transformer block typically consists of a Multi-Head Self-Attention (MHSA) sub-layer and a Feed-Forward Network (FFN) sub-layer. Both of these are usually followed by a residual connection and layer normalization. The core idea of adapters is to insert a small, trainable module after one or both of these existing frozen layers.
@@ -63,6 +61,9 @@ If we denote the output of a Transformer sub-layer (e.g., MHSA or FFN) as h_in, 
 h_out =Adapter(h_in)+h_in
 
 This indicates a residual connection around the adapter itself, meaning the adapter learns to apply a small "correction" or "adaptation" to the original hidden state.
+
+Pros: Parameter efficient, Fast training, Modular: Adapters can be swapped out easily for different tasks.  
+Cons: May not be as widely adopted or as performant as LoRA for all tasks.
 
 <img width="718" alt="image" src="https://github.com/user-attachments/assets/6e2fc38e-52af-4826-abd2-b0e80090b9b6" />
 
@@ -89,11 +90,17 @@ peft_model_loaded = PeftModel.from_pretrained(base_model, OUTPUT_DIR)
 # they remain separate modules. So, you typically use `peft_model_loaded` directly.
 
 ```
-
+<img width="721" alt="image" src="https://github.com/user-attachments/assets/217b824e-3395-4df6-92b0-4b0fc15a5642" />
 
 ### Prefix-Tuning
 Prefix-Tuning adds trainable tokens to the input sequence.
-Learns a small, continuous, task-specific "prefix" that is prepended to the input embeddings at each layer of the transformer.
+Learns a small, continuous, task-specific "prefix" that is prepended to the input embeddings at **each layer** of the transformer.
+
+Prefix projection: 
+<img width="742" alt="image" src="https://github.com/user-attachments/assets/b326ae80-d011-4d7c-b845-51c4ebdf9d8b" />
+<img width="725" alt="image" src="https://github.com/user-attachments/assets/a50ce9c8-27b4-4af7-a660-30d35adcf4ad" />
+
+<img width="735" alt="image" src="https://github.com/user-attachments/assets/d2b1935c-d26c-4044-a8f4-76c9495e28d4" />
 
 Practical Tips: 
 ```
@@ -110,10 +117,8 @@ prefix_config = PrefixTuningConfig(
 * Learning Rate: These methods might benefit from higher learning rates than LoRA or full fine-tuning (e.g., 1e−3 for Prefix-Tuning is common).
 * Quantization: These methods can also be combined with 4-bit or 8-bit quantization (bitsandbytes) for further memory savings, just like QLoRA. You would load the base model with load_in_4bit=True and then apply the PEFT method on top.
 
-Pros: Parameter efficient, Fast training, Modular: Adapters can be swapped out easily for different tasks.  
-Cons: May not be as widely adopted or as performant as LoRA for all tasks.
-<img width="721" alt="image" src="https://github.com/user-attachments/assets/217b824e-3395-4df6-92b0-4b0fc15a5642" />
-
+Pros: Extremely Parameter-Efficient, No Architectural Changes (Unlike adapters), Task-Specific Context/"soft prompt"  
+Cons: Performance Variability (sensitive to the choice of num_virtual_tokens and learning rate), Training Stability: Can be less stable than LoRA, especially without prefix_projection=True.
 
 ## Pre-training 
 <img width="731" alt="image" src="https://github.com/user-attachments/assets/b6bfee6a-0eb9-4d3b-8349-d5abdfd1d48e" />
