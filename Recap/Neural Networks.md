@@ -13,12 +13,15 @@ One-to-one, one-to-many, many-to-one, many-to-many (input and output: same size,
 ## RNN Architecture
 ### RNN
 <img src="https://github.com/shilpagopi/ML/blob/master/Recap/img/RNN%20Cell.png" width="750" height="400">
+<img width="418" alt="image" src="https://github.com/user-attachments/assets/463cdef5-5dda-4816-b2f2-3c16a7b25ede" />
 
 ### GRU
 <img src="https://github.com/shilpagopi/ML/blob/master/Recap/img/GRU%20Cell.png" width="750" height="400">
+<img width="403" alt="image" src="https://github.com/user-attachments/assets/0a494c97-22e8-41c5-86a8-ec6d67174c87" />
 
 ### LSTM
 <img src="https://github.com/shilpagopi/ML/blob/master/Recap/img/LSTM%20Cell.png" width="750" height="400">
+<img width="403" alt="image" src="https://github.com/user-attachments/assets/ee40af6b-b57a-42fa-9606-0b7ec995e21a" />
 
 ### Advantages of RNN 
 * Possibility of processing input of any length
