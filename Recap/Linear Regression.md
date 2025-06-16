@@ -48,6 +48,8 @@ y = wTx + e(=Error term)
 e is distributed IID (independently and identically distributed) according to a Gaussian distribution (also called a Normal distribution) mean *zero* and some variance σ^2.  
 e ~ N(0,σ^2), y ~ N(wTx,σ^2)  
 Least square function can be obtained by calculating log likelihood, P(y/x) = P(e), since w is fixed.
+<img width="735" alt="image" src="https://github.com/user-attachments/assets/9de35211-bc49-4a99-9b27-992e351b13a7" />
+
 
 ## Linear Regression Analysis
 * Regression Coefficients (β values): These tell you the estimated change in the dependent variable for a one-unit change in the corresponding independent variable, holding all other predictors constant.
