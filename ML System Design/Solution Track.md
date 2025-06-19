@@ -31,3 +31,5 @@ Gen-AI System Design examples
 * Text-to-Image Generation
 * Personalized Headshot Generation
 * Text-to-Video Generation
+
+Books: Generative AI System Design Interview,Machine Learning System Design Interview,
