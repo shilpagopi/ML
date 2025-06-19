@@ -32,6 +32,11 @@ Examples:
 * Similar Listings on Vacation Rental Platforms
 * Personalized News Feed
 * People You May Know
+* Design a feed recommendation system
+* Design Youtube(Google)
+* Design Google contact ranking(Google)
+* Design an item replacement recommendation(Instacart)
+* Design an ML System to optimize coupon distribution with a set budget(Netflix).
 
 Gen-AI System Design examples
 * Gmail Smart Compose
