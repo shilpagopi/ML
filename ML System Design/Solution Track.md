@@ -18,7 +18,7 @@
   * ML modeling: optimizations - regularization, hyper parameter tuning
   * cold-start solution
   * Feedback loops
-6. Deployment, MLOps, monitoring, logging, etc.
+6. Deployment, MLOps, monitoring, logging, model versioning etc.
 7. Online metrics, A/B testing
 
 Examples: 
