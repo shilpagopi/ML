@@ -1,12 +1,25 @@
 # Solution Track
-1. Business problem understanding and clarifying questions
-2. ML task formulation and offline metrics
-3. [Optional] High-level architecture
-4. Data collection, filtering, analysis, storing, validation
-5. Features preparation
-6. ML modeling: cold-start solution, optimizations - regularization, hyper parameter tuning, feedback loops
-7. Online metrics, A/B testing 
-8. Deployment, online learning, MLOps, model optimization, monitoring, logging, etc.
+1. Problem Scope and business understanding. Any particular business metrics?
+2. Data:
+  * Data features
+  * Data type(static/dynamic, structured/unstructured, derived features, biases)
+  * Scale
+  * Inference realtime/offline
+  * Training/retraining periodicity
+3. ML Problem formulation:
+  * Metrics (relative or absolute): Business metrics and Optimization objective
+  * ML problem category
+  * ML System I/O
+4. Data Preprocessing:
+  * Data collection, filtering, analysis, storing, validation
+  * Biases, Long-tail categories, imbalance
+  * Feature Engineering
+5. Core Architectural Choices
+  * ML modeling: optimizations - regularization, hyper parameter tuning
+  * cold-start solution
+  * Feedback loops
+6. Deployment, MLOps, monitoring, logging, etc.
+7. Online metrics, A/B testing
 
 Examples: 
 * Visual Search System
