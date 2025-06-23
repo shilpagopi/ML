@@ -21,6 +21,9 @@
 6. Deployment, MLOps, monitoring, logging, model versioning etc.
 7. Online metrics, A/B testing
 
+Tips: 
+* For optimizing latency, train smaller models using knowledge distillation
+
 Examples: 
 * Visual Search System
 * Google Street View Blurring System
