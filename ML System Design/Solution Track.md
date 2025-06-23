@@ -23,6 +23,7 @@
 
 Tips: 
 * For optimizing latency, train smaller models using knowledge distillation
+* For optimizing latency and storage: pruning technique (prune featuremaps) not detrimental to model quality.
 
 Examples: 
 * Visual Search System
