@@ -7,4 +7,5 @@
 * User location
 * Content language
 * Content Duration
-* 
+* Content delivered by existing subscriptions
+* Existing subscriptions embedding
