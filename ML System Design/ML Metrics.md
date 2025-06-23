@@ -16,6 +16,13 @@ However, mAP is designed for binary relevances; in other words, it works well wh
 <img width="1265" alt="image" src="https://github.com/user-attachments/assets/77492bd8-bb01-4da6-b215-39e6f9827d0c" />
 Its primary shortcoming is that deriving ground truth relevance scores is not always possible. In our case, since the evaluation dataset contains similarity scores, we can use nDCG to measure the performance of the model during the offline evaluation.
 
+<img width="1251" alt="image" src="https://github.com/user-attachments/assets/d148af36-329a-431f-b570-00efdfe473cc" />
+
+<img width="1293" alt="image" src="https://github.com/user-attachments/assets/bae067e8-32ff-4194-a80b-9d99474ee2fa" />
+NDCG values range from 0 to 1.
+
+
+
 
 
 
