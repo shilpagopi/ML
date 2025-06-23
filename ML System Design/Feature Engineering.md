@@ -6,3 +6,4 @@
 * Explicit user interaction: Likes, comments, Negative feedback (do not recommend)
 * User location
 * Content language
+* Content Duration
