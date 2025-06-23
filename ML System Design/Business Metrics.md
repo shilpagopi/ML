@@ -5,4 +5,5 @@
 #### Video completion rate
 #### Total watch time of search results
 
-
+#### User Interaction/Engagement Metrics
+* Likes, Comments, Explored details etc.
