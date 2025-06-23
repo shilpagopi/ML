@@ -8,5 +8,9 @@ Z-score normalization: Scale pixel values to have a mean of 0 and variance of 1
 Consistent : Ensuring images have a consistent color mode (e.g., RGB or CMYK)
 
 ## Video Preprocessing
+Process whole video(expensive) using 3D convolutions or transformers if capturing actions/motions/temporal semantics are relevant. 
+<img width="550" alt="image" src="https://github.com/user-attachments/assets/81cd9dc8-811d-4503-9df3-214266db50e3" />
+
+<img width="792" alt="image" src="https://github.com/user-attachments/assets/e5aba919-ddb4-4b1b-a080-27235876d639" />
 <img width="708" alt="image" src="https://github.com/user-attachments/assets/bb70bbfd-c787-4419-bc57-d5753bde8fc4" />
 
