@@ -9,3 +9,4 @@
 * Content Duration
 * Content delivered by existing subscriptions
 * Existing subscriptions embedding
+* For hastags, use simpler embedding models (no need of transformers as there is hardly any context or length sentences)
