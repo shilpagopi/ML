@@ -1,10 +1,12 @@
 # Optimizers
 ## Gradient Descent: 
 <img width="337" alt="image" src="https://github.com/user-attachments/assets/1a2f6b5e-5c8b-49fb-9893-f1b76b611ba4" />  
+
 ### Batch Gradient Descent (BGD)
 How it works: Calculates the gradient of the loss function using all training examples in each iteration.  
 Pros: Guaranteed to converge to the global minimum for convex loss functions and a local minimum for non-convex functions.  
 Cons: Computationally very expensive , Can get stuck in local minima more easily in non-convex landscapes.  
+
 ### Stochastic Gradient Descent (SGD)
 How it works: Calculates the gradient and updates parameters using one random training example at each iteration.
 Pros: Much faster per iteration compared to BGD. The "noisy" updates (due to using single examples) can help escape shallow local minima and saddle points.
