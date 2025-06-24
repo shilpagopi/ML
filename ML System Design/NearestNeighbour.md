@@ -17,9 +17,8 @@ Implementations: Faiss (developed by Meta) and ScaNN (developed by Google)
 
 For dynamically changing indices like those in social media post recommendation systems, HNSW (Hierarchical Navigable Small World) is the leading ANN algorithm due to its efficient incremental update capabilities, high recall, and speed. For practical deployment, leveraging a vector database (like Milvus) that implements and manages HNSW at scale is the recommended approach.
 
-
-
-
-
-
-
+### HNSW (Heirarchical Mavigable Small World)
+<img width="749" alt="image" src="https://github.com/user-attachments/assets/e4cc607d-fdb7-4124-a3a0-0268f8e83ce9" />
+<img width="749" alt="image" src="https://github.com/user-attachments/assets/d2255727-c2bc-497d-885b-1b00ad476f59" />
+<img width="747" alt="image" src="https://github.com/user-attachments/assets/f1494bce-09d4-43f8-9fb8-e95395d19aa1" />
+<img width="732" alt="image" src="https://github.com/user-attachments/assets/d9897b34-f1c6-4de2-b24e-03956e7d54c8" />
