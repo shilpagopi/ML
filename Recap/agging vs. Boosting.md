@@ -1,4 +1,4 @@
-# Ensemble Learning
+# Bagging vs. Boosting
 Characteristic|Bagging (Bootstrap Aggregation)|Boosting
 --------------|-------|--------
 Dataset creation|Random subsets, of same size as original dataset, of the original training set are created by bootstraping(picking at random) with replacement and repetitions.|Sequentially with more weightage to the instances misclassified by previous model
