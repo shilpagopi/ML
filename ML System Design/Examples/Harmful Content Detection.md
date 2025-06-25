@@ -12,6 +12,11 @@ Fused features -> Shared layers -> Transformed features -> Task specific layers 
 shared layers: newly transformed features to make predictions for each harmful classes
 task-specifc layers: various Hate/violence/... classification head
 
+<img width="1145" alt="image" src="https://github.com/user-attachments/assets/47645f99-ae30-45e0-ab29-b35dc773ace9" />
+
+Use a lightweight (say LightGBM or XGBoost) as the initial approximate model  
+Use a final calibration model to output single confidence score, given all predicted features, if we want human alignment.
+
 ### Metrics
 precision-recall curve: tradeoff between precision and recall
 receiver operating characteristic (ROC) curve: tradeoff between true positive (recall) and false positive.
