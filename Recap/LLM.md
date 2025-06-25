@@ -19,7 +19,8 @@
 * Human evaluation:Rating Scales (e.g., Likert scale), Ranking, A/B Testing, Critique and Annotation.
   Human evaluation parameters: Fluency/Naturalness,Coherence/Consistency, Relevance/Fidelity to Prompt, Creativity/Diversity, Factuality/Truthfulness, Safety/Harmlessness, Aesthetics, Task-Specific Criteria
 
-* For Text Generation:
+##### For Text Generation:
+
 Reference-based Metrics (require ground truth): 
  * BLEU (Bilingual Evaluation Understudy) - precision of n-gram overlap. Higher scores better. 
  * ROUGE (Recall-Oriented Understudy for Gisting Evaluation): Measures recall of n-gram overlap
@@ -29,7 +30,7 @@ Reference-based Metrics (require ground truth):
 
 Reference-free Metrics:
 * Perplexity: Measures how well a language model predicts a sample. Lower perplexity generally indicates a better model.
-  Perplexity(W)=exp(− 1/N(summation of all log probabilities of each word given previous word)
+  Perplexity(W)=exp(− 1/N*(summation of all log probabilities of each word given previous word))
   Perplexity is the exponentiated average negative log-likelihood of a sequence of words.
   Intuitive meaning: The weighted average number of choices the model has for the next word. More choices..more confused the model is.
   Not comparable across models with different vocabularies. Doesn't measure other factors liek factual accuracy.
@@ -41,7 +42,7 @@ Reference-free Metrics:
 * Factuality Metrics: Emerging metrics use knowledge bases or entailment models to check if generated statements are factually correct.
 * Safety/Toxicity Scores: Use classifiers (e.g., Perspective API) to detect toxic, biased, or harmful language.
 
-* For Image Generation:
+##### For Image Generation:
 
 Reference-based Metrics (require ground truth images):
 * PSNR (Peak Signal-to-Noise Ratio): Measures pixel-wise similarity. Simple but doesn't always correlate well with human perception.
