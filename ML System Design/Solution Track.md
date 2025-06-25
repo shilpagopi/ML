@@ -1,26 +1,26 @@
 # Solution Track
-1. Problem Scope and business understanding. Any particular business metrics?
-2. Data:
+1. **Problem Scope**  and business understanding. Any particular business metrics?
+2. **Data**:
   * Data features
   * Data type(static/dynamic, structured/unstructured, derived features, biases)
   * Scale
   * Inference realtime/offline
   * Training/retraining periodicity
   * Annotated data - Data augmentation 
-3. ML Problem formulation:
+3. **ML Problem formulation** and **Metrics (ML and Business)**:
   * Metrics (relative or absolute): Business metrics and Optimization objective
   * ML problem category
   * ML System I/O
-4. Data Preprocessing:
+4. **Data Preprocessing**:
   * Data collection, filtering, analysis, storing, validation
-  * Biases, Long-tail categories, imbalance
+  * **Address challenges**: Biases, Long-tail categories, imbalance
   * Feature Engineering
-5. Core Architectural Choices
+5. **Core Architectural Choices**
   * ML modeling: optimizations - regularization, hyper parameter tuning
   * cold-start solution
   * Feedback loops
-6. Deployment, MLOps, monitoring, logging, model versioning etc.
-7. Online metrics, A/B testing
+6. **Deployment, MLOps, monitoring, logging, model versioning etc.**
+7. **Online metrics, A/B testing**
 
 Tips: 
 * For optimizing latency, train smaller models using knowledge distillation
