@@ -1,7 +1,6 @@
 # Business Metrics
 * Click Through Rate (CTR)
 <img width="512" alt="image" src="https://github.com/user-attachments/assets/0b30f2ff-0aa3-4bef-a48f-da8f6fa3e867" />
-
 * Video completion rate
 * Total watch time of search results
 * User Interaction/Engagement Metrics - Likes, Comments, Explored details, Dislikes, Reports etc.
@@ -25,3 +24,8 @@
 * Revenue or conversions per search
 * Latency-p99 for search requests
 * Query reformulation rate (proxy for dissatisfaction)
+* Task success rate (e.g., ticket fully resolved)
+* Average handle time (when humans intervene)
+* User satisfaction / Net Promoter Score (NPS, "how likely are you to recommend this product to a friend?")
+* Prompt–response latency
+* Down-stream engagement (clicks, watch-time, etc.)
