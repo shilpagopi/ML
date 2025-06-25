@@ -6,6 +6,7 @@
   * Scale
   * Inference realtime/offline
   * Training/retraining periodicity
+  * Annotated data - Data augmentation 
 3. ML Problem formulation:
   * Metrics (relative or absolute): Business metrics and Optimization objective
   * ML problem category
@@ -24,6 +25,7 @@
 Tips: 
 * For optimizing latency, train smaller models using knowledge distillation
 * For optimizing latency and storage: pruning technique (prune featuremaps) not detrimental to model quality.
+* Use an approximate, fast classification model, say XGBoost or LightGBM, as a candidate generation model before actual huge transformer based models.  
 
 Examples: 
 * Visual Search System
