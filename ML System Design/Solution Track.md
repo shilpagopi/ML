@@ -25,7 +25,10 @@
 Tips: 
 * For optimizing latency, train smaller models using knowledge distillation
 * For optimizing latency and storage: pruning technique (prune featuremaps) not detrimental to model quality.
-* Use an approximate, fast classification model, say XGBoost or LightGBM, as a candidate generation model before actual huge transformer based models.  
+* Use an approximate, fast classification model, say XGBoost or LightGBM, as a candidate generation model before actual huge transformer based models.
+* For query disambiguation, cover multiple possible intents in proportion to their popularity. Rely on further user signals.
+* Freshness and Recency: Query classification helps identify which queries require fresh results versus those that can use evergreen content. Time-based decay functions can be applied to relevance scores to naturally deprecate older content when appropriate.
+* Feedback Loops: Regularly injecting randomness into rankings to gather unbiased feedback. Position bias can be addressed through inverse propensity scoring and click data debiasing.Maintaining golden sets unaffected by feedback loops provides stable evaluation baselines
 
 Examples: 
 * Visual Search System
