@@ -23,6 +23,16 @@ Its primary shortcoming is that deriving ground truth relevance scores is not al
 <img width="1293" alt="image" src="https://github.com/user-attachments/assets/bae067e8-32ff-4194-a80b-9d99474ee2fa" />
 NDCG values range from 0 to 1. nDCG is non differentiable.
 
+# Image Related Metrics
+## IOU (Intersection over Union)
+For object detection bounding boxes
+  
+## CLIP Score:
+* Intuition: "How well does the generated image match the text prompt?"
+* Higher scores indicate better text-image alignment: Based on how close the image and text embeddings are in a shared space
+
+# For Gen-AI Specific Metrics: Go to https://github.com/shilpagopi/ML/blob/master/Recap/LLM.md
+
 ## ML Metrics for Learning to Rank Approaches
 <img width="737" alt="image" src="https://github.com/user-attachments/assets/d0a45988-b28e-4798-af97-7777cf1e028f" />
 <img width="737" alt="image" src="https://github.com/user-attachments/assets/2023731c-e51a-494b-85db-6c11d570fd0d" />
