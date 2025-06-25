@@ -10,3 +10,10 @@
 
 #### Diversity
 To measure diversity, we calculate the average pairwise similarity (e.g., cosine similarity or dot product) between videos in the list. A low average pairwise similarity score indicates the list is diverse.
+
+#### User retention rate
+#### Time to label (moderate/evaluate/judge/etc)
+#### User satisfaction scores
+#### Operational review costs
+#### Appeal rate for moderation decisions
+#### Downstream costs associated with errors (both false-positives and false-negatives)
