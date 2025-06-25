@@ -52,15 +52,4 @@ While the primary goal of Random Forest is variance reduction, it can introduce 
 Feature Randomness: By randomly selecting a subset of features at each split, individual trees might not always find the globally optimal split, potentially introducing a small amount of additional bias in each tree.
 Averaging: Averaging multiple biased models doesn't necessarily reduce bias. However, the bias of a Random Forest is generally comparable to or only slightly higher than that of a single decision tree that is allowed to grow deep (low bias). The key is that the massive reduction in variance typically far outweighs any minor increase in bias, leading to a much better overall model.
 
-### AdaBoost (Adaptive Boosting)
-```
-a) Count of dataset instances = n
-b) Initial weightage of each instance = 1/n
-c) Find best feature to split on (e.g. using weighted gini index)
-d) Error rate, E = sum of weightage of all misclassified instances/ total sum of weights
-e) Stage value(Amount of Say of each weak classifier) = ln((1-E)/E)
-f) Update weights of misclassified instances: New weightage = weight*exp(stage value)
-g) Normalize all weights (i.e,sum = 1)
-h) Create new classifier
-i) Predictions: Weighted average of individual classifier prediction using stage value
-```
+
