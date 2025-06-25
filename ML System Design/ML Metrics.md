@@ -14,6 +14,12 @@ However, mAP is designed for binary relevances; in other words, it works well wh
 
 <img width="697" alt="image" src="https://github.com/user-attachments/assets/88d56fb0-1f7d-44ba-b3be-31c5db30f585" />
 
+## Hit@K
+Fraction of sessions where at least one relevant item appears in the top K
+
+## Coverage
+Proportion of catalog shown over a time window—critical for cold-start sellers and long-tail content
+
 ## nDCG
 <img width="1265" alt="image" src="https://github.com/user-attachments/assets/77492bd8-bb01-4da6-b215-39e6f9827d0c" />
 Its primary shortcoming is that deriving ground truth relevance scores is not always possible. In our case, since the evaluation dataset contains similarity scores, we can use nDCG to measure the performance of the model during the offline evaluation. rel_i is higher for top ranks.
