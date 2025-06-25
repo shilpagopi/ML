@@ -17,3 +17,8 @@ To measure diversity, we calculate the average pairwise similarity (e.g., cosine
 #### Operational review costs
 #### Appeal rate for moderation decisions
 #### Downstream costs associated with errors (both false-positives and false-negatives)
+#### Session watch/purchase rate per user
+#### Average revenue per user (ARPU) or Gross Merchandise Value (GMV)/user
+#### Retention or churn-deferral rate over N-day windows
+#### Inventory utilization (how evenly the catalog is surfaced)
+#### Dwell time (are we creating "doom-scrolling" that later harms satisfaction?)
