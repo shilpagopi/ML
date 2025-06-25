@@ -60,17 +60,20 @@ CatBoost, developed by Yandex, stands out for its robust handling of categorical
 <img width="751" alt="image" src="https://github.com/user-attachments/assets/ebe41349-62cd-4ef8-b9c3-1f3eb96f2b02" />
 
 <img width="751" alt="image" src="https://github.com/user-attachments/assets/1a980efb-fc3e-4fc4-a8bb-9dcfc9f6dd70" />
+
 General Guidelines:
 
 LightGBM: Choose when you prioritize speed and efficiency, especially with very large datasets and sufficient memory. Good for tasks where quick iteration is important.
 XGBoost: A robust all-rounder. Choose when you need high performance and have a mix of numerical and categorical features (after preprocessing). It's very stable and widely used.
 CatBoost: Ideal when your dataset has many categorical features, and you want to reduce preprocessing efforts and mitigate overfitting related to categorical variable encoding. It's also a good choice if you prefer strong default parameters.
 
+### Node splitting
+<img width="722" alt="image" src="https://github.com/user-attachments/assets/db0b26db-8903-4e86-a7ea-b05aca8f049f" />
+<img width="748" alt="image" src="https://github.com/user-attachments/assets/026cebdb-05f8-4c0b-9692-94571453d5f0" />
+<img width="748" alt="image" src="https://github.com/user-attachments/assets/b64f29f8-dac1-4d01-9893-2b4a5a666cd7" />
+<img width="748" alt="image" src="https://github.com/user-attachments/assets/c917bbeb-4922-402e-974d-08a368f84f1e" />
+<img width="748" alt="image" src="https://github.com/user-attachments/assets/cda107bf-5765-4fb1-a297-44cfb2cb8403" />
 
-
-
-
-
-
-
+### XGBoost first iteration/initialization
+<img width="748" alt="image" src="https://github.com/user-attachments/assets/a5d6122b-15dc-4def-8632-1f065af5faa3" />
 
