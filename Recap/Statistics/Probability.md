@@ -20,10 +20,10 @@
 E=n*summation over 1 to n(1/i) 
 Expected no. of buys to collect all n different coupons.
 
-#### Questions
-##### Tips: 
+#### Tips: 
 * Identify type of distribution (Eg. if geometric with each trial independent, find prob, p of success and invert it. E(X) = 1/p. If geometric without replacement, then say ans = E.)
-
+  
+#### Questions
 * What is the probability that a seven-game series goes to 7 games?
 * What is the probability that two random chords in a circle will intersect? 1/3
 * What is the expected number of rolls needed to see all 6 sides of a fair die? (1+6/5+6/4+6/3+6/2+6/1) = 14.7
