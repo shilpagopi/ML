@@ -21,7 +21,7 @@ E=n*summation over 1 to n(1/i)
 Expected no. of buys to collect all n different coupons.
 
 #### Tips: 
-* Identify type of distribution (Eg. if geometric with each trial independent, find prob, p of success and invert it. E(X) = 1/p. If geometric without replacement, then say ans = E.)
+* Identify type of distribution (Eg. if geometric with each trial independent, find prob, p of success and invert it. E(X) = 1/p. If geometric without replacement, then say ans = E. If the sample is exhaustive, try to dsitribute equidistantly.. eg. #draws till ace in a deck of 52 cards)
   
 #### Questions
 * What is the probability that a seven-game series goes to 7 games?
