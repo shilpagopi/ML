@@ -74,7 +74,7 @@ Expected no. of buys to collect all n different coupons.
 * The expected number of cards to draw until the first special card is observed is given by the formula: E= (N+1)/(K+1), where N=52,K=number of special cards.
   Formula basis: Think of aces being evenly spread out. 4*10.6+(10.6-1)=52
 * A and B are playing a game where A has n+1 coins, B has n coins, and they each flip all of their coins. What is the probability that A will have more heads than B? 0.5 (intuitive answer)
-* Say you are given an unfair coin, with an unknown bias towards heads or tails. How can you generate fair odds using this coin? use "HT" to denote head and "TH" to denote tail coz prob = p(1-p), equal for both cases. Ignore "HH" and "TT"
+* Say you are given an unfair coin, with an unknown bias towards heads or tails. How can you generate fair odds using this coin? use "HT" to denote head and "TH" to denote tail coz prob = p(1-p), equal for both cases. Ignore "HH" and "TT"  
 ​* A fair die is rolled n times. What is the probability that the largest number rolled is r, for each r in 1..6? <img width="164" alt="image" src="https://github.com/user-attachments/assets/4b31b4f8-e9ae-4710-b3c0-a49704ec82fb" />
 * There are two groups of n users, A and B, and each user in A is friends with those in B and vice versa. Each user in A will randomly choose a user in B as their best friend and each user in B will randomly choose a user in A as their best friend. If two people have chosen each other, they are mutual best friends. What is the probability that there will be no mutual best friendships? [(n−1)/n]]^(2n)
 
