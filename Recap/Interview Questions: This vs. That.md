@@ -87,7 +87,14 @@ Enables Identity Mapping: If the stacked convolutional layers within a residual 
 
 ResNet architectures can be built with hundreds or even thousands of layers (e.g., ResNet-50, ResNet-101, ResNet-152), significantly outperforming shallower networks on complex image recognition tasks.
 
+### ML recommendation model : two separate segmentwise models or a single unified model?
+* Tailored/Focused Recommendations
+* Feature Importance migh differ for each group - Feature overlap/redundancy could also happen
+* Bias towards dominant group
+* Easier A/B Testing
+* Clearer Performance Evaluation
+* Data sparsity/imbalance, Cold Start Problem
+* Increased Dev and Maintenance Overhead
+* Cross pollination/interaction of insights
 
-
-
-
+Conclude: Based on distinctness in behaviour, empirical results and business objectives.
