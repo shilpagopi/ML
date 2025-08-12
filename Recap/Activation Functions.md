@@ -7,7 +7,8 @@
 | RELU | max (0,z) | 1 and 0 | derivative =1 allows for faster convergence as they don't vanish. sparsity also helps in the same, and acts as a regularisation by turning some neurons off. <br> Less computationally expensive than tanh and sigmoid because it involves simpler mathematical operations. Dying ReLu problem: if input neg, value becomes 0, gradient also 0, neuron does.| NO | Y |
 | Sigmoid (Logistics)| | g(z) (1-g(z))| Range: 0-1, non-linear, continuously differentiable, monotonic, and has a fixed output range. Not zero centered - makes optimization harder.| YES | NO |
 |Tanh|(e^z-e^(-z))/(e^z+e^(-z))| 1 - g(z)^2|Range:-1 to 1, Non-linear, zero-centered, more preferred to sigmoid (?), steeper gradient than sigmoid,  fixed output range |YES|NO|
-| Leaky RELU| (alpha x z) when z<0 | alpha | usu, alpha = 0.01 | NO | Y |
+| Leaky RELU| (alpha x z) when z<0  | 1 when z>0, else alpha | usu, alpha = 0.01(constant). solved dying Relu problem. | NO | Y |
+| Parametric RELU ||| same as leaky Relu, but alpha is a learnable parameter learnt through back propagation. df/dalpha = 0 (z>0),z (z<0) ||
 * Vanishing gradients happens when derivative of activation function 0<=f’(x)<<1 (close to zero); exploding gradients when f’(x)>1. Gradients used to update the network's weights become extremely small or "vanish" as they are backpropagated from the output layers to the earlier layers. (Eg. sigmoid, tanh)
 
 ##### Why do we need activation functions?
