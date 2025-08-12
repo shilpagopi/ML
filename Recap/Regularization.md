@@ -41,7 +41,7 @@ During Testing: Dropout is not applied during testing. Instead, the weights of t
 Prevents the model from learning noise in the training data after it has already learned the general patterns.
 
 ### Batch Normalization
-While its primary purpose is to stabilize and accelerate training (by reducing internal covariate shift), Batch Normalization also has a significant regularization effect.
+While its primary purpose is to stabilize and accelerate training (by reducing internal covariate shift), Batch Normalization also has a significant regularization effect.Internal covariate shift means change in the distribution of inputs to subsequent layers as the previous layer's paranters are trained/updated. this leads to the network taking more time to adapt and learning rates to be slow.
 
 Concept: Normalizes the activations of each layer (by subtracting the batch mean and dividing by the batch standard deviation) for each mini-batch during training. It also introduces learnable scale and shift parameters (γ and β).
 
@@ -52,9 +52,11 @@ During Testing: Uses fixed mean and variance values (typically calculated as mov
 
 * normalize the inputs of a layer for each mini-batch, typically applied after the activation function.
 * Normalized_x = (x - mean(x)) / std(x), Output = gamma * Normalized_x + beta, gamma and beta are learnable params.
+
 * Benefits
   * Reduces internal covariate shift between layers: By normalizing the inputs, it helps to stabilize the distribution of activations across layers, preventing the distribution of inputs to later layers from changing drastically.
-  * Improves gradient flow: By reducing the magnitude of activations, it helps to prevent vanishing or exploding gradients.
+  * Improves gradient flow: By reducing the magnitude of activations, it helps to prevent vanishing or exploding gradients, by having zero centred inputs to nonlinearities which will result in stable gradients and not saturated gradients and also clips/bounds the values by normalisation preventing exploding gradients.
+* Reduces sensitivity to initializations 
   * Acts as a regularizer: Reduces overfitting by introducing noise into the training process.
   * Allows for higher learning rates: Since the inputs are normalized, higher learning rates can be used without causing instability.
 
