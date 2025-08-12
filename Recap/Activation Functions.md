@@ -5,8 +5,8 @@
 | Linear | m x z | Constant m | Used for predicting continuous target variables. Else, rarely used in neural networks. If there is an error in prediction, the changes made by back propagation is constant and not depending on the change in input delta(x) ! constant derivatinve can increase vanishing gradient problems.| Y | Y |
 | Exponential Linear Unit (ELU) | Similar to RELU, but for negative z values, alpha*(exp(z)-1) | 1 (z>0), alpha x exp(z) (z<0) |--| Y | Y |
 | RELU | max (0,z) | 1 and 0 | Less computationally expensive than tanh and sigmoid because it involves simpler mathematical operations. Dying ReLu problem| NO | Y |
-| Sigmoid (Logistics)| | g(z) (1-g(z))| Range: 0-1, non-linear, continuously differentiable, monotonic, and has a fixed output range. Not zero centered - makes optimization harder.| Y | NO |
-|Tanh|| 1 - g(z)^2|Range:-1 to 1, Non-linear, zero-centered, more preferred to sigmoid (?), steeper gradient than sigmoid,  fixed output range |Y|NO|
+| Sigmoid (Logistics)| | g(z) (1-g(z))| Range: 0-1, non-linear, continuously differentiable, monotonic, and has a fixed output range. Not zero centered - makes optimization harder.| YES | NO |
+|Tanh|(e^z-e^(-z))/(e^z+e^(-z))| 1 - g(z)^2|Range:-1 to 1, Non-linear, zero-centered, more preferred to sigmoid (?), steeper gradient than sigmoid,  fixed output range |YES|NO|
 | Leaky RELU| (alpha x z) when z<0 | alpha | usu, alpha = 0.01 | NO | Y |
 * Vanishing gradients happens when derivative of activation function 0<=f’(x)<<1 (close to zero); exploding gradients when f’(x)>1. Gradients used to update the network's weights become extremely small or "vanish" as they are backpropagated from the output layers to the earlier layers. (Eg. sigmoid, tanh)
 
