@@ -7,7 +7,7 @@
 * Encoder: Processes the input sequence into a sequence of representations.   
 * Decoder: Generates the output sequence based on the encoder's output.   
 * Attention mechanism: Allows the model to focus on different parts of the input sequence when making predictions.
-* For a standard Transformer architecture("Attention Is All You Need" paper), the multiple encoder and decoder blocks must have the same model dimension (d_model) on account of residual connections, modularity and consistency and parameter sharing (if any).
+* For a standard Transformer architecture("Attention Is All You Need" paper), the multiple encoder and decoder blocks must have the same model dimension (d_model) on account of residual connections, modularity and consistency and parameter sharing (if any). The same d_model is the dimension of word embeddings as well as position embeddings.
 
 ##### Feed Forward Network
 Its primary functions are:
