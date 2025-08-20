@@ -61,13 +61,13 @@ MAP can be more robust to small datasets by leveraging prior information.
 
 ### Differentiate between autoregressive and masked language models
 
-| Feature           | Autoregressive Language Models (ARLMs) | Masked Language Models (MLMs)        |
-| ---------------- | ------------------------------------- | ----------------------------------- |
-| Prediction | Predicts the *next* token              | Predicts random *masked* tokens             |
-| Context| Unidirectional (left-to-right)         | Bidirectional (left and right)       |
-| Primary Use Case | Text *generation*, summarization, translation | Text *understanding*, classification, QA |
-| Typical Architecture | Decoder-only Transformer               | Encoder-only Transformer             |
-| Examples | GPT series (GPT-2, GPT-3, GPT-4)       | BERT, RoBERTa, ALBERT, DistilBERT    |
+| Feature           | Autoregressive Language Models (ARLMs) | Masked Language Models (MLMs)        | Encoder-Decoder
+| ---------------- | ------------------------------------- | ----------------------------------- |------
+| Prediction | Predicts the *next* token              | Predicts random *masked* tokens             |  sequence-to-sequence (seq2seq) tasks 
+| Context| Unidirectional (left-to-right)         | Bidirectional (left and right)       | Eg. the model must "translate" the input sequence into a different output sequence
+| Primary Use Case | Text *generation*, summarization, translation | Text *understanding*, classification, QA | Translation, Summarization, Question answering, Chatbot.
+| Typical Architecture | Decoder-only Transformer               | Encoder-only Transformer             | Encoder-Decoder Transformer
+| Examples | GPT series (GPT-2, GPT-3, GPT-4)       | BERT, RoBERTa, ALBERT, DistilBERT    | T5, BART
 
 ### Gradient Descent vs. Adam
 <img width="702" alt="image" src="https://github.com/user-attachments/assets/0eb8b1b0-39ab-4000-ab68-21e344ec690a" />
