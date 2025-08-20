@@ -115,6 +115,8 @@ This final (seq_len, d_model) output is the context-aware representation of the 
 * Encoder-Decoder Attention (Cross-Attention): Used in the decoder. Queries come from the decoder's previous layer output, while Keys and Values come from the encoder's output. This allows the decoder to focus on relevant parts of the input sequence when generating the output.
 * Masked Self-Attention (Causal Attention): Used in the decoder for training. It's a special type of self-attention where future tokens are "masked out" (set to negative infinity before softmax) to prevent the model from "cheating" by looking at subsequent tokens when predicting the current one. This ensures that the generation process remains autoregressive (only depends on past information).
 
+<img width="720" height="245" alt="image" src="https://github.com/user-attachments/assets/4f323d9d-6a46-4542-8552-b751f83ef7d7" />
+
 ##### Types of Attention:
 * Scaled Dot product attention discussed above.
   
