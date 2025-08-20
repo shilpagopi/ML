@@ -1,10 +1,14 @@
 # Attention
 The computational complexity of the standard self-attention mechanism is O(n^2⋅d) in terms of time and O(n2) in terms of space, where n is the sequence length and d is the model dimension.
 
+* Additive Attention (Bahdanau Attention): More complex and computationally expensive.
+<img width="779" height="577" alt="image" src="https://github.com/user-attachments/assets/535ef0eb-4ed4-4fa6-af4a-102ba07133a1" />
+
+* Scaled Dot-Product Attention: standard for modern Transformer-based models, used for computational efficiency and simplicity
+
 #### Efficient attention
 1. Sparse Attention
 Instead of having every token attend to every other token, sparse attention methods limit the connections to a predefined, structured pattern. This reduces the number of pairwise computations.
-
 
 Local Attention: Tokens only attend to other tokens within a fixed-size window around them. This is efficient for tasks where local context is most important.
 
