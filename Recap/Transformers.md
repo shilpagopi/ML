@@ -7,11 +7,12 @@
 * Encoder: Processes the input sequence into a sequence of representations.   
 * Decoder: Generates the output sequence based on the encoder's output.   
 * Attention mechanism: Allows the model to focus on different parts of the input sequence when making predictions.
+* For a standard Transformer architecture("Attention Is All You Need" paper), the multiple encoder and decoder blocks must have the same model dimension (d_model) on account of residual connections, modularity and consistency and parameter sharing (if any).
 
 ##### Feed Forward Network
 Its primary functions are:
 * Introduce Non-linearity: The FFN uses a ReLU (or other) activation function between its two linear layers. This non-linearity allows the model to learn more complex patterns and relationships that a linear self-attention mechanism alone cannot capture.
-* Provide Expressive Power: The FFN is often the largest component in a Transformer block in terms of parameters. It acts as a way to parameterize the attention outputs, allowing the model to learn and represent a wide range of functions, effectively acting as a universal function approximator.
+* Provide Expressive Power: The FFN is often the largest component in a Transformer block in terms of parameters. It acts as a way to parameterize the attention outputs, allowing the model to learn and represent a wide range of functions, effectively acting as a universal function approximator. In FFN, the hidden layer's dimension is typically much larger than d_model (e.g., d_ff=4×d_model), but it is then projected back to the original d_model dimension before the residual connection.
 
 ##### Layer Normalization
 * Generally used in Pre-LN fashion (right before MHA(MultiHeadAttention) or FFN(FeedForwardNetwork) layers)
