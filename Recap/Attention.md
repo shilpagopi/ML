@@ -1,4 +1,31 @@
+# Attention
+The computational complexity of the standard self-attention mechanism is O(n^2⋅d) in terms of time and O(n2) in terms of space, where n is the sequence length and d is the model dimension.
 
+#### Efficient attention
+1. Sparse Attention
+Instead of having every token attend to every other token, sparse attention methods limit the connections to a predefined, structured pattern. This reduces the number of pairwise computations.
+
+
+Local Attention: Tokens only attend to other tokens within a fixed-size window around them. This is efficient for tasks where local context is most important.
+
+Global Attention: A few selected tokens (e.g., [CLS] tokens or special "global" tokens) are allowed to attend to all other tokens, and all other tokens attend to them. This creates a few long-range connections while keeping the overall complexity low.
+
+Combinations: Models like Longformer and BigBird combine local and global attention patterns to balance efficiency with the ability to capture long-range dependencies.
+
+2. Kernel-Based Methods
+These methods re-formulate the softmax function in the attention mechanism to avoid the explicit computation of the n×n attention matrix. By leveraging the properties of kernels, they can transform the attention calculation from Q×K T×V into a more efficient form like Q×(K T×V), which can be computed with linear complexity.
+
+Linformer and Performer are examples of this approach. They use a low-rank approximation or a kernel trick to achieve a complexity of O(n⋅d) or O(n⋅logn), respectively.
+
+3. Recurrence with Attention
+This approach breaks long sequences into smaller, manageable chunks. The model processes one chunk at a time, but it uses a memory mechanism to carry forward information from previous chunks. This allows the model to maintain a long-term context without needing to compute attention over the entire sequence at once.
+
+Transformer-XL introduced this concept of a "memory" of past states, which allows it to handle sequences far longer than its attention window.
+
+4. Low-Rank Factorization
+This method assumes that the attention matrix is low-rank and can be approximated by multiplying two smaller matrices. This reduces the complexity from O(n2) to O(n⋅k) where k is the rank of the approximation.
+
+# Rough work
 Tech Wrench
 ·
 Follow publication
