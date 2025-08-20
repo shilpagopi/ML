@@ -1,25 +1,33 @@
-# Tranformers
+# Transformers
 ##### Advantages
-* Capture long range dependencies using attention mechanism (which RNNs struggle with)
-* Parallel processing
+* Capture long range dependencies using attention mechanism (which RNNs struggle with vanishing gradient problem). (Original 2017 paper had self-attention mechanism)
+* Parallel processing (made possible by attention mechanism and positional encoding?)
 
 ##### Core components
 * Encoder: Processes the input sequence into a sequence of representations.   
 * Decoder: Generates the output sequence based on the encoder's output.   
 * Attention mechanism: Allows the model to focus on different parts of the input sequence when making predictions.
 
+##### Positional Encodings
+positional embedding dimension = word embeddings dimension (bcoz they are added element-wise)
+<img width="750" height="500" alt="image" src="https://github.com/user-attachments/assets/b1eb7193-ae44-4335-8b89-c0be12b814ee" />
+
+The self-attention mechanism in the Transformer, by its very nature, is permutation invariant. This means if you were to randomly shuffle the words in a sentence, the self-attention mechanism would produce the exact same output, as it treats the input as a "bag of words" without any regard for their original order. Without Positional Encodings, the model would be unable to differentiate between sentences like "The dog chased the cat" and "The cat chased the dog".
+
 ## Attention
 Scaled Dot-Product Attention
 ###### At a Glance:
-* Input Embeddings:(seq_len, d_model)
-* W_Q,W_K,W_V: Query Weights (W_Q): (d_model, d_k); Key Weights (W_K): (d_model, d_k); Value Weights (W_V): (d_model, d_v)
-* Q,K,V: (seq_len, d_k),(seq_len, d_k),(seq_len, d_v)
-* QK(transpose) divided by the square root of d_k: (seq_len, seq_len)
+l - seq_len, hidden_dimension - d
+* Input Embeddings:(l, d)
+* W_Q,W_K,W_V: Query Weights (W_Q): (d, d_k); Key Weights (W_K): (d, d_k); Value Weights (W_V): (d, d_v)
+* Q,K,V: (l, d_k),(l, d_k),(l, d_v)
+* QK(transpose) divided by the square root of d_k: (l, l)
 * **row-wise** Softmax
-* softmax{Attention_Weights).V : (seq_len, seq_len) x (seq_len, d_v) = (seq_len, d_v)
+* softmax{Attention_Weights).V : (l, l) x (l, d_v) = (seq_len, d_v)
 * For multihead attention:
-  * Concatenate heads: (seq_len, headcount * d_v_head) = (seq_len, d_model)
-  * MultiHead(Q,K,V)=Concat(all_heads)*W_O => (seq_len, d_model) x (d_model, d_model) = (seq_len, d_model)
+  * Concatenate heads: (l, headcount * d_v_head) = (l, d) # h * d_v = d
+  * MultiHead(Q,K,V)=Concat(all_heads)*W_O => (l, d) x (d, d) = (l, d)  (W_O is of dimension (d * d))
+* Residual connection: Output(l,d) = Input Embeddings(l, d)+ MultiHeadAttention(l,d)
 
 ###### Detailed Explanation:
 
