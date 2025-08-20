@@ -13,14 +13,14 @@
   * Temperature(T) Sampling: Divide logits (raw prediction scores) by T *before* the softmax function. T = 0: Equivalent to greedy sampling. T = 1: No change (standard sampling).T < 1: "Hardens" or "sharpens" the distribution (conservative and deterministic). T > 1: "Softens" or "flattens" the distribution (creative, even non coherent)
   * Top-K Sampling: A token is sampled from the k most probable tokens. Pros:Diverse, Avoids sampling extremely unlikely tokens Cons: The fixed k.
   * Top-P Sampling (Nucleus Sampling): Samples from the smallest set of tokens whose cumulative probability exceeds a threshold p. Pros: Dynamically adjusts the number of tokens, more robust that top-K. Provides a good balance between coherence and diversity.
-* Combining Strategies: Temperature and Top-P
+  * Top-k and top-p sampling do not directly modify the original probability distribution like temperature does. Instead, they act as a filter that prunes the vocabulary and then re-normalizes the probabilities of the remaining tokens to sum to 1.
+* Combining Strategies: Temperature and Top-P, top-k and beam search.
 
 #### Evaluation
 * Human evaluation:Rating Scales (e.g., Likert scale), Ranking, A/B Testing, Critique and Annotation.
   Human evaluation parameters: Fluency/Naturalness,Coherence/Consistency, Relevance/Fidelity to Prompt, Creativity/Diversity, Factuality/Truthfulness, Safety/Harmlessness, Aesthetics, Task-Specific Criteria
 
 ##### For Text Generation:
-
 Reference-based Metrics (require ground truth): 
  * BLEU (Bilingual Evaluation Understudy) - precision of n-gram overlap. Higher scores better. 
  * ROUGE (Recall-Oriented Understudy for Gisting Evaluation): Measures recall of n-gram overlap
