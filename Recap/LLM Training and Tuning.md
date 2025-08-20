@@ -130,8 +130,8 @@ Code line: data_collator = DataCollatorForLanguageModeling(tokenizer=tokenizer, 
 mlm=True: The data collator will randomly mask a percentage of tokens in the input sequences and the model will be trained to predict the original masked tokens. This is common for training BERT-like models.
 mlm=False: The data collator will prepare the data for causal language modeling, where the model predicts the next token in the sequence. This is common for training GPT-like models.
 
-
-
-
-
-
+## Distillation Models
+Knowledge Transfer: The student model is trained on a combined loss function that includes two components:
+* Distillation Loss: This loss measures the difference between the student's output probabilities and the teacher's "soft targets." (probability distributions of the teacher model)
+* Student Loss: This is the traditional loss function that measures the difference between the student's predictions and the actual ground-truth labels.
+Reasons: Model Compression and Efficiency(faster and requires less memory, reducing latency and operational costs), Edge and Mobile Deployment, Real-time Applications, Enhanced Generalization (and guidance from teacher probabilities)
