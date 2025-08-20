@@ -1,10 +1,18 @@
 # Attention
 The computational complexity of the standard self-attention mechanism is O(n^2⋅d) in terms of time and O(n2) in terms of space, where n is the sequence length and d is the model dimension.
 
+#### Types of Attention
 * Additive Attention (Bahdanau Attention): More complex and computationally expensive.
 <img width="779" height="577" alt="image" src="https://github.com/user-attachments/assets/535ef0eb-4ed4-4fa6-af4a-102ba07133a1" />
 
 * Scaled Dot-Product Attention: standard for modern Transformer-based models, used for computational efficiency and simplicity
+
+#### Attention Masking
+How: Attention masking is the process of preventing an attention head from looking at certain tokens. This is done by adding a large negative value (e.g., -1e9) to the attention scores for the tokens to be masked, so that after the softmax function is applied, their attention weights become effectively zero.
+
+Where: 
+* Padding Masking: When training a batch of sequences, they are often padded to a uniform length. A padding mask is applied to prevent the model from attending to these meaningless padding tokens, ensuring that the model doesn't waste computational resources or learn spurious relationships from them.
+* Look-Ahead Masking: In a decoder, during autoregressive generation (e.g., text generation), a look-ahead mask is used to prevent the model from "cheating" by attending to future tokens. It ensures that the prediction for a given token depends only on the tokens that have already been generated, preserving the sequential nature of generation.
 
 #### Efficient attention
 1. Sparse Attention
