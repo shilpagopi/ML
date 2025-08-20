@@ -9,6 +9,7 @@ Advantages:
 * Manages vocabulary size: It creates a fixed-size vocabulary that is larger than character-level but much smaller than word-level, striking a good balance.
 * Captures common morphological units: Learns prefixes, suffixes, and common word roots.
 * Simplicity: The algorithm is relatively straightforward to implement.
+* Better than character based tokenization as it would increase in the input sequence length.
 
 Disadvantages:
 * Greedy approach: May not always result in the linguistically most intuitive or optimal subword segmentation.
