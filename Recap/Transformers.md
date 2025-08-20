@@ -8,6 +8,11 @@
 * Decoder: Generates the output sequence based on the encoder's output.   
 * Attention mechanism: Allows the model to focus on different parts of the input sequence when making predictions.
 
+##### Feed Forward Network
+Its primary functions are:
+* Introduce Non-linearity: The FFN uses a ReLU (or other) activation function between its two linear layers. This non-linearity allows the model to learn more complex patterns and relationships that a linear self-attention mechanism alone cannot capture.
+* Provide Expressive Power: The FFN is often the largest component in a Transformer block in terms of parameters. It acts as a way to parameterize the attention outputs, allowing the model to learn and represent a wide range of functions, effectively acting as a universal function approximator.
+
 ##### Layer Normalization
 * Generally used in Pre-LN fashion (right before MHA(MultiHeadAttention) or FFN(FeedForwardNetwork) layers)
 * Why not batch norm? Because of small or no batch sizes and also varying lengths across multiple input samples (unlike images)
