@@ -1,6 +1,7 @@
 # Solution Track
-1. **Problem Scope**  and business understanding. Any particular business metrics?
-2. **Data**:
+1. **Problem Scope** and business understanding/goals, target audience/enduser, and key constraints, accuracy requirements/hallucination tolerance.
+2. **Functional Requirements and NFR** : Scale, Latency, Privacy, Security, Online/Offline
+3. **Data**:
   * Data features
   * Data type(static/dynamic, structured/unstructured, derived features, biases)
   * Scale
@@ -19,7 +20,8 @@
   * ML modeling: optimizations - regularization, hyper parameter tuning
   * cold-start solution
   * Feedback loops
-6. **Deployment, MLOps, monitoring, logging, model versioning etc.**
+  * If LLM-based solution, RAG vs finetuning? Open source-vs-off the shelf models. Prompt engineering techniques.
+6. **Deployment, Postproduction: MLOps, monitoring, logging, model versioning etc.**
 7. **Online metrics, A/B testing**
 
 Tips: 
