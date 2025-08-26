@@ -27,21 +27,12 @@ While self-hosting offers full control and data privacy, it requires significant
 * Caching repeated requests
 
 ### Scaling & Bottlenecks
-Question: How do we handle high-volume traffic and ensure the service scales?
-Answer: Discuss autoscaling, load balancing, and model parallelism (e.g., sharding a large model across multiple GPUs). Load balancers distribute requests, while autoscaling adds/removes resources based on demand.
+* High-volume traffic: autoscaling, load balancing, and model parallelism (e.g., sharding a large model across multiple GPUs). 
+* Bottlenecks: GPU memory, I/O latency (especially with RAG), network latency, and the LLM's inherent processing time.
 
-Question: What are the potential bottlenecks in this system?
-Answer: Common bottlenecks include GPU memory, I/O latency (especially with RAG), network latency, and the LLM's inherent processing time.
-
-Question: How would we manage the cost of running the LLM in production?
-Answer: Discuss cost optimization strategies. This includes using smaller models, quantizing models, using spot instances, and leveraging caching for repeated requests.
-
-Question: What strategies would you use to reduce the latency of the API?
-Answer: Latency reduction techniques include model quantization, using a faster model, optimizing the inference stack (e.g., with frameworks like TensorRT), and caching frequent queries.
-
-Question: How do we handle unexpected token limits or complex queries that require a longer context window?
-Answer: This addresses the model's limitations. Solutions include chunking the input, using a sliding window approach, or selecting a model with a larger context window (e.g., GPT-4o, Claude 3 Opus).
-
+### Safety and Responsible AI 🛡️
+* Safety Filters: Implement a multi-layered safety stack: pre-filter on the user's input to block harmful prompts and a post-filter on the model's output to detect and prevent the generation of toxic or biased content. 
+* Bias Mitigation: addressed by fine-tuning the model on a more diverse dataset or by adjusting the safety filters to prevent biased responses.
 
 
   
