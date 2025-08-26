@@ -8,9 +8,22 @@
 
 ### Deployment
 *  FastAPI is great for a simple REST API wrapper, while Triton Inference Server is a specialized tool for high-throughput, low-latency model serving.  Deploy on GPUs/TPUs with Triton or vLLM for efficient serving.
+* For deploying LLMs, a cloud-based managed service like AWS SageMaker or Azure AI is often preferred over a self-hosted solution.
+While self-hosting offers full control and data privacy, it requires significant upfront investment and specialized expertise (lacks built-in features for GPU resource allocation and autoscaling)
+
+### Monitoring and Observability
+
+* Model Performance Metrics: Latency, Throughput, Hallucination Rate, Content Safety Score: A score from a secondary filter model indicating the level of toxicity, bias, or hate speech.
+* Business Metrics: User Engagement, First-Time Resolution Rate (For a chatbot), Customer Satisfaction Score (CSAT)
+
+* Data Drift: Monitor the distribution of incoming prompts. If the input data starts to change significantly (e.g., new slang, different topics), it can signal data drift. You can use statistical tests or monitor the cosine similarity of incoming embeddings to a baseline.
+
+* Concept Drift: Track key model performance and business metrics over time. A sustained decline in accuracy, resolution rate, or user satisfaction can indicate that the underlying concepts the model was trained on are no longer relevant. For example, a chatbot might start performing poorly if user language shifts from formal to casual.
 
 ### Cost and Latency Optimization
-* using smaller models, quantizing models, using spot instances?, and leveraging caching for repeated requests, prompt caching, optimizing the inference stack (e.g., with frameworks like TensorRT),
+* Optimizing the inference stack (e.g., with frameworks like TensorRT), using smaller/distilled models, quantizing models, using spot instances?
+* Prompt caching, prompt-optimization, output optimization for token-based billing, Tiered Model Strategy (route simpler tasks to cheaper models)
+* Caching repeated requests, 
 
 
 
