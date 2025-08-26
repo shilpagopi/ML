@@ -98,3 +98,4 @@ ResNet architectures can be built with hundreds or even thousands of layers (e.g
 * Cross pollination/interaction of insights
 
 Conclude: Based on distinctness in behaviour, empirical results and business objectives.
+
