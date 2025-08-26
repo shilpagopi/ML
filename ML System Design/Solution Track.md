@@ -1,6 +1,6 @@
 # Solution Track
 1. **Problem Scope** and business understanding/goals, target audience/enduser, and key constraints, accuracy requirements/hallucination tolerance.
-2. **Functional Requirements and NFR** : Scale, Latency, Privacy, Security, Online/Offline
+2. **Functional Requirements and NFR** : Scale, Latency, Privacy, Security, Online/Offline, Guardrails
 3. **Data**:
   * Data features
   * Data type(static/dynamic, structured/unstructured, derived features, biases)
