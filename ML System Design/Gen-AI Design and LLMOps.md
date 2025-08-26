@@ -12,7 +12,6 @@
 While self-hosting offers full control and data privacy, it requires significant upfront investment and specialized expertise (lacks built-in features for GPU resource allocation and autoscaling)
 
 ### Monitoring and Observability
-
 * Model Performance Metrics: Latency, Throughput, Hallucination Rate, Content Safety Score: A score from a secondary filter model indicating the level of toxicity, bias, or hate speech.
 * Business Metrics: User Engagement, First-Time Resolution Rate (For a chatbot), Customer Satisfaction Score (CSAT)
 
@@ -20,10 +19,28 @@ While self-hosting offers full control and data privacy, it requires significant
 
 * Concept Drift: Track key model performance and business metrics over time. A sustained decline in accuracy, resolution rate, or user satisfaction can indicate that the underlying concepts the model was trained on are no longer relevant. For example, a chatbot might start performing poorly if user language shifts from formal to casual.
 
+* Cadence for model updates and retraining
+
 ### Cost and Latency Optimization
 * Optimizing the inference stack (e.g., with frameworks like TensorRT), using smaller/distilled models, quantizing models, using spot instances?
 * Prompt caching, prompt-optimization, output optimization for token-based billing, Tiered Model Strategy (route simpler tasks to cheaper models)
-* Caching repeated requests, 
+* Caching repeated requests
+
+### Scaling & Bottlenecks
+Question: How do we handle high-volume traffic and ensure the service scales?
+Answer: Discuss autoscaling, load balancing, and model parallelism (e.g., sharding a large model across multiple GPUs). Load balancers distribute requests, while autoscaling adds/removes resources based on demand.
+
+Question: What are the potential bottlenecks in this system?
+Answer: Common bottlenecks include GPU memory, I/O latency (especially with RAG), network latency, and the LLM's inherent processing time.
+
+Question: How would we manage the cost of running the LLM in production?
+Answer: Discuss cost optimization strategies. This includes using smaller models, quantizing models, using spot instances, and leveraging caching for repeated requests.
+
+Question: What strategies would you use to reduce the latency of the API?
+Answer: Latency reduction techniques include model quantization, using a faster model, optimizing the inference stack (e.g., with frameworks like TensorRT), and caching frequent queries.
+
+Question: How do we handle unexpected token limits or complex queries that require a longer context window?
+Answer: This addresses the model's limitations. Solutions include chunking the input, using a sliding window approach, or selecting a model with a larger context window (e.g., GPT-4o, Claude 3 Opus).
 
 
 
