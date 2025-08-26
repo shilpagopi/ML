@@ -7,9 +7,12 @@
 * RAG vs Finetuning: RAG brings in latency
 
 ### Deployment
-*  FastAPI is great for a simple REST API wrapper, while Triton Inference Server is a specialized tool for high-throughput, low-latency model serving.  Deploy on GPUs/TPUs with Triton or vLLM for efficient serving.
 * For deploying LLMs, a cloud-based managed service like AWS SageMaker or Azure AI is often preferred over a self-hosted solution.
 While self-hosting offers full control and data privacy, it requires significant upfront investment and specialized expertise (lacks built-in features for GPU resource allocation and autoscaling)
+* Deploy on GPUs/TPUs with **Triton** or **vLLM** for efficient serving. :
+* **FastAPI**, Triton Inference Server (high-throughput, low-latency model serving), vLLM (novel "paged attention" algorithm to significantly increase the throughput of LLM serving)
+* **TGI** (Text Generation Inference): A purpose-built serving solution from Hugging Face that optimizes text generation.
+* BentoML / OpenLLM: Frameworks that help you package your models and dependencies into a production-ready container, often with built-in features for serving and scaling.
 
 ### Monitoring and Observability
 * Model Performance Metrics: Latency, Throughput, Hallucination Rate, Content Safety Score: A score from a secondary filter model indicating the level of toxicity, bias, or hate speech.
@@ -22,7 +25,7 @@ While self-hosting offers full control and data privacy, it requires significant
 * Cadence for model updates and retraining
 
 ### Cost and Latency Optimization
-* Optimizing the inference stack (e.g., with frameworks like TensorRT), using smaller/distilled models, quantizing models, using spot instances?
+* Optimizing the inference stack (e.g., with frameworks like **TensorRT**), using smaller/distilled models, quantizing models, using spot instances?
 * Prompt caching, prompt-optimization, output optimization for token-based billing, Tiered Model Strategy (route simpler tasks to cheaper models)
 * Caching repeated requests
 
@@ -33,6 +36,7 @@ While self-hosting offers full control and data privacy, it requires significant
 ### Safety and Responsible AI
 * Safety Filters: Implement a multi-layered safety stack: pre-filter on the user's input to block harmful prompts and a post-filter on the model's output to detect and prevent the generation of toxic or biased content. 
 * Bias Mitigation: addressed by fine-tuning the model on a more diverse dataset or by adjusting the safety filters to prevent biased responses.
+* **NeMo Guardrails**: An open-source toolkit from NVIDIA for creating conversational AI firewalls.
 
 ### LLM and RAG Evaluation
 #### Generator Evaluation
@@ -45,5 +49,5 @@ While self-hosting offers full control and data privacy, it requires significant
 Contextual Precision/Relevancy= f(retrieved context,user's query) =  verify each retrieved chunk in the context C against the original question Q.
 Contextual Precision and Recall (Precision@k, Recall@k), MRR: break down the **groundtruth** answer into a set of discrete claims. Verify how many can be attributed to the context.
 
-Frameworks/Tools: RAGAs, DeepEval, and Promptfoo, LangChain/LlamaIndex, TruLens, MLflow/Weights & Biases (W&B)
+Frameworks/Tools: **RAGAs, DeepEval, and Promptfoo, LangChain/LlamaIndex, TruLens, MLflow/Weights & Biases (W&B)**
   
