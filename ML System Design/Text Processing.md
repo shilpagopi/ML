@@ -7,7 +7,7 @@
   * Models:LSTMs, GRUs, Transformer Models
 * Models for Very Long Text:
   * Chunking and Summarization
-  * Long-Context Transformer Models (like LongFormer using sparse attention, BigBird)
+  * Long-Context Transformer Models: like LongFormer(4,096 tokens) using sparse attention, BigBird(4,096 tokens), LongT5 (16,384 tokens)
   * Hierarchical Transformer Models:
    Lower Level (Sentence Encoding): A model like SBERT processes each sentence independently to create a sentence embedding. 
 Higher Level (Document Encoding): The sequence of sentence embeddings is then fed into a second transformer model. This higher-level transformer learns the relationships between the sentences, capturing the overall context, topic, and structure of the entire paragraph or document.
