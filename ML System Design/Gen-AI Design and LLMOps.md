@@ -1,6 +1,6 @@
 # Gen-AI Design and LLMOps
 
-#### Architecture
+### Architecture
 * Off-the-shelf APIs are fast to deploy, require less maintenance, and offer high performance but come with a higher cost, less control, and potential data privacy concerns.
 * Open-source models offer full control, better cost management for high volume, and data privacy but require significant infrastructure and MLOps expertise.
 * A single large model is simpler to manage but can be expensive and inefficient for varied tasks. A combination of specialized models (e.g., one for summarization, another for Q&A) can be more cost-effective and performant but adds architectural complexity.
@@ -30,9 +30,20 @@ While self-hosting offers full control and data privacy, it requires significant
 * High-volume traffic: autoscaling, load balancing, and model parallelism (e.g., sharding a large model across multiple GPUs). 
 * Bottlenecks: GPU memory, I/O latency (especially with RAG), network latency, and the LLM's inherent processing time.
 
-### Safety and Responsible AI 🛡️
+### Safety and Responsible AI
 * Safety Filters: Implement a multi-layered safety stack: pre-filter on the user's input to block harmful prompts and a post-filter on the model's output to detect and prevent the generation of toxic or biased content. 
 * Bias Mitigation: addressed by fine-tuning the model on a more diverse dataset or by adjusting the safety filters to prevent biased responses.
 
+### LLM and RAG Evaluation
+#### Generator Evaluation
+* Faithfulness(Hallucination/Factuality or Groundedness (in a RAG context): break down the generated answer into a set of discrete, verifiable claims or statements. Verify how many are supported by the context.
+* Relevance/Answer Relevancy: Generate a set of artificial questions suiting the generated answer, the final score is the mean of the cosine similarity between the embedding of the original question and the embeddings of the generated questions.
+* Completeness
+* If groundtruth references: BLEU/ROUGE
 
+#### Retriever Evaluation
+Contextual Precision/Relevancy= f(retrieved context,user's query) =  verify each retrieved chunk in the context C against the original question Q.
+Contextual Precision and Recall (Precision@k, Recall@k), MRR: break down the **groundtruth** answer into a set of discrete claims. Verify how many can be attributed to the context.
+
+Frameworks/Tools: RAGAs, DeepEval, and Promptfoo, LangChain/LlamaIndex, TruLens, MLflow/Weights & Biases (W&B)
   
