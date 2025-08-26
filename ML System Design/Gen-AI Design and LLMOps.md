@@ -7,10 +7,10 @@
 * RAG vs Finetuning: RAG brings in latency
 
 ### Deployment
-*  FastAPI is great for a simple REST API wrapper, while Triton Inference Server is a specialized tool for high-throughput, low-latency model serving.
+*  FastAPI is great for a simple REST API wrapper, while Triton Inference Server is a specialized tool for high-throughput, low-latency model serving.  Deploy on GPUs/TPUs with Triton or vLLM for efficient serving.
 
 ### Cost and Latency Optimization
-* using smaller models, quantizing models, using spot instances?, and leveraging caching for repeated requests, prompt caching, optimizing the inference stack (e.g., with frameworks like TensorRT), 
+* using smaller models, quantizing models, using spot instances?, and leveraging caching for repeated requests, prompt caching, optimizing the inference stack (e.g., with frameworks like TensorRT),
 
 
 
