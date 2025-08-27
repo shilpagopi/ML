@@ -86,10 +86,17 @@ This method involves comparing your calculated F-statistic to a critical value f
 Rule: If the calculated F-statistic is greater than the F-critical value, you reject the null hypothesis.
 This is conceptually equivalent to the p-value method, as a large F-statistic corresponds to a small p-value.
 
+<img width="741" height="397" alt="image" src="https://github.com/user-attachments/assets/f7a5c7c0-eeec-4f3d-a578-330acc4a6e20" />
+
 Example:
 <img width="741" height="627" alt="image" src="https://github.com/user-attachments/assets/0c3e5c92-2f51-4341-a482-57a2df34bd41" />
 <img width="741" height="651" alt="image" src="https://github.com/user-attachments/assets/8fa72ca7-929b-48f0-a0f2-ae7ab3a47350" />
 <img width="741" height="656" alt="image" src="https://github.com/user-attachments/assets/cabe9e23-a3ad-4520-9e24-a64acd5e198b" />
+p_value = stats.f.sf(f_statistic, df1, df2)
+
+For Linear Regression: 
+<img width="741" height="656" alt="image" src="https://github.com/user-attachments/assets/47d3be43-82ff-4023-b240-463e6f306a0c" />
+
 
 
 
