@@ -105,4 +105,6 @@ Boosting (e.g., AdaBoost, Gradient Boosting): Sequentially builds models, with l
 ### 4. Combination of Approaches
 Why might it be beneficial to use an ensemble of different algorithms for fraud detection?
 Answer: An ensemble combines multiple models to get a better overall prediction. In fraud detection, this is useful because different models can capture different types of fraud. For example, a Random Forest might be great at catching typical fraud patterns, while an Isolation Forest (an anomaly detection algorithm) can catch new, unseen types of fraud. Combining their predictions can lead to a more robust and accurate system.
-  
+
+### Isolation Forest
+Need to copy paste from gemini outputs.
