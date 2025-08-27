@@ -73,6 +73,11 @@ One tailed vs two tailed t-distributions
 <img width="777" height="550" alt="image" src="https://github.com/user-attachments/assets/79f258d2-f021-47a3-adc7-5e50fa3ebafd" />
 <img width="750" height="449" alt="image" src="https://github.com/user-attachments/assets/3d3d9c49-1770-4d7a-a517-a467288357ed" />
 <img width="750" height="698" alt="image" src="https://github.com/user-attachments/assets/3c455e17-edc5-4970-a048-914c5c72ab70" />
+Using the F-critical value:
+This method involves comparing your calculated F-statistic to a critical value from an F-distribution table. The critical value depends on your chosen significance level (α) and the degrees of freedom for your numerator and denominator.
+
+Rule: If the calculated F-statistic is greater than the F-critical value, you reject the null hypothesis.
+This is conceptually equivalent to the p-value method, as a large F-statistic corresponds to a small p-value.
 
 
 
