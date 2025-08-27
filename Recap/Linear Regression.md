@@ -62,6 +62,14 @@ Least square function can be obtained by calculating log likelihood, P(y/x) = P(
   
 * F-statistic and its p-value: This tests the overall significance of the entire regression model. A small p-value for the F-statistic indicates that the model as a whole is statistically significant, meaning that at least one of the independent variables contributes to explaining the variation in the dependent variable.
 
+Question: When would you use adjusted R2 over R2?
+
+Answer: You should use adjusted R2 when comparing multiple regression models that have a different number of independent variables. It helps to select the most parsimonious model (the one with the fewest predictors that still has good explanatory power) and avoids overfitting.
+
+Question: Can the adjusted R2 be negative? If so, what does that imply?
+
+Answer: Yes, adjusted R2 can be negative. This happens when the model's performance is worse than a model with no predictors at all (i.e., a simple model that just predicts the mean of the dependent variable). A negative adjusted R2 indicates that your predictors are not explaining the variance in the dependent variable and may be a very poor model.
+
 ### How to handle multicolliearity
 #### 1. Correlation Matrix
 How it works: Calculate the Pearson correlation coefficient between all pairs of your independent variables.
