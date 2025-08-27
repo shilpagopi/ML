@@ -93,7 +93,9 @@ Using both oversampling and undersampling. Eg. SMOTE + Tomek Links / SMOTE + ENN
 ### 2.Algorithm-Level Approaches (Cost-Sensitive Learning)
 * Adjust sample weights: Example: In scikit-learn, many classifiers (e.g., LogisticRegression, SVC, RandomForestClassifier, GradientBoostingClassifier) have a class_weight parameter (often set to 'balanced'), which assigns weights inversely proportional to classes.<img width="617" alt="image" src="https://github.com/user-attachments/assets/1851dff7-2917-45fa-8373-963b90e9e57d" />
 Note that sample weights assigned during the training phase of a decision tree classifier or regressor are generally NOT used during inferencing (prediction).
-* Change the prediction threshold value (For models that output probabilities (like logistic regression))
+* Change the prediction threshold value (For models that output probabilities (like logistic regression)): 
+How can a simple "threshold moving" technique help with imbalanced classification?
+Answer: By moving this threshold, you can adjust the balance between precision and recall. For example, by lowering the threshold (e.g., to 0.3), you can increase the recall by flagging more transactions as fraud, but this will also increase the number of false positives.
 
 ### 3.Ensemble Methods
 Combining multiple models can improve performance on imbalanced datasets.
