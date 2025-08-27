@@ -1,7 +1,6 @@
 # Handling Data Imbalance
-* Data-based approaches: Use under sampling or over sampling to balance the data (oversampling - overfitting, undersampling - info loss)
-* Algorithmic appraoches (Cost-Sensistive Learning) : Change the prediction threshold value, Assign larger sample weights to minority labels)
-* Ensemble methods
+* Data-based approaches: Use under sampling or over sampling to balance the data (oversampling - overfitting, undersampling - info loss), synthetic data generation(eg. SMOTE)
+* Algorithmic approaches: Ensemble methods(Eg.Random Forest, XGBoost), Cost-Sensistive Learning : Change the prediction threshold value, Assign larger sample weights to minority labels
 * Use apt eval metrics (prec, rec, f1 instead of accuracy)
 * Othe rmethods: Collect more data, Feature Engineering, Anomaly detection algorithms (If the minority class truly represents anomalies or outliers), Change the Problem Formulation
 
