@@ -49,6 +49,10 @@ Conservativeness|	Less conservative (narrower confidence intervals for a given a
 For discrete: <img width="240" alt="image" src="https://github.com/user-attachments/assets/d8fbab23-21b9-4924-82bb-3d6e42d7c3b8" />
 For continuous: <img width="721" alt="image" src="https://github.com/user-attachments/assets/7d1785fd-6148-4e8e-9125-5f4583e9dc78" />
 
+#### 9.How does the sample size affect the power of a test and the p-value?
+
+A larger sample size generally increases the statistical power of a test because it reduces the standard error of the mean, making it easier to detect a true effect. With a larger sample, a smaller p-value is more likely if an effect truly exists.
+
 #### 9. PDF vs CDF
 
 
