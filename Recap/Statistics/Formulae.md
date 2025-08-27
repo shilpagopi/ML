@@ -69,6 +69,14 @@ One tailed vs two tailed t-distributions
 <img width="735" alt="image" src="https://github.com/user-attachments/assets/2e711830-ec6a-4f52-9799-d5fbc19a5463" />
 
 
+#### F test
+<img width="777" height="550" alt="image" src="https://github.com/user-attachments/assets/79f258d2-f021-47a3-adc7-5e50fa3ebafd" />
+<img width="750" height="449" alt="image" src="https://github.com/user-attachments/assets/3d3d9c49-1770-4d7a-a517-a467288357ed" />
+<img width="750" height="698" alt="image" src="https://github.com/user-attachments/assets/3c455e17-edc5-4970-a048-914c5c72ab70" />
+
+
+
+
 
 
 
