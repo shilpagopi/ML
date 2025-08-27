@@ -71,6 +71,10 @@ One tailed vs two tailed t-distributions
 
 #### F test
 There is no upper limit for the F-statistic value. It can theoretically range from zero to positive infinity.
+<img width="741" height="589" alt="image" src="https://github.com/user-attachments/assets/12b2c859-0044-42c1-b4f7-9eafbc2b504e" />
+<img width="741" height="717" alt="image" src="https://github.com/user-attachments/assets/25d1b9b3-fd8f-4756-acb2-5f814f73c18e" />
+
+
 <img width="777" height="550" alt="image" src="https://github.com/user-attachments/assets/79f258d2-f021-47a3-adc7-5e50fa3ebafd" />
 <img width="750" height="449" alt="image" src="https://github.com/user-attachments/assets/3d3d9c49-1770-4d7a-a517-a467288357ed" />
 <img width="750" height="698" alt="image" src="https://github.com/user-attachments/assets/3c455e17-edc5-4970-a048-914c5c72ab70" />
@@ -81,6 +85,13 @@ This method involves comparing your calculated F-statistic to a critical value f
 
 Rule: If the calculated F-statistic is greater than the F-critical value, you reject the null hypothesis.
 This is conceptually equivalent to the p-value method, as a large F-statistic corresponds to a small p-value.
+
+Example:
+<img width="741" height="627" alt="image" src="https://github.com/user-attachments/assets/0c3e5c92-2f51-4341-a482-57a2df34bd41" />
+<img width="741" height="651" alt="image" src="https://github.com/user-attachments/assets/8fa72ca7-929b-48f0-a0f2-ae7ab3a47350" />
+<img width="741" height="656" alt="image" src="https://github.com/user-attachments/assets/cabe9e23-a3ad-4520-9e24-a64acd5e198b" />
+
+
 
 
 
