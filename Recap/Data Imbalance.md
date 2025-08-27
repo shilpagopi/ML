@@ -107,4 +107,8 @@ Why might it be beneficial to use an ensemble of different algorithms for fraud 
 Answer: An ensemble combines multiple models to get a better overall prediction. In fraud detection, this is useful because different models can capture different types of fraud. For example, a Random Forest might be great at catching typical fraud patterns, while an Isolation Forest (an anomaly detection algorithm) can catch new, unseen types of fraud. Combining their predictions can lead to a more robust and accurate system.
 
 ### Isolation Forest
-Need to copy paste from gemini outputs.
+<img width="732" height="397" alt="Screenshot 2025-08-27 at 2 53 16 PM" src="https://github.com/user-attachments/assets/6eb1db58-4a20-48eb-a0f7-3361912a5489" />
+<img width="756" height="369" alt="Screenshot 2025-08-27 at 2 54 21 PM" src="https://github.com/user-attachments/assets/42954a55-74bd-43e0-b8f1-89d5d64a9e21" />
+<img width="756" height="515" alt="Screenshot 2025-08-27 at 2 54 54 PM" src="https://github.com/user-attachments/assets/dba85e3d-1daf-4341-ad84-ee6ac5d36405" />
+<img width="756" height="415" alt="Screenshot 2025-08-27 at 2 55 13 PM" src="https://github.com/user-attachments/assets/f7eda7e2-31ca-4718-b720-62b5ce97d414" />
+<img width="756" height="279" alt="Screenshot 2025-08-27 at 2 55 32 PM" src="https://github.com/user-attachments/assets/b943aeb3-7680-4c36-ac15-76a7eb04d425" />
