@@ -101,4 +101,8 @@ Answer: By moving this threshold, you can adjust the balance between precision a
 Combining multiple models can improve performance on imbalanced datasets.
 Bagging (e.g., BalancedBaggingClassifier): Trains multiple base learners on different subsets of the data. For imbalanced data, each subset can be sampled to be balanced.
 Boosting (e.g., AdaBoost, Gradient Boosting): Sequentially builds models, with later models focusing more on instances that earlier models misclassified. AdaBoost can inherently pay more attention to misclassified minority samples.
+
+### 4. Combination of Approaches
+Why might it be beneficial to use an ensemble of different algorithms for fraud detection?
+Answer: An ensemble combines multiple models to get a better overall prediction. In fraud detection, this is useful because different models can capture different types of fraud. For example, a Random Forest might be great at catching typical fraud patterns, while an Isolation Forest (an anomaly detection algorithm) can catch new, unseen types of fraud. Combining their predictions can lead to a more robust and accurate system.
   
