@@ -45,7 +45,7 @@ In hypothesis testing, we typically set a significance level (alpha, e.g., 0.05)
 
 #### 5. What is the difference between covariance and correlation?
 * Covariance: Measures the direction of the linear relationship between two variables. A positive covariance means they tend to increase or decrease together, while a negative covariance means one tends to increase as the other decreases. Its magnitude is not standardized, making it difficult to interpret the strength of the relationship.
-* Correlation: Measures both the direction and strength of the linear relationship between two variables. It's a standardized version of covariance, ranging from -1 to +1. A correlation of +1 indicates a perfect positive linear relationship, -1 a perfect negative linear relationship, and 0 no linear relationship.
+* Correlation: Measures both the direction and strength of the linear relationship between two variables. It's a standardized version of covariance, ranging from -1 to +1. A correlation of +1 indicates a perfect positive linear relationship, -1 a perfect negative linear relationship, and 0 no linear relationship.(strong: +/-1, weak : 0 linear relationship). Can be computed between two variables, two populations or two samples.
 Correlation is covariance normalized by product of both standard deviations.
 <img width="642" height="263" alt="Screenshot 2025-08-28 at 10 38 04 AM" src="https://github.com/user-attachments/assets/318a341e-f2fd-4b90-bf5d-2d346aec9aab" />
 
