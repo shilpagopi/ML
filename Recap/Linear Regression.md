@@ -1,16 +1,22 @@
 ## Linear Regression
 
+### At a Glance
+* Linear Regression Assumptions
+* R-Squared vs. Adjusted-R-Squared
+---
+
+### Introduction
 * Core idea: Fit a line to data
-* Linear Regression is a machine learning algorithm based on supervised learning. 
-* Regression models a target prediction value based on independent variables.
+* Linear Regression is a machine learning algorithm based on supervised learning
+* Regression models a target prediction value based on independent variables
   
 ### Assumptions:
-* Errors are normally distributed, Variance of errors is constant. Variance of predictions is zero as the lie on straight line.
+* Errors are normally distributed, Variance of errors is constant. Variance of predictions is zero as the lie on straight line. e ~ N(0,σ^2), y ~ N(wTx,σ^2)  
 * Linearity: The relationship between the dependent variable and each independent variable should be linear. This can be checked by scatter plots of the dependent variable against each independent variable.
+* No Multicollinearity: The independent variables should not be highly correlated with each other. High multicollinearity can make it difficult to estimate the individual coefficients accurately and can lead to an unstable model. This is checked using methods like Variance Inflation Factor (VIF), as discussed previously.
 Independence of Errors (No Autocorrelation): The residuals (errors) should be independent of each other. This is particularly important for time-series data. The Durbin-Watson test can be used to check for autocorrelation.
 * Homoscedasticity: The variance of the residuals should be constant across all levels of the independent variables. In other words, the spread of the residuals should be roughly the same throughout the range of predicted values. A scatter plot of residuals versus predicted values can help visualize this.
 * Normality of Residuals: The residuals should be approximately normally distributed. This assumption is less critical for large sample sizes due to the Central Limit Theorem but is important for valid hypothesis testing and confidence intervals. Histograms or Q-Q plots of residuals can check this.
-* No Multicollinearity: The independent variables should not be highly correlated with each other. High multicollinearity can make it difficult to estimate the individual coefficients accurately and can lead to an unstable model. This is checked using methods like Variance Inflation Factor (VIF), as discussed previously.
 * No Outliers: There should be no extreme outlier data points that exert undue influence on the regression line.
 
 ### _Cost function: MSE_
@@ -19,7 +25,6 @@ Independence of Errors (No Autocorrelation): The residuals (errors) should be in
 
 ### _R-Squared_
 <img width="548" alt="image" src="https://github.com/user-attachments/assets/dcd47f64-78a9-45c4-91df-8ced93a22917" />
-
 
 <img src="https://miro.medium.com/max/1406/1*_HbrAW-tMRBli6ASD5Bttw.png" width="400" height="75"/>
 
@@ -32,13 +37,11 @@ R^2 = 1-(Loss/SST)
 <img width="471" alt="image" src="https://github.com/user-attachments/assets/4dbb4b27-f349-49fb-9acb-eb260552062d" />
 <img width="316" alt="image" src="https://github.com/user-attachments/assets/e1d77616-8cf1-4e01-896d-b9ad3e5bdf56" />
 
-
 Higher is Not Always Better: A very high R^2 can sometimes indicate overfitting. Sensitive to Outliers. Increases with More Independent variables.
 
 ### Adjusted_R-Squared_
 <img width="726" alt="image" src="https://github.com/user-attachments/assets/efc9429a-e04a-4691-889d-cd74a5ce796d" />
 
-  
 Two popular examples of regularization:
 Lasso Regression: where J is modified to minimize the absolute sum of the coefficients (called L1 regularization).
 Ridge Regression: ... L2 regularization
@@ -50,7 +53,6 @@ e ~ N(0,σ^2), y ~ N(wTx,σ^2)
 Least square function can be obtained by calculating log likelihood, P(y/x) = P(e), since w is fixed.
 <img width="735" alt="image" src="https://github.com/user-attachments/assets/9de35211-bc49-4a99-9b27-992e351b13a7" />
 
-
 ## Linear Regression Analysis
 * Regression Coefficients (β values): These tell you the estimated change in the dependent variable for a one-unit change in the corresponding independent variable, holding all other predictors constant.
   
@@ -61,14 +63,6 @@ Least square function can be obtained by calculating log likelihood, P(y/x) = P(
 * Adjusted R-squared: This is a modified R-squared that accounts for the number of predictors in the model. It's often preferred when comparing models with different numbers of independent variables, as R-squared tends to artificially increase with more predictors, even if they aren't useful.
   
 * F-statistic and its p-value: This tests the overall significance of the entire regression model. A small p-value for the F-statistic indicates that the model as a whole is statistically significant, meaning that at least one of the independent variables contributes to explaining the variation in the dependent variable.
-
-Question: When would you use adjusted R2 over R2?
-
-Answer: You should use adjusted R2 when comparing multiple regression models that have a different number of independent variables. It helps to select the most parsimonious model (the one with the fewest predictors that still has good explanatory power) and avoids overfitting.
-
-Question: Can the adjusted R2 be negative? If so, what does that imply?
-
-Answer: Yes, adjusted R2 can be negative. This happens when the model's performance is worse than a model with no predictors at all (i.e., a simple model that just predicts the mean of the dependent variable). A negative adjusted R2 indicates that your predictors are not explaining the variance in the dependent variable and may be a very poor model.
 
 ### How to handle multicolliearity
 #### 1. Correlation Matrix
@@ -140,4 +134,13 @@ Forecasts/Predictions (within the range of the observed data): If the primary go
 
 ### Linear vs Non-linear Measurements
 ##### Can t-test or chi squared test be used for non-linear relations?
-No, they are not designed to detect or analyze non-linearity, hence reveal nothing about shape, direction or strength.T-test's purpose is to compare the means of two groups to determine if they are statistically significantly different.Chi test's purpose is to assess the association or independence between two or more categorical variables. For non-linear cases, use non-linear regression(e.g., exponential, logarithmic, polynomial regression, logistic regression) and Spearman's Rank Correlation or Kendall's Tau: These measure the strength and direction of monotonic relationships only.
+No, they are not designed to detect or analyze non-linearity, hence reveal nothing about shape, direction or strength. T-test's purpose is to compare the means of two groups to determine if they are statistically significantly different.Chi test's purpose is to assess the association or independence between two or more categorical variables. For non-linear cases, use non-linear regression(e.g., exponential, logarithmic, polynomial regression, logistic regression) and Spearman's Rank Correlation or Kendall's Tau: These measure the strength and direction of monotonic relationships only.
+
+### FAQ
+Question: When would you use adjusted R2 over R2?
+
+Answer: You should use adjusted R2 when comparing multiple regression models that have a different number of independent variables. It helps to select the most parsimonious model (the one with the fewest predictors that still has good explanatory power) and avoids overfitting.
+
+Question: Can the adjusted R2 be negative? If so, what does that imply?
+
+Answer: Yes, adjusted R2 can be negative. This happens when the model's performance is worse than a model with no predictors at all (i.e., a simple model that just predicts the mean of the dependent variable). A negative adjusted R2 indicates that your predictors are not explaining the variance in the dependent variable and may be a very poor model.
