@@ -25,7 +25,7 @@ Discrete uniform distribution (over integers a,a+1,...,b):
 * Var(X)= ((b−a+1)^2-1)/12
 
 * Mode = 3 Median – 2 Mean
-* For symmetirc distribution, all 3 are equal. For left skewed, mode<median<mean. For right skewed, mean<median<mode
+* For symmetirc distribution, all 3 are equal. For left skewed (long tail on left), mode<median<mean. For right skewed, mean<median<mode. median is always in the middle and mode is the highest peak of the curve. 
 
 ##### Types of distributions
 > Multinomial distribution is a generalization of the binomial distribution. It models the probability of counts for each side of a k-sided die rolled n times.  
