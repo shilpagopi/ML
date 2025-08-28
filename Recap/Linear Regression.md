@@ -13,12 +13,19 @@
   
 ### Assumptions:
 * Errors are normally distributed, Variance of errors is constant. Variance of predictions is zero as the lie on straight line. e ~ N(0,σ^2), y ~ N(wTx,σ^2)  
-* Linearity: The relationship between the dependent variable and each independent variable should be linear. This can be checked by scatter plots of the dependent variable against each independent variable.
+* Linearity: The relationship between the dependent variable and each independent variable should be linear. This can be checked by XY scatter plots of the dependent variable against each independent variable, and that the residual plot shows a random pattern.
 * No Multicollinearity: The independent variables should not be highly correlated with each other. High multicollinearity can make it difficult to estimate the individual coefficients accurately and can lead to an unstable model. This is checked using methods like Variance Inflation Factor (VIF), as discussed previously.
 Independence of Errors (No Autocorrelation): The residuals (errors) should be independent of each other. This is particularly important for time-series data. The Durbin-Watson test can be used to check for autocorrelation.
 * Homoscedasticity: The variance of the residuals should be constant across all levels of the independent variables. In other words, the spread of the residuals should be roughly the same throughout the range of predicted values. A scatter plot of residuals versus predicted values can help visualize this.
 * Normality of Residuals: The residuals should be approximately normally distributed. This assumption is less critical for large sample sizes due to the Central Limit Theorem but is important for valid hypothesis testing and confidence intervals. Histograms or Q-Q plots of residuals can check this.
 * No Outliers: There should be no extreme outlier data points that exert undue influence on the regression line.
+
+* For each value of X, the probability distribution of Y has the same standard deviation σ. When this condition is satisfied, the variability of the residuals will be relatively constant across all values of X, which is easily checked in a residual plot.
+* For any X,
+  * The Y values are independent, as indicated by a random pattern on the residual plot.
+  * The Y values are roughly normally distributed (i.e., symmetric and unimodal). A little skewness is ok if the sample size is large. A histogram or a dotplot will show the shape of the distribution.
+* If you know the linear correlation (r) between two variables, then the coefficient of determination (R2) is easily computed using the following formula: R2 = r2.
+* A random pattern of residuals supports a linear model; a non-random pattern supports a nonlinear model. The sum of the residuals is always zero, whether the data set is linear or nonlinear.
 
 ### _Cost function: MSE_
 
