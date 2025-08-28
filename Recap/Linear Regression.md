@@ -4,7 +4,7 @@
 * Linear Regression Assumptions
 * R-Squared vs. Adjusted-R-Squared
 * Linear Regression Analysis
-* Multicollinearity
+* Multicollinearity: Correlation Matrix, Variance Inflation Factor (VIF =  Xj= 1/(1−Rj^2)), Tolerance, Condition Index, Common Sense and Domain Knowledge
 ---
 ### Introduction
 * Core idea: Fit a line to data
