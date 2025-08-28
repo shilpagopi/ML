@@ -11,12 +11,24 @@
 * Descriptive Statistics: Summarizes and describes the main features of a collection of information. It's about organizing, displaying, and describing data. Examples include mean, median, mode, standard deviation, and histograms.
 * Inferential Statistics: Uses a sample of data to make inferences or predictions about a larger population. It involves hypothesis testing, confidence intervals, and regression analysis to draw conclusions beyond the observed data.
 
-#### 2. Explain the Central Limit Theorem (CLT) and its significance.
-The Central Limit Theorem states that, regardless of the original distribution of a population, the sampling distribution of the sample mean (or sum) will approach a normal distribution as the sample size increases. E[Xbar]=μ.
- This is significant because:
+#### 2. Central Limit Theorem (CLT)
+The Central Limit Theorem states that, regardless of the original distribution of a population, the sampling distribution of the sample mean (or sum) will approach a normal distribution which has a mean μ and a variance V/n, as the value of n (= number of data points in each sample = 30) goes up. E[Xbar]=μ. (In fact, in the sampling distribution of the mean, the number of samples is assumed to be infinite.)
+
+This is significant because:
 It allows us to use normal distribution properties for hypothesis testing and confidence intervals, even if the original population isn't normally distributed.
-It's fundamental to understanding why many statistical methods work.
 It applies to a wide range of real-world scenarios where data is aggregated.
+
+* Assumptions
+  * The data must be sampled randomly
+  * Samples should be independent of each other.
+  * Sample size should be not more than 10% of the population when sampling is done without replacement
+  * The sample size should be sufficiently large. (a sample size of 30 is considered sufficient when the population is symmetric.)
+ 
+* Applications/Inferences:
+  * We have the information of a valid sample. We can make accurate assumptions about it’s population.
+  * We have the information of the population. We can make accurate assumptions about a valid sample from that population.
+  * We have the information of a population and a valid sample. We can accurately infer if the sample was drawn from that population.
+  * We have the information about two different valid samples. We can accurately infer if the two samples where drawn from the same population.
 
 #### 3. What is a p-value, and how is it used in hypothesis testing?
 Answer: A p-value is the probability of observing a test statistic as extreme as, or more extreme than, the one calculated from the sample data, assuming the null hypothesis is true.
