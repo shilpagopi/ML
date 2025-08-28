@@ -30,15 +30,6 @@ Z = (sample mean - μ) / SE
 #### Outlier
 As a "rule of thumb", an extreme value is often considered to be an outlier if it is at least 1.5 interquartile ranges below the first quartile (Q1), or at least 1.5 interquartile ranges above the third quartile (Q3).
 
-#### Population mean and Sample statistics
-Population mean (μ), population std deviation (σ), E[sample mean] = μ, E[variance] =σ^2
-
-#### Bernoulli Distribution
-E(x) = p; Var(x) = p(1-p)
-
-#### Binomial Distribution
-E(x) = np; Var(x) = np(1-p)
-
 #### Random quantity
 * The random quantity is approximately Gaussian with mean p and variance p(1−p)/n
 * If variance of population is given, var of sample = (var of popu.)/n
