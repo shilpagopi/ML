@@ -3,8 +3,9 @@
 ### At a Glance
 * Linear Regression Assumptions
 * R-Squared vs. Adjusted-R-Squared
+* Linear Regression Analysis
+* Multicollinearity
 ---
-
 ### Introduction
 * Core idea: Fit a line to data
 * Linear Regression is a machine learning algorithm based on supervised learning
@@ -64,7 +65,7 @@ Least square function can be obtained by calculating log likelihood, P(y/x) = P(
   
 * F-statistic and its p-value: This tests the overall significance of the entire regression model. A small p-value for the F-statistic indicates that the model as a whole is statistically significant, meaning that at least one of the independent variables contributes to explaining the variation in the dependent variable.
 
-### How to handle multicolliearity
+### How to handle multicollinearity
 #### 1. Correlation Matrix
 How it works: Calculate the Pearson correlation coefficient between all pairs of your independent variables.
 Interpretation:
