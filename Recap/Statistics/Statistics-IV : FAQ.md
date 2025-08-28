@@ -6,6 +6,7 @@
 * Covariance vs. Correlation
 * Z-test vs t-Test
 * PDF vs CDF
+* Law of Large Numbers
 ---
 #### 1. What is the difference between descriptive and inferential statistics?
 * Descriptive Statistics: Summarizes and describes the main features of a collection of information. It's about organizing, displaying, and describing data. Examples include mean, median, mode, standard deviation, and histograms.
@@ -31,10 +32,12 @@ It applies to a wide range of real-world scenarios where data is aggregated.
   * We have the information about two different valid samples. We can accurately infer if the two samples where drawn from the same population.
 
 #### 3. What is a p-value, and how is it used in hypothesis testing?
-Answer: A p-value is the probability of observing a test statistic as extreme as, or more extreme than, the one calculated from the sample data, assuming the null hypothesis is true.
+A p-value (0-1) is the probability of observing a test statistic as extreme as, or more extreme than, the one calculated from the sample data, assuming the null hypothesis is true.
+
 In hypothesis testing, we typically set a significance level (alpha, e.g., 0.05).
-If the p-value is less than alpha, we reject the null hypothesis, suggesting there is sufficient evidence to support the alternative hypothesis.
-If the p-value is greater than alpha, we fail to reject the null hypothesis, meaning there isn't enough evidence to support the alternative.
+* If the p-value is less than alpha, we reject the null hypothesis, suggesting there is sufficient evidence to support the alternative hypothesis.
+* If the p-value is greater than alpha, we fail to reject the null hypothesis, meaning there isn't enough evidence to support the alternative.
+* Low p-value (≤ 0.05) indicates strength against the null hypothesis which means we can reject the null Hypothesis. High p-value (≥ 0.05) indicates strength for the null hypothesis which means we can accept the null Hypothesis p-value of 0.05 indicates the Hypothesis could go either way.
 
 #### 4. Define Type I and Type II errors in hypothesis testing.
 * Type I Error (False Positive): Rejecting a true null hypothesis. This means concluding there's an effect or relationship when there isn't one. The probability of a Type I error is denoted by α (alpha), the significance level.
@@ -77,5 +80,7 @@ The PDF is the derivative of the CDF. Differentiating the CDF gives you the PDF.
 * Symmetry and shape
 * Central Tendency: The mean, median, and mode are all equal and located at the exact center of the distribution, representing the value with the highest frequency
 * Defined by mu and sigma (68-95-99.7 rule)
- 
+
+#### 12. What Is the Law of Large Numbers?
+It is a theorem that describes the result of performing the same experiment a large number of times. This theorem forms the basis of frequency-style thinking. It says that the sample means, the sample variance and the sample standard deviation converge to what they are trying to estimate.
 
