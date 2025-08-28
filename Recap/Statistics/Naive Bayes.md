@@ -28,3 +28,9 @@ Why Does it Still Work Well?
 * Robustness to Violations: In many real-world scenarios, features are only weakly dependent, or the dependencies "cancel out" across different classes.
 * Simplicity and Efficiency: The naive assumption dramatically simplifies the calculations. This makes Naive Bayes extremely fast to train and predict, even with very high-dimensional data (like text data with thousands of words as features). It requires less training data to estimate the necessary parameters compared to models that try to capture all feature dependencies.
 * Curse of Dimensionality: By decoupling the feature probabilities, Naive Bayes effectively mitigates the "curse of dimensionality," which can plague more complex models in high-dimensional spaces.
+
+#### What is Marginal Probability?
+The term "marginal probability" comes from the practice of writing probability values in the margins of a joint probability table. This table shows the probabilities of two or more variables occurring together.
+Here's the key idea: to find the probability of a single variable, you sum or integrate across all possible values of the other variables, and this sum is traditionally written in the table's margins. This process of "summing out" or "integrating out" the other variables is called marginalization.
+<img width="725" height="559" alt="Screenshot 2025-08-28 at 11 01 17 AM" src="https://github.com/user-attachments/assets/474f50df-c784-400e-921b-4d758dbb2799" />
+
