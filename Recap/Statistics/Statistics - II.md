@@ -30,20 +30,6 @@ Z = (sample mean - μ) / SE
 #### Outlier
 As a "rule of thumb", an extreme value is often considered to be an outlier if it is at least 1.5 interquartile ranges below the first quartile (Q1), or at least 1.5 interquartile ranges above the third quartile (Q3).
 
-#### Corelation Coefficient
-* The greater the absolute value of the Pearson product-moment correlation coefficient, the stronger the linear relationship. (strong: +/-1, weak : 0 linear relationship)
-* Can be computed between two variables, two populations or two samples.
-
-#### Linear Regression Assumptions
-* The dependent variable Y has a linear relationship to the independent variable X. To check this, make sure that the XY scatterplot is linear and that the residual plot shows a random pattern. (Don't worry. We'll cover residual plots in a future lesson.)
-* For each value of X, the probability distribution of Y has the same standard deviation σ. When this condition is satisfied, the variability of the residuals will be relatively constant across all values of X, which is easily checked in a residual plot.
-* For any X,
-  * The Y values are independent, as indicated by a random pattern on the residual plot.
-  * The Y values are roughly normally distributed (i.e., symmetric and unimodal). A little skewness is ok if the sample size is large. A histogram or a dotplot will show the shape of the distribution.
-
-* If you know the linear correlation (r) between two variables, then the coefficient of determination (R2) is easily computed using the following formula: R2 = r2.
-* A random pattern of residuals supports a linear model; a non-random pattern supports a nonlinear model. The sum of the residuals is always zero, whether the data set is linear or nonlinear.
-
 #### Population mean and Sample statistics
 Population mean (μ), population std deviation (σ), E[sample mean] = μ, E[variance] =σ^2
 
