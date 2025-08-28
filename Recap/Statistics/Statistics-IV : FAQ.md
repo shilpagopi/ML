@@ -3,7 +3,10 @@
 * Central Limit Theorem 
 * p-value
 * Type-I (False Positive) and Type-II Errors (False Negative)
-* ---
+* Covariance vs. Correlation
+* Z-test vs t-Test
+* PDF vs CDF
+---
 #### 1. What is the difference between descriptive and inferential statistics?
 * Descriptive Statistics: Summarizes and describes the main features of a collection of information. It's about organizing, displaying, and describing data. Examples include mean, median, mode, standard deviation, and histograms.
 * Inferential Statistics: Uses a sample of data to make inferences or predictions about a larger population. It involves hypothesis testing, confidence intervals, and regression analysis to draw conclusions beyond the observed data.
@@ -52,6 +55,11 @@ For continuous: <img width="721" alt="image" src="https://github.com/user-attach
 A larger sample size generally increases the statistical power of a test because it reduces the standard error of the mean, making it easier to detect a true effect. With a larger sample, a smaller p-value is more likely if an effect truly exists.
 
 #### 10. PDF vs CDF
+The PDF shows the rate of change of probability (the slope of the CDF), while the CDF shows the total accumulated probability. The PDF describes the relative likelihood of a variable taking a specific value, while the CDF gives the cumulative probability of the variable being less than or equal to a certain value. 
+The CDF is the integral of the PDF. This means you can get the CDF by integrating the PDF from negative infinity up to a given point.
+The PDF is the derivative of the CDF. Differentiating the CDF gives you the PDF.
+<img width="741" height="470" alt="Screenshot 2025-08-28 at 10 49 42 AM" src="https://github.com/user-attachments/assets/73a7ba26-1afd-4060-af23-3a7bd2e20710" />
+<img width="741" height="431" alt="Screenshot 2025-08-28 at 10 50 07 AM" src="https://github.com/user-attachments/assets/69ef2a84-0ebb-44d2-b16c-39637e0124da" />
 
 #### 11. What are the properties of normal/Gaussian distribution/bell curve?
 * Symmetry and shape
