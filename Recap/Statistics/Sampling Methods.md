@@ -1,4 +1,9 @@
 # Sampling Methods
+### At A Glance
+* Probability vs. Non-Probability Samples
+* Probability Sampling: Simple random sampling, Stratified sampling, Cluster sampling, Multistage sampling, Systematic random sampling
+* Non-Probability Samples: Voluntary, Convenience
+---
 ### Probability vs. Non-Probability Samples
 #### Probability samples.
 With probability sampling methods, each population element has a known (non-zero) chance of being chosen for the sample.
