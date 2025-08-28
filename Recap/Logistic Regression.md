@@ -49,6 +49,7 @@ Its main purpose is to measure the difference between two probability distributi
 <img width="443" alt="image" src="https://github.com/user-attachments/assets/411db1e0-b35c-426d-bfe9-9ab86ab8b62b" />
 
 The loss is only concerned with the predicted probability of the correct class.
+
 # Multinomial/Softmax Logistic Regression
 ```
 Do the maths, considering K labels. It will turn out to be equivalent to training independent k-1 regressors. Separate w for each class.
@@ -58,12 +59,17 @@ p(k=1) = exp(z1)/(sum(exp(z)) for k = 1 to K)
 ```
 
 # Evaluation of Model Fit
+* Confusion Matrix
+* Derived Metrics: Accuracy, Precision, Recall, F1 Score
+* ROC curve and AUC 
 * Pseudo R2 =1 − (L1/L0)  
 where, L1 and L0 are the log-likelihood of trained model and a base model with a logistic regression on just a constant (and does not depend on x) (yi=1/(1+exp(−α)))
 
 * Akaike information criterion, AIC = 2k-2*ln(L)  
 k is the number of estimated parameters in the model
 L is the maximum value of the likelihood function for the model  
-Prefer model with the minimum AIC value  
-Intuition: Information loss  
+Prefer model with the minimum AIC value and minimum BIC value
+Intuition: Information loss
+
+* Bayesian Information Criterion (BIC), BIC=kln(n)−2ln(L)
 
