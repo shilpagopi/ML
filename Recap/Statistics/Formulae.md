@@ -11,6 +11,8 @@
 #### Random Variables
 <img width="637" alt="image" src="https://github.com/user-attachments/assets/3d3b8171-f13f-48bd-a6fa-a4baa7a8edfb" />
 
+E(X,Y) = E(X)E(Y) + Cov(X,Y)
+
 #### Probability Distributions
 Multinomial distribution:
 * The expected number of times the outcome i was observed over n trials is: E(Xi) = n* pi
