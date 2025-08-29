@@ -50,4 +50,9 @@ Contextual Precision/Relevancy= f(retrieved context,user's query) =  verify each
 Contextual Precision and Recall (Precision@k, Recall@k), MRR: break down the **groundtruth** answer into a set of discrete claims. Verify how many can be attributed to the context.
 
 Frameworks/Tools: **RAGAs, DeepEval, and Promptfoo, LangChain/LlamaIndex, TruLens, MLflow/Weights & Biases (W&B)**
-  
+
+#### Improve RAG efficiency - Indexing
+* Hierarchical Navigable Small World (HNSW) graphs: These provide an excellent balance between search speed and index size, allowing for efficient GPU-based retrieval even on massive datasets.
+* Product Quantization (PQ): By compressing our vector representations, PQ allows us to fit much larger indices in GPU memory, enabling faster and more scalable retrieval.
+* Locality-Sensitive Hashing (LSH): While not always as accurate as other methods, LSH can be incredibly fast and GPU-friendly, making it a great choice for initial candidate generation in multi-stage retrieval setups.
+* GPU-accelerated indexing: Many popular ANN libraries now offer GPU acceleration for index building and searching. Leveraging these can dramatically speed up both offline index construction and online retrieval.
