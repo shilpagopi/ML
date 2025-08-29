@@ -1,14 +1,18 @@
 # LLM Training on GPUs
 
 ## Size Estimation
-* Model Parameters: The foundation of your LLM. FP32 means each parameter requires 4 bytes, FP16 requires 2.
-* Optimizer States: Often the largest memory consumer. Traditional optimizers like AdamW maintain multiple copies of the parameters.
+* Model Parameters: 1B param =~ 4GB in FP32. FP32 means each parameter requires 4 bytes, FP16 requires 2.
+* Optimizer States: Largest memory consumer. Optimizers like AdamW maintain extra tensors for tracking gradients and momentum, double the size for parameters.
 * Gradients: Required for backpropagation. These usually match the precision of your model weights. Also, add another full copy of the parameter count to your VRAM requirements.
 * Activations: The wild card in the equation. These vary based on batch size, sequence length, and model architecture. They can be managed through techniques like gradient checkpointing.
 
 These components add up to the ~16GB per 1B parameter rule of thumb?
 flash attention (which might save you 10-20%.)? 
 gradient checkpointing?
+Use FSDP / ZeRO for Efficient Training
+* FSDP (Fully Sharded Data Parallel) distributes memory across multiple GPUs.?
+* ZeRO (Zero Redundancy Optimizer) reduces optimizer memory overhead.?
+Use High-Bandwidth Storage: Use NVMe SSDs instead of HDDs for storing models and datasets.?
 
 #### Size required for different techniques and model sizes
 <img width="1050" height="268" alt="Screenshot 2025-08-29 at 12 24 33 PM" src="https://github.com/user-attachments/assets/a547bd29-4e3c-40f0-be21-d360efe25612" />
