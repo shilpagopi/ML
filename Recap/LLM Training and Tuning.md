@@ -22,6 +22,23 @@ How it works: For a weight matrix W0, LoRA adds an update W0+ΔW, where ΔW=BA_t
 Pros: Reduced trainable parameters, Faster training, Lower training compute, Reduced storage, Mitigates catastrophic forgetting  
 Cons: May not reach the absolute peak performance of full fine-tuning  
 
+##### How Weights are Loaded During Inference
+There are two primary methods for loading weights during inference with LoRA:
+
+##### Merging the LoRA Weights (Standard Method):
+The most efficient way to use a LoRA-fine-tuned model for inference is to permanently merge the LoRA weights into the original base model's weights. This process is often performed before deployment and is handled by libraries like Hugging Face's PEFT (Parameter-Efficient Fine-Tuning).
+
+The Process: LoRA works by learning a low-rank matrix (B) and a second matrix (A) to approximate the weight update, ΔW=BA. During merging, this small ΔW matrix is calculated and then directly added to the original weight matrix (W0) of the base model.
+
+Result: The final weight matrix becomes Wfinal=W0+BA. The new, merged model is now a complete, standalone model that no longer requires a separate LoRA adapter. This means there is no additional computational overhead or latency during inference compared to the original base model. The model's size increases only slightly, but its performance is identical to a traditionally fine-tuned model of the same size.
+
+##### Dynamic Loading (Multi-Adapter Serving):
+In scenarios where you need to serve multiple different fine-tuned versions of a single base model on the same GPU, you can keep the LoRA adapters separate from the base model.
+
+The Process: The large base model is loaded into GPU memory just once. Then, different LoRA adapters (each a small set of matrices) can be loaded and unloaded as needed for different requests.
+
+Result: This method introduces a small overhead for each request, as the LoRA matrices must be loaded from disk or CPU memory and applied to the base model's forward pass computations. This can lead to slightly increased latency, particularly during a "cold start" or when switching between different adapters. However, this trade-off is often acceptable because it allows for efficient multi-tenancy, enabling a single GPU to serve many different specialized models simultaneously without the need for a separate copy of the entire base model for each one.
+
 ### Quantization-aware Low-Rank Adaptation (QLoRA)
 What it is: QLoRA builds upon LoRA by performing LoRA fine-tuning on a quantized version of the pre-trained LLM.   
 How it works: Original model weights are stored in a lower precision format (e.g., 4-bit integers instead of 16-bit floating points) using "4-bit NormalFloat (NF4)" quantization, but performs computations in a higher precision. It then applies LoRA on top of these quantized weights.  
