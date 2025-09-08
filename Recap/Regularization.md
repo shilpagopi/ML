@@ -1,10 +1,11 @@
 # Regularization
 ### At A Glance
 * Lasso(L1) and Ridge(L2) Regression, Elastic Net
-* Dropout
+* Dropout:  Reduced Co-adaptation, Ensemble Effect, Inverted Dropout (1/1-p)
 * Early Stopping
-* Batch and Layer Normalization
+* Batch and Layer Normalization: reducing internal covariate shift, stabilizes training, faster convergence, less sensitive to initialization, learnable scale and shift parameters (γ and β), BN is batch size sensitive. Check last BN vs LN table.
 ---
+
 Why? To prevent overfitting.  
 Regularization significantly reduces the variance of the model, without substantial increase in its bias.
 It reduces flexibility of complex models
