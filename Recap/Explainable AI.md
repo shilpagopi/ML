@@ -1,6 +1,17 @@
 # Explainable AI
+### At A Glance
+* Techniques:
+  * Feature Importance: Eg. SHAP (Shapely Additive Explanations), LIME (Local Interpretable Model Agnostic Explanations)
+  * Partial Dependency Plots (PDPs)
+  * Model-based (liner regression, tree-based models)
+  * Saliency maps (for images)
+* Check SHAP formula
+* SHAP vs LIME table
+---
+
 ## Types of Explanations
 <img width="737" alt="image" src="https://github.com/user-attachments/assets/93d2aebb-7433-4665-89ea-475043c5a663" />
+
 ## Techniques
 <img width="737" alt="image" src="https://github.com/user-attachments/assets/178a7897-b882-4416-a537-be1f51108ddd" />
 <img width="737" alt="image" src="https://github.com/user-attachments/assets/f681f800-e410-4f65-9cf9-8a06652f983a" />
