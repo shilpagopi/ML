@@ -40,7 +40,7 @@ How it works:
 Reduced Co-adaptation: Prevents neurons from co-adapting too much to specific features in the training data. If a neuron relies too heavily on the output of another specific neuron, dropout breaks that dependency.
 Ensemble Effect: It can be seen as training an ensemble of many different "thinned" networks simultaneously. When the full network is used at test time, it's akin to averaging the predictions of this ensemble, which generally leads to better generalization.
 
-During Testing: Dropout is not applied during testing. Instead, the weights of the remaining (non-dropped-out) neurons are scaled by the dropout probability (1−p or inverse of p, depending on implementation) to account for the fact that all neurons are active. A common practice is "inverted dropout," where activations are scaled during training.
+During Testing: Dropout is not applied during testing. Instead, the weights of the remaining (non-dropped-out) neurons are scaled by the dropout probability (1/1−p or inverse of p, depending on implementation) to account for the fact that all neurons are active. A common practice is "inverted dropout" where activations are scaled by 1/1−p during training.
 
 ### Early Stopping
 Prevents the model from learning noise in the training data after it has already learned the general patterns.
