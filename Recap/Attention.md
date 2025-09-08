@@ -1,5 +1,11 @@
 # Attention
-The computational complexity of the standard self-attention mechanism is O(n^2⋅d) in terms of time and O(n2) in terms of space, where n is the sequence length and d is the model dimension.
+### At A Glance
+
+* The computational complexity of the standard self-attention mechanism is O(n^2⋅d) in terms of time and O(n2) in terms of space, where n is the sequence length and d is the model dimension.
+* Types: Additive Attention (Bahdanau Attention) (check formulae below), Scaled Dot-Product Attention
+* Attention Masking: Padding Masking and Look-Ahead Masking (negative infinity scores)
+* Efficient Techniques: Sparse (local,global), Kernel based methods like Linformer and Performer: ~O(n.d) or O(nlogn), Low Rank Factorization
+---
 
 #### Types of Attention
 * Additive Attention (Bahdanau Attention): More complex and computationally expensive.
@@ -25,7 +31,7 @@ Global Attention: A few selected tokens (e.g., [CLS] tokens or special "global" 
 Combinations: Models like Longformer and BigBird combine local and global attention patterns to balance efficiency with the ability to capture long-range dependencies.
 
 2. Kernel-Based Methods
-These methods re-formulate the softmax function in the attention mechanism to avoid the explicit computation of the n×n attention matrix. By leveraging the properties of kernels, they can transform the attention calculation from Q×K T×V into a more efficient form like Q×(K T×V), which can be computed with linear complexity.
+These methods re-formulate the softmax function in the attention mechanism to avoid the explicit computation of the n×n attention matrix. By leveraging the properties of kernels, they can transform the attention calculation from Q×K T×V into a more efficient form like Q×(K_T×V), which can be computed with linear complexity.
 
 Linformer and Performer are examples of this approach. They use a low-rank approximation or a kernel trick to achieve a complexity of O(n⋅d) or O(n⋅logn), respectively.
 
@@ -38,44 +44,6 @@ Transformer-XL introduced this concept of a "memory" of past states, which allow
 This method assumes that the attention matrix is low-rank and can be approximated by multiplying two smaller matrices. This reduces the complexity from O(n2) to O(n⋅k) where k is the rank of the approximation.
 
 # Rough work
-Tech Wrench
-·
-Follow publication
-
-Top Ten Interview Questions on Transformers in AI
-Double Pointer
-Double Pointer
-
-
-Follow
-5 min read
-·
-Oct 28, 2024
-
-Listen
-
-
-Share
-
-Don’t forget to get your copy of Designing Data Intensive Applications, the single most important book to read for system design interview prep!
-
-Transformer models have revolutionized the field of Artificial Intelligence, particularly in natural language processing and deep learning. Here, we cover the top ten interview questions on transformers in AI, along with detailed answers to help you understand these influential models and their applications.
-
-Consider ByteByteGo’s popular System Design Interview Course for your next interview!
-
-
-Grokking Modern System Design for Software Engineers and Managers.
-1. What is a Transformer in AI?
-_________
-Don’t waste hours on Leetcode. Learn patterns with the course Grokking the Coding Interview: Patterns for Coding Questions.
-
-A Transformer is a type of deep learning model introduced in the ‘Attention is All You Need’ paper by Vaswani et al. in 2017. It leverages self-attention mechanisms to process input data all at once instead of sequentially, as in RNNs or LSTMs. This parallel processing ability allows for faster training and better scalability, making transformers highly effective for large-scale natural language processing (NLP) tasks.
-
-2. How Does the Attention Mechanism Work in Transformers?
-_________
-Land a higher salary with Grokking Comp Negotiation in Tech.
-
-The attention mechanism in transformers computes the relevance of each part of the input sequence in relation to each other. For each input token, the transformer calculates a weighted representation by comparing it to every other token. This enables the model to focus on important words, allowing it to capture complex relationships across long sequences.
 
 3. Explain Self-Attention and Why It’s Important in Transformers
 _________
