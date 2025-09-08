@@ -1,7 +1,7 @@
 # Word Embeddings
 ### At A Glance
 * Glove: global word to word co-occurance counts in word-context matrix
-* Word2Vec: co-occurance within local context (Skipgram and CBOW)
+* Word2Vec: co-occurance within local context (Skipgram(single input, better for rare words) and CBOW(context averaging))
 * FastText: fragment based, handles OOV words.
 ---
 
