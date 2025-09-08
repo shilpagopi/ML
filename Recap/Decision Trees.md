@@ -67,3 +67,12 @@ Splitting criterion|	Information gain|	Gain ratio	|Gini impurity (classification
 Handling missing values	|No	|Yes	|Yes
 Pruning	|No	|Yes|	Yes
 Tree structure	|Multi-way splits|	Multi-way splits	|Binary splits
+
+### How do CART handle missing values?
+* Identify the primary split: When growing a tree, the algorithm first identifies the single best variable and split point (the "primary split") for a given node, using all observations that have complete data for that variable.
+* Find surrogate splitters: After the primary split is found, the algorithm searches for other available variables that have a strong correlation with the primary variable. These are called "surrogate splitters" and are ranked based on how closely they mimic the primary split.
+* Route cases with missing values:
+ * For any data point with a missing value on the primary split variable, the algorithm consults the list of surrogate splitters.
+ * It uses the first available surrogate variable with a non-missing value to decide which child node the data point belongs to.
+ * If that surrogate also has a missing value, it moves to the next one on the list until it finds a suitable substitute.
+* Prediction for new data: The same logic is applied when making predictions on new data. If a new data point has a missing value for a variable used in a tree split, the model will follow its pre-established hierarchy of surrogate rules to assign it to a node. 
