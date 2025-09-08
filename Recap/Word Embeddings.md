@@ -1,4 +1,10 @@
 # Word Embeddings
+### At A Glance
+* Glove: global word to word co-occurance counts in word-context matrix
+* Word2Vec: co-occurance within local context (Skipgram and CBOW)
+* FastText: fragment based, handles OOV words.
+---
+
 ### Glove vs Word2vec
 #### Similar Properties
 * The relationship between words is derived by cosine distance between words. 
@@ -19,6 +25,8 @@ Glove is based on matrix factorization techniques on the word-context matrix. It
 So then we factorize this matrix to yield a lower-dimensional (word x features) matrix, where each row now yields a vector representation for the corresponding word. In general, this is done by minimizing a “reconstruction loss”. This loss tries to find the lower-dimensional representations which can explain most of the variance in the high-dimensional data.
 
 (Words x Context) = (Words x Features) * (Features x Context) 
+
+<img width="700" height="343" alt="Screenshot 2025-09-08 at 12 18 16 PM" src="https://github.com/user-attachments/assets/d50909ca-b890-4afe-925c-b6cd2a7e053b" />
 
 ### FastText
 * FastText (based on Word2Vec) is word-fragment based and can usually handle unseen words, although it still generates one vector per word. 
