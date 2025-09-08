@@ -1,5 +1,10 @@
 # Activation Functions
 
+### At A Glance
+* Table of activation Functions
+* Solutions to Vanishing Gradient Problem
+---
+
 | Name | Formula | Derivative | Remarks | Vanishing Gradient Exists | Activation Blowup Exists |
 |--|--|--|--|--|--|
 | Linear | m x z | Constant m | Used for predicting continuous target variables. Else, rarely used in neural networks. If there is an error in prediction, the changes made by back propagation is constant and not depending on the change in input delta(x) ! constant derivatinve can increase vanishing gradient problems.| Y | Y |
@@ -16,7 +21,7 @@
 Its primary purpose is to introduce non-linearity into the model, which allows he network to approximate any continuous function (Universal Approximation Theorem). Without activation functions, a neural network would be equivalent to a simple linear regression model, incapable of learning complex patterns in data.
 
 ##### Activation functions depending on output layer
-softmax is used for multi-class classification, sigmoid for binary classification, and linear for regression.   
+softmax is used for multi-class classification, sigmoid for binary or multilabel classification, and linear for regression.   
 
 ##### Activation functions depending on architecture
 Generative Adversarial Networks (GANs): Leaky ReLU for the generator, and sigmoid or tanh for the discriminator
@@ -34,7 +39,7 @@ CNN: ReLU
 * Gradient Clipping
 * Batch Normalization: Normalizing activations
 * Architectural: Resnets (skip connections), LSTM and GRU gates
-* Optimization algorithsm with Adaptive learning rate methods. Eg: Adam and RMSprop
+* Optimization algorithms with adaptive learning rate methods. Eg: Adam and RMSprop
 
 ##### Recent Advancements
 * Mish: a smooth, continuous, self regularized, non-monotonic activation function:
