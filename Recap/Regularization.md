@@ -1,8 +1,13 @@
 # Regularization
-
+### At A Glance
+* Lasso(L1) and Ridge(L2) Regression, Elastic Net
+* Dropout
+* Early Stopping
+* Batch and Layer Normalization
+---
 Why? To prevent overfitting.  
 Regularization significantly reduces the variance of the model, without substantial increase in its bias.
-Regularization reduces flexibility of complex models
+It reduces flexibility of complex models
 
 ### Lasso Regression (L1 Norm)
 <img src = "https://miro.medium.com/max/1094/1*tHJ4sSPYV0bDr8xxEdiwXA.png" width = "600" height = "100">
