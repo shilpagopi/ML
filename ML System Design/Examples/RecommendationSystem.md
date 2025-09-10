@@ -30,6 +30,18 @@ Online Retrieval: When a new user query arrives, the query tower is used to gene
 <img width="519" alt="image" src="https://github.com/user-attachments/assets/100d2b14-c49a-45a7-a6da-1a40ef3dffc3" />
 
 ### Re-Ranker
+### Pointwise Ranking Models
+* Logistic Regression (For rating)
+* GBDT
+
+### Pairwise Ranking Models
+<img width="725" height="446" alt="Screenshot 2025-09-10 at 5 36 57 PM" src="https://github.com/user-attachments/assets/5cf28ff6-6506-4d25-93bf-ebccc8865146" />
+
+<img width="725" height="446" alt="Screenshot 2025-09-10 at 5 37 03 PM" src="https://github.com/user-attachments/assets/2f39a79d-198e-4329-98af-db7adf1fd640" />
+
+<img width="739" height="512" alt="Screenshot 2025-09-10 at 5 37 18 PM" src="https://github.com/user-attachments/assets/880fad56-5f05-4c72-854d-c18e145dc63b" />
+
+### PostProcessor
 * Region-restricted videos
 * Video freshness
 * Videos spreading misinformation
