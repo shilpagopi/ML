@@ -7,22 +7,33 @@
   * Scale
   * Inference realtime/offline
   * Training/retraining periodicity
-  * Annotated data - Data augmentation 
+  * Annotated data - Data augmentation
+    
 3. **ML Problem formulation** and **Metrics (ML and Business)**:
   * Metrics (relative or absolute): Business metrics and Optimization objective
   * ML problem category
   * ML System I/O
+    
 4. **Data Preprocessing**:
   * Data collection, filtering, analysis, storing, validation
   * **Address challenges**: Biases, Long-tail categories, imbalance
   * Feature Engineering
+    
 5. **Core Architectural Choices**
   * ML modeling: optimizations - regularization, hyper parameter tuning
   * cold-start solution
   * Feedback loops
   * If LLM-based solution, RAG vs finetuning? Open source-vs-off the shelf models. Prompt engineering techniques.
-6. **Deployment, Postproduction: MLOps, monitoring, logging, model versioning etc.**
-7. **Online metrics, A/B testing**
+    
+6. **Deployment, Postproduction:**
+    * Data Processing and Feature Engineering: <br> Spark/Dask: For handling large-scale datasets, these distributed computing frameworks are essential for ETL (Extract, Transform, Load) tasks and feature engineering.
+    * Feature Stores (Feast, Tecton): <br>  A feature store is a centralized repository that standardizes the management and serving of features. It ensures consistency between offline training and online inference, preventing "training-serving skew."
+    * Model Training: <br> TensorFlow, PyTorch, NVIDIA Merlin
+    * Model Serving and Deployment: <br> TensorFlow Serving / TorchServe, Vector Databases (e.g., Milvus, Pinecone, FAISS, ScaNN), Kubernetes / Docker: containerization and orchestration of multiple microservices and handle auto-scaling, Cloud Platforms (AWS SageMaker, Google Vertex AI, Azure ML)
+   * ML OPs, Versioning: <br> MLflow / Weights & Biases (W&B)
+   * Operational Metrics: <br> Prometheus / Grafana
+     
+7. **Online metrics: A/B testing**
 
 Tips: 
 * For optimizing latency, train smaller models using knowledge distillation
