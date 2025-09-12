@@ -23,7 +23,7 @@
   * Feature Engineering
     
 5. **Core Architectural Choices**
-  * **Trade-offs: latency, interpretability, data types, scale, nonlinearity, feature engg**
+  * **Trade-offs: latency, interpretability, data types, scale, nonlinearity, feature engg, cold start**
   * Classification: Logistic Regression, GBDT, Neural Networks
   * Regression: Linear Regression, GBDT
   * Recommendation
