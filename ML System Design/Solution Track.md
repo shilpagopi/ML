@@ -11,6 +11,9 @@
     
 3. **ML Problem formulation** and **Metrics (ML and Business)**:
   * Metrics (relative or absolute): Business metrics and Optimization objective
+   * Classification: Binary/Categorical Cross entropy Loss
+   * Recommendation: Hit Ratio, MRR (mean reciprocal rank), Precision@K, MAP (mean average precision), NDCG, Coverage
+   * Regression: MSE (mean squared error), MAE (mean average error)
   * ML problem category
   * ML System I/O
     
@@ -20,6 +23,13 @@
   * Feature Engineering
     
 5. **Core Architectural Choices**
+  * Trade-offs: latency, interpretability, data types, scale, nonlinearity, feature engg.
+  * Classification: Logistic Regression, GBDT, Neural Networks
+  * Regression: Linear Regression, GBDT
+  * Recommendation
+    * Candidate Generation: Collaborative Filtering vs Two Tower model: Cold start, Other categorical features, Scale
+    * Ranking: GBDT vs. DNN(Wide and Deep): Interpretability, Unstructured/Embedded features, Complex to train(DNN), Wide and Deep (Memoization + Generalization)
+    * Reranking: Heuristics and business data - for freshness, diversity, fairness, business rules
   * ML modeling: optimizations - regularization, hyper parameter tuning
   * cold-start solution
   * Feedback loops
